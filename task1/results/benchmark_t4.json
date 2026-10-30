@@ -1,0 +1,143 @@
+{
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu128",
+  "results": [
+    {
+      "method": "fullft",
+      "theta0_device": "none",
+      "trainable_params": 596049920,
+      "overhead": {},
+      "stress_update_seconds": 31.76772165298462,
+      "stress_tokens": 45592,
+      "seconds_per_update": 6.46953550974528,
+      "tokens_per_second": 1137.217912360283,
+      "est_hours_1250_updates": 2.2463664964393333,
+      "last_record": {
+        "lr": 2.105263157894737e-06,
+        "sft_loss": 0.8573707416653633,
+        "n_valid_tokens": 5433,
+        "grad_norm": 25.422136306762695,
+        "loss_scale": 65536.0,
+        "skipped": false
+      },
+      "peak_mem_allocated_gb": 11.1365,
+      "peak_mem_reserved_gb": 12.8867,
+      "status": "ok"
+    },
+    {
+      "method": "l2sp",
+      "theta0_device": "cuda",
+      "trainable_params": 596049920,
+      "overhead": {
+        "l2sp_reference_bytes": 2384199680,
+        "l2sp_reference_setup_seconds": 0.023757457733154297
+      },
+      "stress_update_seconds": 35.65817713737488,
+      "stress_tokens": 45592,
+      "status": "OOM: CUDA out of memory. Tried to allocate 1.16 GiB. GPU 0 has a total capacity of 14.56 GiB of which 890.81 MiB is free. Including non-PyTorch memory, this process has 13.69 GiB memory in use. Of the allocated memory 12.87 GiB is allocated by PyTorch, and 701.38 MiB is reserved by PyTorch but unallocate",
+      "peak_mem_allocated_gb": 13.3596
+    },
+    {
+      "method": "l2sp",
+      "theta0_device": "cpu",
+      "trainable_params": 596049920,
+      "overhead": {
+        "l2sp_reference_bytes": 2384199680,
+        "l2sp_reference_setup_seconds": 2.953483819961548,
+        "l2sp_transfer_seconds": 1.7693371772766113
+      },
+      "stress_update_seconds": 33.88167977333069,
+      "stress_tokens": 45592,
+      "seconds_per_update": 6.9480336507161455,
+      "tokens_per_second": 1057.255840063464,
+      "est_hours_1250_updates": 2.4125116842764394,
+      "last_record": {
+        "lr": 2.105263157894737e-06,
+        "sft_loss": 0.8574293665587902,
+        "n_valid_tokens": 5433,
+        "omega": 0.0012555174611076933,
+        "lambda_omega": 1.2555174611076933e-06,
+        "total_loss": 0.8574306220762513,
+        "grad_norm": 25.421680450439453,
+        "loss_scale": 65536.0,
+        "skipped": false
+      },
+      "peak_mem_allocated_gb": 12.3948,
+      "peak_mem_reserved_gb": 14.0859,
+      "status": "ok"
+    },
+    {
+      "method": "lora4",
+      "theta0_device": "none",
+      "trainable_params": 2523136,
+      "overhead": {
+        "adapter_setup_seconds": 0.04102945327758789
+      },
+      "stress_update_seconds": 31.579885005950928,
+      "stress_tokens": 45592,
+      "seconds_per_update": 7.727898359298706,
+      "tokens_per_second": 950.0934512318856,
+      "est_hours_1250_updates": 2.683298041423162,
+      "last_record": {
+        "lr": 2.105263157894737e-05,
+        "sft_loss": 0.9770016893744469,
+        "n_valid_tokens": 5433,
+        "grad_norm": 1.7368284463882446,
+        "loss_scale": 65536.0,
+        "skipped": false
+      },
+      "peak_mem_allocated_gb": 3.124,
+      "peak_mem_reserved_gb": 3.6562,
+      "status": "ok"
+    },
+    {
+      "method": "lora16",
+      "theta0_device": "none",
+      "trainable_params": 10092544,
+      "overhead": {
+        "adapter_setup_seconds": 0.06647014617919922
+      },
+      "stress_update_seconds": 31.24155306816101,
+      "stress_tokens": 45592,
+      "seconds_per_update": 7.823323170344035,
+      "tokens_per_second": 939.8430214161425,
+      "est_hours_1250_updates": 2.7164316563694566,
+      "last_record": {
+        "lr": 2.105263157894737e-05,
+        "sft_loss": 0.9103641584515572,
+        "n_valid_tokens": 5433,
+        "grad_norm": 3.461472749710083,
+        "loss_scale": 65536.0,
+        "skipped": false
+      },
+      "peak_mem_allocated_gb": 3.1541,
+      "peak_mem_reserved_gb": 3.7676,
+      "status": "ok"
+    },
+    {
+      "method": "oplora",
+      "theta0_device": "none",
+      "trainable_params": 10092544,
+      "overhead": {
+        "oplora_basis_bytes": 322961408,
+        "oplora_preprocessing_seconds": 34.631890058517456
+      },
+      "stress_update_seconds": 31.81748652458191,
+      "stress_tokens": 45592,
+      "seconds_per_update": 9.932416359583536,
+      "tokens_per_second": 735.6440248538869,
+      "est_hours_1250_updates": 3.44875568041095,
+      "last_record": {
+        "lr": 2.105263157894737e-05,
+        "sft_loss": 0.9151481501758099,
+        "n_valid_tokens": 5433,
+        "grad_norm": 3.1141552925109863,
+        "loss_scale": 65536.0,
+        "skipped": false
+      },
+      "peak_mem_allocated_gb": 3.4598,
+      "peak_mem_reserved_gb": 4.0684,
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "method": "fullft",
+  "displacement": {
+    "625": 10.033606841944543,
+    "1250": 10.672120546136213
+  },
+  "checkpoints": {
+    "312": {
+      "recovery_bytes": 7152947859,
+      "save_seconds": 13.452810049057007
+    },
+    "625": {
+      "recovery_bytes": 7152978195,
+      "save_seconds": 13.070010423660278,
+      "model_bytes": 2384234944
+    },
+    "937": {
+      "recovery_bytes": 7153008467,
+      "save_seconds": 13.049338102340698
+    },
+    "1250": {
+      "recovery_bytes": 7153038803,
+      "save_seconds": 12.898731231689453,
+      "model_bytes": 2384234944
+    }
+  },
+  "updates_completed": 1250,
+  "skipped_updates": [],
+  "train_seconds": 8558.763854026794,
+  "wall_seconds_this_session": 8613.197514533997,
+  "peak_mem_allocated_gb": 11.6861,
+  "peak_mem_reserved_gb": 13.2676,
+  "trainable_params": 596049920,
+  "gpu": "Tesla T4",
+  "overhead": {}
+}

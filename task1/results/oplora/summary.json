@@ -1,0 +1,36 @@
+{
+  "method": "oplora",
+  "displacement": {},
+  "checkpoints": {
+    "312": {
+      "recovery_bytes": 161944301,
+      "save_seconds": 0.3470458984375
+    },
+    "625": {
+      "recovery_bytes": 161974637,
+      "save_seconds": 0.29870128631591797
+    },
+    "937": {
+      "recovery_bytes": 162004909,
+      "save_seconds": 0.5229353904724121
+    },
+    "1250": {
+      "recovery_bytes": 162035309,
+      "save_seconds": 0.3101084232330322,
+      "model_bytes": 80825456
+    }
+  },
+  "updates_completed": 1250,
+  "skipped_updates": [],
+  "train_seconds": 11568.142575025558,
+  "wall_seconds_this_session": 11569.77264714241,
+  "peak_mem_allocated_gb": 3.5537,
+  "peak_mem_reserved_gb": 3.916,
+  "trainable_params": 10092544,
+  "gpu": "Tesla T4",
+  "overhead": {
+    "oplora_basis_bytes": 322961408,
+    "oplora_preprocessing_seconds": 30.953747034072876,
+    "oplora_export_seconds": 0.06595039367675781
+  }
+}

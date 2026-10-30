@@ -1,0 +1,184 @@
+{
+  "condition": "lora16_1250",
+  "status": "ok",
+  "return_codes": {
+    "gen": 0,
+    "ll": 0
+  },
+  "model": {
+    "condition": "lora16_1250",
+    "method": "lora16",
+    "update": 1250,
+    "base": "Qwen/Qwen3-0.6B",
+    "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "weights": "/kaggle/input/notebooks/dentusayd/atml-pa3-task1-lora16/task1/models/lora16/update_1250/adapter.safetensors",
+    "weights_sha256": "efb7f5c26237200ca33f8bb149db728df262e5e054c98e20688e7ba946dd1935",
+    "dtype": "torch.float16"
+  },
+  "merge_check": {
+    "n_sequences": 8,
+    "n_positions": 599,
+    "max_abs_logit_diff": 0.103515625,
+    "mean_abs_logit_diff": 0.005828334018588066,
+    "max_abs_logit": 37.25,
+    "top1_agreement": 1.0,
+    "last_token_top1_agreement": 1.0
+  },
+  "primary": {
+    "gsm8k_cot": {
+      "metric": "exact_match,flexible-extract",
+      "value": 0.6125852918877938
+    },
+    "hellaswag": {
+      "metric": "acc_norm,none",
+      "value": 0.4750049790878311
+    },
+    "boolq": {
+      "metric": "acc,none",
+      "value": 0.7195718654434251
+    },
+    "arc_easy": {
+      "metric": "acc_norm,none",
+      "value": 0.6388888888888888
+    }
+  },
+  "scores": {
+    "gsm8k_cot": {
+      "name": "gsm8k_cot",
+      "sample_len": 1319,
+      "exact_match,strict-match": 0.0,
+      "exact_match_stderr,strict-match": 0.0,
+      "exact_match,flexible-extract": 0.6125852918877938,
+      "exact_match_stderr,flexible-extract": 0.01341879844782738
+    },
+    "hellaswag": {
+      "name": "hellaswag",
+      "sample_len": 10042,
+      "acc,none": 0.379008165704043,
+      "acc_stderr,none": 0.004841486716855584,
+      "acc_norm,none": 0.4750049790878311,
+      "acc_norm_stderr,none": 0.004983542768853415
+    },
+    "boolq": {
+      "name": "boolq",
+      "sample_len": 3270,
+      "acc,none": 0.7195718654434251,
+      "acc_stderr,none": 0.007856704488285262
+    },
+    "arc_easy": {
+      "name": "arc_easy",
+      "sample_len": 2376,
+      "acc,none": 0.6645622895622896,
+      "acc_stderr,none": 0.009688175165829564,
+      "acc_norm,none": 0.6388888888888888,
+      "acc_norm_stderr,none": 0.009856013425811298
+    }
+  },
+  "n_samples": {
+    "gsm8k_cot": {
+      "original": 1319,
+      "effective": 1319
+    },
+    "hellaswag": {
+      "original": 10042,
+      "effective": 10042
+    },
+    "boolq": {
+      "original": 3270,
+      "effective": 3270
+    },
+    "arc_easy": {
+      "original": 2376,
+      "effective": 2376
+    }
+  },
+  "gsm8k_generation": {
+    "n_truncated": 11,
+    "n_no_extraction_flexible": 0,
+    "n_no_extraction_strict": 1319,
+    "mean_new_tokens": 141.06899166034876,
+    "stop_reasons": {
+      "stop_sequence": 0,
+      "eos": 1308,
+      "length": 11
+    }
+  },
+  "resources": {
+    "wall_seconds": 1300.3765091896057,
+    "gpus": 2,
+    "parallel_parts": true,
+    "model_load_seconds": {
+      "gen": 4.533764362335205,
+      "ll": 4.480639219284058
+    },
+    "tasks": {
+      "gsm8k_cot": {
+        "seconds": 1277.4081511497498,
+        "peak_mem_allocated_gb": 5.6313,
+        "peak_mem_reserved_gb": 7.0176
+      },
+      "hellaswag": {
+        "seconds": 518.4985973834991,
+        "peak_mem_allocated_gb": 2.0714,
+        "peak_mem_reserved_gb": 2.6016
+      },
+      "boolq": {
+        "seconds": 96.64663052558899,
+        "peak_mem_allocated_gb": 6.869,
+        "peak_mem_reserved_gb": 8.3438
+      },
+      "arc_easy": {
+        "seconds": 86.71267056465149,
+        "peak_mem_allocated_gb": 2.137,
+        "peak_mem_reserved_gb": 8.3438
+      }
+    }
+  },
+  "dataset_revisions": {
+    "gsm8k_cot": {
+      "path": "openai/gsm8k",
+      "name": "main",
+      "revision_at_eval": "740312add88f781978c0658806c59bc2815b9866"
+    },
+    "hellaswag": {
+      "path": "Rowan/hellaswag",
+      "name": null,
+      "revision_at_eval": "218ec52e09a7e7462a5400043bb9a69a41d06b76"
+    },
+    "boolq": {
+      "path": "aps/super_glue",
+      "name": "boolq",
+      "revision_at_eval": "3de24cf8022e94f4ee4b9d55a6f539891524d646"
+    },
+    "arc_easy": {
+      "path": "allenai/ai2_arc",
+      "name": "ARC-Easy",
+      "revision_at_eval": "210d026faf9955653af8916fad021475a3f00453"
+    }
+  },
+  "settings": {
+    "gen": {
+      "batch_size": 32,
+      "max_gen_toks": 1024,
+      "num_fewshot": 0,
+      "apply_chat_template": true,
+      "enable_thinking": false,
+      "dtype": "float16"
+    },
+    "ll": {
+      "batch_size": 8,
+      "num_fewshot": 0,
+      "apply_chat_template": false,
+      "dtype": "float16"
+    }
+  },
+  "lm_eval_version": "0.4.13",
+  "versions": {
+    "lm_eval": "0.4.13",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.16.1",
+    "datasets": "4.8.5",
+    "accelerate": "1.14.0"
+  },
+  "gpu": "Tesla T4"
+}

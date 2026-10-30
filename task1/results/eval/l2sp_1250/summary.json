@@ -1,0 +1,176 @@
+{
+  "condition": "l2sp_1250",
+  "status": "ok",
+  "return_codes": {
+    "gen": 0,
+    "ll": 0
+  },
+  "model": {
+    "condition": "l2sp_1250",
+    "method": "l2sp",
+    "update": 1250,
+    "base": "Qwen/Qwen3-0.6B",
+    "base_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "weights": "/kaggle/input/notebooks/dentusayd/atml-pa3-task1-l2sp/task1/models/l2sp/update_1250/model.safetensors",
+    "weights_sha256": "7d45cc2c2efd4d235397d333b9d365d11a7cb58a63546089e52f2753757a4685",
+    "dtype": "torch.float16"
+  },
+  "merge_check": null,
+  "primary": {
+    "gsm8k_cot": {
+      "metric": "exact_match,flexible-extract",
+      "value": 0.6535253980288097
+    },
+    "hellaswag": {
+      "metric": "acc_norm,none",
+      "value": 0.4649472216689902
+    },
+    "boolq": {
+      "metric": "acc,none",
+      "value": 0.6657492354740061
+    },
+    "arc_easy": {
+      "metric": "acc_norm,none",
+      "value": 0.6372053872053872
+    }
+  },
+  "scores": {
+    "gsm8k_cot": {
+      "name": "gsm8k_cot",
+      "sample_len": 1319,
+      "exact_match,strict-match": 0.0,
+      "exact_match_stderr,strict-match": 0.0,
+      "exact_match,flexible-extract": 0.6535253980288097,
+      "exact_match_stderr,flexible-extract": 0.013107179054313392
+    },
+    "hellaswag": {
+      "name": "hellaswag",
+      "sample_len": 10042,
+      "acc,none": 0.37532364070902213,
+      "acc_stderr,none": 0.004832167854501845,
+      "acc_norm,none": 0.4649472216689902,
+      "acc_norm_stderr,none": 0.004977504446608968
+    },
+    "boolq": {
+      "name": "boolq",
+      "sample_len": 3270,
+      "acc,none": 0.6657492354740061,
+      "acc_stderr,none": 0.008250572455083389
+    },
+    "arc_easy": {
+      "name": "arc_easy",
+      "sample_len": 2376,
+      "acc,none": 0.6637205387205387,
+      "acc_stderr,none": 0.0096941780727253,
+      "acc_norm,none": 0.6372053872053872,
+      "acc_norm_stderr,none": 0.009865936757013891
+    }
+  },
+  "n_samples": {
+    "gsm8k_cot": {
+      "original": 1319,
+      "effective": 1319
+    },
+    "hellaswag": {
+      "original": 10042,
+      "effective": 10042
+    },
+    "boolq": {
+      "original": 3270,
+      "effective": 3270
+    },
+    "arc_easy": {
+      "original": 2376,
+      "effective": 2376
+    }
+  },
+  "gsm8k_generation": {
+    "n_truncated": 13,
+    "n_no_extraction_flexible": 0,
+    "n_no_extraction_strict": 1319,
+    "mean_new_tokens": 141.2357846853677,
+    "stop_reasons": {
+      "stop_sequence": 0,
+      "eos": 1306,
+      "length": 13
+    }
+  },
+  "resources": {
+    "wall_seconds": 1858.6856088638306,
+    "gpus": 2,
+    "parallel_parts": true,
+    "model_load_seconds": {
+      "gen": 360.4225027561188,
+      "ll": 361.0644450187683
+    },
+    "tasks": {
+      "gsm8k_cot": {
+        "seconds": 1486.6052305698395,
+        "peak_mem_allocated_gb": 5.6313,
+        "peak_mem_reserved_gb": 6.3516
+      },
+      "hellaswag": {
+        "seconds": 566.2304346561432,
+        "peak_mem_allocated_gb": 2.0714,
+        "peak_mem_reserved_gb": 2.3086
+      },
+      "boolq": {
+        "seconds": 104.7936851978302,
+        "peak_mem_allocated_gb": 6.869,
+        "peak_mem_reserved_gb": 8.1094
+      },
+      "arc_easy": {
+        "seconds": 82.3179304599762,
+        "peak_mem_allocated_gb": 2.137,
+        "peak_mem_reserved_gb": 8.1094
+      }
+    }
+  },
+  "dataset_revisions": {
+    "gsm8k_cot": {
+      "path": "openai/gsm8k",
+      "name": "main",
+      "revision_at_eval": "740312add88f781978c0658806c59bc2815b9866"
+    },
+    "hellaswag": {
+      "path": "Rowan/hellaswag",
+      "name": null,
+      "revision_at_eval": "218ec52e09a7e7462a5400043bb9a69a41d06b76"
+    },
+    "boolq": {
+      "path": "aps/super_glue",
+      "name": "boolq",
+      "revision_at_eval": "3de24cf8022e94f4ee4b9d55a6f539891524d646"
+    },
+    "arc_easy": {
+      "path": "allenai/ai2_arc",
+      "name": "ARC-Easy",
+      "revision_at_eval": "210d026faf9955653af8916fad021475a3f00453"
+    }
+  },
+  "settings": {
+    "gen": {
+      "batch_size": 32,
+      "max_gen_toks": 1024,
+      "num_fewshot": 0,
+      "apply_chat_template": true,
+      "enable_thinking": false,
+      "dtype": "float16"
+    },
+    "ll": {
+      "batch_size": 8,
+      "num_fewshot": 0,
+      "apply_chat_template": false,
+      "dtype": "float16"
+    }
+  },
+  "lm_eval_version": "0.4.13",
+  "versions": {
+    "lm_eval": "0.4.13",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.16.1",
+    "datasets": "4.8.5",
+    "accelerate": "1.14.0"
+  },
+  "gpu": "Tesla T4"
+}

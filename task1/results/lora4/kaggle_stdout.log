@@ -1,0 +1,169 @@
+[{"stream_name":"stderr","time":43.867327635,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":49.812238696,"data":"\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c02:45,  1.87it/s]\rLoading weights:  73%|███████▎  | 226/311 [00:00\u003c00:00, 473.13it/s]\rLoading weights: 100%|██████████| 311/311 [00:00\u003c00:00, 406.30it/s]\n"}
+,{"stream_name":"stdout","time":66.029089458,"data":"update    1/1250 | sft_loss 1.0286 | lr 0.00e+00 | grad_norm 1.890 | 10.3 s/update | ETA 3h33m\n"}
+,{"stream_name":"stdout","time":137.61531681,"data":"update   10/1250 | sft_loss 0.7853 | lr 4.74e-05 | grad_norm 1.560 | 7.9 s/update | ETA 2h49m\n"}
+,{"stream_name":"stdout","time":218.491148362,"data":"update   20/1250 | sft_loss 0.4774 | lr 1.00e-04 | grad_norm 0.583 | 7.9 s/update | ETA 2h46m\n"}
+,{"stream_name":"stdout","time":301.848358305,"data":"update   30/1250 | sft_loss 0.3667 | lr 1.53e-04 | grad_norm 0.332 | 8.3 s/update | ETA 2h46m\n"}
+,{"stream_name":"stdout","time":382.473261139,"data":"update   40/1250 | sft_loss 0.3389 | lr 2.00e-04 | grad_norm 0.298 | 9.1 s/update | ETA 2h44m\n"}
+,{"stream_name":"stdout","time":463.461730592,"data":"update   50/1250 | sft_loss 0.2787 | lr 2.00e-04 | grad_norm 0.221 | 8.2 s/update | ETA 2h43m\n"}
+,{"stream_name":"stdout","time":542.540361545,"data":"update   60/1250 | sft_loss 0.3024 | lr 2.00e-04 | grad_norm 0.241 | 8.2 s/update | ETA 2h40m\n"}
+,{"stream_name":"stdout","time":624.459736517,"data":"update   70/1250 | sft_loss 0.2877 | lr 2.00e-04 | grad_norm 0.264 | 8.8 s/update | ETA 2h39m\n"}
+,{"stream_name":"stdout","time":704.747575872,"data":"update   80/1250 | sft_loss 0.2742 | lr 1.99e-04 | grad_norm 0.263 | 7.8 s/update | ETA 2h38m\n"}
+,{"stream_name":"stdout","time":785.546304446,"data":"update   90/1250 | sft_loss 0.2714 | lr 1.99e-04 | grad_norm 0.253 | 7.9 s/update | ETA 2h36m\n"}
+,{"stream_name":"stdout","time":866.77296104,"data":"update  100/1250 | sft_loss 0.2706 | lr 1.99e-04 | grad_norm 0.236 | 8.6 s/update | ETA 2h35m\n"}
+,{"stream_name":"stdout","time":946.880384777,"data":"update  110/1250 | sft_loss 0.2839 | lr 1.98e-04 | grad_norm 0.320 | 7.9 s/update | ETA 2h33m\n"}
+,{"stream_name":"stdout","time":1028.654795795,"data":"update  120/1250 | sft_loss 0.2435 | lr 1.98e-04 | grad_norm 0.262 | 8.0 s/update | ETA 2h32m\n"}
+,{"stream_name":"stdout","time":1109.641896747,"data":"update  130/1250 | sft_loss 0.2454 | lr 1.97e-04 | grad_norm 0.260 | 7.9 s/update | ETA 2h31m\n"}
+,{"stream_name":"stdout","time":1189.00251961,"data":"update  140/1250 | sft_loss 0.2528 | lr 1.97e-04 | grad_norm 0.300 | 7.9 s/update | ETA 2h29m\n"}
+,{"stream_name":"stdout","time":1271.916348143,"data":"update  150/1250 | sft_loss 0.2603 | lr 1.96e-04 | grad_norm 0.304 | 8.5 s/update | ETA 2h28m\n"}
+,{"stream_name":"stdout","time":1356.172107743,"data":"update  160/1250 | sft_loss 0.2390 | lr 1.95e-04 | grad_norm 0.263 | 8.0 s/update | ETA 2h27m\n"}
+,{"stream_name":"stdout","time":1438.849186938,"data":"update  170/1250 | sft_loss 0.2724 | lr 1.94e-04 | grad_norm 0.269 | 8.3 s/update | ETA 2h26m\n"}
+,{"stream_name":"stdout","time":1522.467840658,"data":"update  180/1250 | sft_loss 0.2697 | lr 1.93e-04 | grad_norm 0.313 | 8.2 s/update | ETA 2h25m\n"}
+,{"stream_name":"stdout","time":1603.588040273,"data":"update  190/1250 | sft_loss 0.2310 | lr 1.92e-04 | grad_norm 0.293 | 7.9 s/update | ETA 2h23m\n"}
+,{"stream_name":"stdout","time":1683.734573686,"data":"update  200/1250 | sft_loss 0.2189 | lr 1.91e-04 | grad_norm 0.276 | 8.1 s/update | ETA 2h22m\n"}
+,{"stream_name":"stdout","time":1765.62685088,"data":"update  210/1250 | sft_loss 0.2741 | lr 1.90e-04 | grad_norm 0.300 | 7.8 s/update | ETA 2h21m\n"}
+,{"stream_name":"stdout","time":1847.792690301,"data":"update  220/1250 | sft_loss 0.2596 | lr 1.89e-04 | grad_norm 0.299 | 8.0 s/update | ETA 2h19m\n"}
+,{"stream_name":"stdout","time":1927.383023043,"data":"update  230/1250 | sft_loss 0.2083 | lr 1.88e-04 | grad_norm 0.273 | 7.7 s/update | ETA 2h18m\n"}
+,{"stream_name":"stdout","time":2003.917163178,"data":"update  240/1250 | sft_loss 0.2671 | lr 1.87e-04 | grad_norm 0.268 | 8.1 s/update | ETA 2h16m\n"}
+,{"stream_name":"stdout","time":2082.031898621,"data":"update  250/1250 | sft_loss 0.2594 | lr 1.85e-04 | grad_norm 0.327 | 7.7 s/update | ETA 2h15m\n"}
+,{"stream_name":"stdout","time":2160.664994039,"data":"update  260/1250 | sft_loss 0.2076 | lr 1.84e-04 | grad_norm 0.257 | 7.5 s/update | ETA 2h13m\n"}
+,{"stream_name":"stdout","time":2237.966187384,"data":"update  270/1250 | sft_loss 0.2466 | lr 1.83e-04 | grad_norm 0.296 | 7.6 s/update | ETA 2h12m\n"}
+,{"stream_name":"stdout","time":2319.194778099,"data":"update  280/1250 | sft_loss 0.2058 | lr 1.81e-04 | grad_norm 0.245 | 8.1 s/update | ETA 2h10m\n"}
+,{"stream_name":"stdout","time":2399.158668641,"data":"update  290/1250 | sft_loss 0.2962 | lr 1.80e-04 | grad_norm 0.317 | 7.6 s/update | ETA 2h09m\n"}
+,{"stream_name":"stdout","time":2476.223367084,"data":"update  300/1250 | sft_loss 0.2260 | lr 1.78e-04 | grad_norm 0.287 | 7.6 s/update | ETA 2h07m\n"}
+,{"stream_name":"stdout","time":2554.654236209,"data":"update  310/1250 | sft_loss 0.2632 | lr 1.76e-04 | grad_norm 0.271 | 8.5 s/update | ETA 2h06m\n"}
+,{"stream_name":"stdout","time":2636.673000059,"data":"update  320/1250 | sft_loss 0.1968 | lr 1.75e-04 | grad_norm 0.237 | 8.4 s/update | ETA 2h05m\n"}
+,{"stream_name":"stdout","time":2716.850244449,"data":"update  330/1250 | sft_loss 0.2304 | lr 1.73e-04 | grad_norm 0.300 | 7.8 s/update | ETA 2h03m\n"}
+,{"stream_name":"stdout","time":2796.587832211,"data":"update  340/1250 | sft_loss 0.2175 | lr 1.71e-04 | grad_norm 0.291 | 7.9 s/update | ETA 2h02m\n"}
+,{"stream_name":"stdout","time":2877.642058712,"data":"update  350/1250 | sft_loss 0.2343 | lr 1.69e-04 | grad_norm 0.271 | 8.0 s/update | ETA 2h00m\n"}
+,{"stream_name":"stdout","time":2956.296146986,"data":"update  360/1250 | sft_loss 0.2513 | lr 1.67e-04 | grad_norm 0.266 | 7.9 s/update | ETA 1h59m\n"}
+,{"stream_name":"stdout","time":3038.338085551,"data":"update  370/1250 | sft_loss 0.2553 | lr 1.65e-04 | grad_norm 0.286 | 8.6 s/update | ETA 1h58m\n"}
+,{"stream_name":"stdout","time":3124.214800873,"data":"update  380/1250 | sft_loss 0.2230 | lr 1.63e-04 | grad_norm 0.312 | 8.6 s/update | ETA 1h57m\n"}
+,{"stream_name":"stdout","time":3204.993891843,"data":"update  390/1250 | sft_loss 0.2094 | lr 1.61e-04 | grad_norm 0.288 | 7.7 s/update | ETA 1h55m\n"}
+,{"stream_name":"stdout","time":3286.782341946,"data":"update  400/1250 | sft_loss 0.2191 | lr 1.59e-04 | grad_norm 0.278 | 8.3 s/update | ETA 1h54m\n"}
+,{"stream_name":"stdout","time":3370.918928177,"data":"update  410/1250 | sft_loss 0.2212 | lr 1.57e-04 | grad_norm 0.271 | 8.6 s/update | ETA 1h53m\n"}
+,{"stream_name":"stdout","time":3451.191421552,"data":"update  420/1250 | sft_loss 0.2576 | lr 1.55e-04 | grad_norm 0.295 | 7.9 s/update | ETA 1h51m\n"}
+,{"stream_name":"stdout","time":3530.335646754,"data":"update  430/1250 | sft_loss 0.2206 | lr 1.53e-04 | grad_norm 0.284 | 7.8 s/update | ETA 1h50m\n"}
+,{"stream_name":"stdout","time":3609.669671377,"data":"update  440/1250 | sft_loss 0.2159 | lr 1.51e-04 | grad_norm 0.290 | 7.6 s/update | ETA 1h49m\n"}
+,{"stream_name":"stdout","time":3692.495895547,"data":"update  450/1250 | sft_loss 0.2438 | lr 1.48e-04 | grad_norm 0.299 | 7.7 s/update | ETA 1h47m\n"}
+,{"stream_name":"stdout","time":3774.066591789,"data":"update  460/1250 | sft_loss 0.2414 | lr 1.46e-04 | grad_norm 0.259 | 8.2 s/update | ETA 1h46m\n"}
+,{"stream_name":"stdout","time":3855.236152521,"data":"update  470/1250 | sft_loss 0.2249 | lr 1.44e-04 | grad_norm 0.298 | 8.0 s/update | ETA 1h45m\n"}
+,{"stream_name":"stdout","time":3938.02375126,"data":"update  480/1250 | sft_loss 0.2336 | lr 1.41e-04 | grad_norm 0.268 | 8.3 s/update | ETA 1h43m\n"}
+,{"stream_name":"stdout","time":4019.844767291,"data":"update  490/1250 | sft_loss 0.1747 | lr 1.39e-04 | grad_norm 0.256 | 7.7 s/update | ETA 1h42m\n"}
+,{"stream_name":"stdout","time":4100.613406068,"data":"update  500/1250 | sft_loss 0.2220 | lr 1.37e-04 | grad_norm 0.283 | 8.8 s/update | ETA 1h41m\n"}
+,{"stream_name":"stdout","time":4179.92473724,"data":"update  510/1250 | sft_loss 0.2392 | lr 1.34e-04 | grad_norm 0.278 | 8.0 s/update | ETA 1h39m\n"}
+,{"stream_name":"stdout","time":4260.205369948,"data":"update  520/1250 | sft_loss 0.2014 | lr 1.32e-04 | grad_norm 0.263 | 8.0 s/update | ETA 1h38m\n"}
+,{"stream_name":"stdout","time":4340.419980557,"data":"update  530/1250 | sft_loss 0.2116 | lr 1.29e-04 | grad_norm 0.257 | 7.9 s/update | ETA 1h37m\n"}
+,{"stream_name":"stdout","time":4417.509716543,"data":"update  540/1250 | sft_loss 0.2434 | lr 1.27e-04 | grad_norm 0.309 | 7.7 s/update | ETA 1h35m\n"}
+,{"stream_name":"stdout","time":4496.73314095,"data":"update  550/1250 | sft_loss 0.2125 | lr 1.24e-04 | grad_norm 0.274 | 7.7 s/update | ETA 1h34m\n"}
+,{"stream_name":"stdout","time":4571.976344088,"data":"update  560/1250 | sft_loss 0.2415 | lr 1.22e-04 | grad_norm 0.269 | 7.4 s/update | ETA 1h32m\n"}
+,{"stream_name":"stdout","time":4647.988217205,"data":"update  570/1250 | sft_loss 0.2189 | lr 1.19e-04 | grad_norm 0.274 | 7.4 s/update | ETA 1h31m\n"}
+,{"stream_name":"stdout","time":4725.607531358,"data":"update  580/1250 | sft_loss 0.2137 | lr 1.17e-04 | grad_norm 0.258 | 7.6 s/update | ETA 1h29m\n"}
+,{"stream_name":"stdout","time":4800.670945871,"data":"update  590/1250 | sft_loss 0.2275 | lr 1.14e-04 | grad_norm 0.269 | 7.4 s/update | ETA 1h28m\n"}
+,{"stream_name":"stdout","time":4876.572268234,"data":"update  600/1250 | sft_loss 0.2180 | lr 1.12e-04 | grad_norm 0.291 | 7.3 s/update | ETA 1h27m\n"}
+,{"stream_name":"stdout","time":4952.596801907,"data":"update  610/1250 | sft_loss 0.1910 | lr 1.09e-04 | grad_norm 0.257 | 7.4 s/update | ETA 1h25m\n"}
+,{"stream_name":"stdout","time":5029.170188345,"data":"update  620/1250 | sft_loss 0.2658 | lr 1.06e-04 | grad_norm 0.308 | 8.1 s/update | ETA 1h24m\n"}
+,{"stream_name":"stdout","time":5105.350502827,"data":"update  630/1250 | sft_loss 0.1992 | lr 1.04e-04 | grad_norm 0.286 | 7.7 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":5182.110567198,"data":"update  640/1250 | sft_loss 0.2015 | lr 1.01e-04 | grad_norm 0.264 | 8.0 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":5258.184492877,"data":"update  650/1250 | sft_loss 0.1913 | lr 9.87e-05 | grad_norm 0.292 | 7.4 s/update | ETA 1h20m\n"}
+,{"stream_name":"stdout","time":5334.229557737,"data":"update  660/1250 | sft_loss 0.2336 | lr 9.61e-05 | grad_norm 0.266 | 7.5 s/update | ETA 1h18m\n"}
+,{"stream_name":"stdout","time":5410.171874567,"data":"update  670/1250 | sft_loss 0.2062 | lr 9.35e-05 | grad_norm 0.256 | 7.7 s/update | ETA 1h17m\n"}
+,{"stream_name":"stdout","time":5486.248697179,"data":"update  680/1250 | sft_loss 0.2248 | lr 9.09e-05 | grad_norm 0.315 | 7.4 s/update | ETA 1h15m\n"}
+,{"stream_name":"stdout","time":5566.321059518,"data":"update  690/1250 | sft_loss 0.2312 | lr 8.84e-05 | grad_norm 0.292 | 7.5 s/update | ETA 1h14m\n"}
+,{"stream_name":"stdout","time":5644.324579693,"data":"update  700/1250 | sft_loss 0.2232 | lr 8.58e-05 | grad_norm 0.280 | 7.6 s/update | ETA 1h13m\n"}
+,{"stream_name":"stdout","time":5724.225810708,"data":"update  710/1250 | sft_loss 0.2093 | lr 8.32e-05 | grad_norm 0.330 | 7.5 s/update | ETA 1h11m\n"}
+,{"stream_name":"stdout","time":5804.490407159,"data":"update  720/1250 | sft_loss 0.2333 | lr 8.07e-05 | grad_norm 0.304 | 8.1 s/update | ETA 1h10m\n"}
+,{"stream_name":"stdout","time":5883.628865746,"data":"update  730/1250 | sft_loss 0.2143 | lr 7.81e-05 | grad_norm 0.264 | 7.7 s/update | ETA 1h09m\n"}
+,{"stream_name":"stdout","time":5966.181656259,"data":"update  740/1250 | sft_loss 0.2169 | lr 7.56e-05 | grad_norm 0.246 | 9.5 s/update | ETA 1h07m\n"}
+,{"stream_name":"stdout","time":6044.170855433,"data":"update  750/1250 | sft_loss 0.1687 | lr 7.31e-05 | grad_norm 0.263 | 7.9 s/update | ETA 1h06m\n"}
+,{"stream_name":"stdout","time":6122.841039537,"data":"update  760/1250 | sft_loss 0.2567 | lr 7.06e-05 | grad_norm 0.302 | 7.7 s/update | ETA 1h05m\n"}
+,{"stream_name":"stdout","time":6199.253996796,"data":"update  770/1250 | sft_loss 0.2097 | lr 6.82e-05 | grad_norm 0.311 | 7.5 s/update | ETA 1h03m\n"}
+,{"stream_name":"stdout","time":6278.104720045,"data":"update  780/1250 | sft_loss 0.2227 | lr 6.57e-05 | grad_norm 0.300 | 7.5 s/update | ETA 1h02m\n"}
+,{"stream_name":"stdout","time":6353.854862105,"data":"update  790/1250 | sft_loss 0.1864 | lr 6.33e-05 | grad_norm 0.264 | 7.4 s/update | ETA 1h01m\n"}
+,{"stream_name":"stdout","time":6431.487592992,"data":"update  800/1250 | sft_loss 0.1926 | lr 6.09e-05 | grad_norm 0.289 | 7.4 s/update | ETA 0h59m\n"}
+,{"stream_name":"stdout","time":6508.970330158,"data":"update  810/1250 | sft_loss 0.2562 | lr 5.85e-05 | grad_norm 0.333 | 7.4 s/update | ETA 0h58m\n"}
+,{"stream_name":"stdout","time":6584.74802919,"data":"update  820/1250 | sft_loss 0.2004 | lr 5.62e-05 | grad_norm 0.308 | 7.6 s/update | ETA 0h57m\n"}
+,{"stream_name":"stdout","time":6660.700995974,"data":"update  830/1250 | sft_loss 0.1868 | lr 5.39e-05 | grad_norm 0.255 | 8.4 s/update | ETA 0h55m\n"}
+,{"stream_name":"stdout","time":6738.043048575,"data":"update  840/1250 | sft_loss 0.2268 | lr 5.16e-05 | grad_norm 0.314 | 7.4 s/update | ETA 0h54m\n"}
+,{"stream_name":"stdout","time":6813.260326269,"data":"update  850/1250 | sft_loss 0.2163 | lr 4.93e-05 | grad_norm 0.267 | 7.4 s/update | ETA 0h52m\n"}
+,{"stream_name":"stdout","time":6888.952009446,"data":"update  860/1250 | sft_loss 0.1851 | lr 4.71e-05 | grad_norm 0.271 | 7.9 s/update | ETA 0h51m\n"}
+,{"stream_name":"stdout","time":6964.695456249,"data":"update  870/1250 | sft_loss 0.1757 | lr 4.49e-05 | grad_norm 0.276 | 7.3 s/update | ETA 0h50m\n"}
+,{"stream_name":"stdout","time":7039.009422279,"data":"update  880/1250 | sft_loss 0.1821 | lr 4.28e-05 | grad_norm 0.266 | 7.8 s/update | ETA 0h48m\n"}
+,{"stream_name":"stdout","time":7113.669567771,"data":"update  890/1250 | sft_loss 0.2134 | lr 4.07e-05 | grad_norm 0.288 | 7.3 s/update | ETA 0h47m\n"}
+,{"stream_name":"stdout","time":7190.88418446,"data":"update  900/1250 | sft_loss 0.1951 | lr 3.86e-05 | grad_norm 0.292 | 7.3 s/update | ETA 0h46m\n"}
+,{"stream_name":"stdout","time":7266.475333532,"data":"update  910/1250 | sft_loss 0.1738 | lr 3.66e-05 | grad_norm 0.271 | 7.3 s/update | ETA 0h44m\n"}
+,{"stream_name":"stdout","time":7342.40802166,"data":"update  920/1250 | sft_loss 0.2358 | lr 3.46e-05 | grad_norm 0.302 | 7.3 s/update | ETA 0h43m\n"}
+,{"stream_name":"stdout","time":7416.961390259,"data":"update  930/1250 | sft_loss 0.1894 | lr 3.27e-05 | grad_norm 0.255 | 7.2 s/update | ETA 0h42m\n"}
+,{"stream_name":"stdout","time":7490.551913775,"data":"update  940/1250 | sft_loss 0.1933 | lr 3.08e-05 | grad_norm 0.254 | 7.5 s/update | ETA 0h40m\n"}
+,{"stream_name":"stdout","time":7564.520851203,"data":"update  950/1250 | sft_loss 0.2245 | lr 2.89e-05 | grad_norm 0.316 | 7.2 s/update | ETA 0h39m\n"}
+,{"stream_name":"stdout","time":7641.636742906,"data":"update  960/1250 | sft_loss 0.1837 | lr 2.71e-05 | grad_norm 0.258 | 7.6 s/update | ETA 0h38m\n"}
+,{"stream_name":"stdout","time":7716.198853022,"data":"update  970/1250 | sft_loss 0.2416 | lr 2.54e-05 | grad_norm 0.282 | 7.8 s/update | ETA 0h36m\n"}
+,{"stream_name":"stdout","time":7789.378133501,"data":"update  980/1250 | sft_loss 0.2076 | lr 2.37e-05 | grad_norm 0.285 | 7.1 s/update | ETA 0h35m\n"}
+,{"stream_name":"stdout","time":7863.594875708,"data":"update  990/1250 | sft_loss 0.2024 | lr 2.20e-05 | grad_norm 0.289 | 7.3 s/update | ETA 0h34m\n"}
+,{"stream_name":"stdout","time":7937.879444274,"data":"update 1000/1250 | sft_loss 0.2301 | lr 2.04e-05 | grad_norm 0.284 | 7.6 s/update | ETA 0h32m\n"}
+,{"stream_name":"stdout","time":8012.775228982,"data":"update 1010/1250 | sft_loss 0.2156 | lr 1.89e-05 | grad_norm 0.280 | 7.4 s/update | ETA 0h31m\n"}
+,{"stream_name":"stdout","time":8088.841122274,"data":"update 1020/1250 | sft_loss 0.1721 | lr 1.74e-05 | grad_norm 0.276 | 7.3 s/update | ETA 0h30m\n"}
+,{"stream_name":"stdout","time":8164.183362684,"data":"update 1030/1250 | sft_loss 0.2317 | lr 1.60e-05 | grad_norm 0.305 | 8.0 s/update | ETA 0h28m\n"}
+,{"stream_name":"stdout","time":8238.058672713,"data":"update 1040/1250 | sft_loss 0.2007 | lr 1.46e-05 | grad_norm 0.284 | 7.7 s/update | ETA 0h27m\n"}
+,{"stream_name":"stdout","time":8311.700382512,"data":"update 1050/1250 | sft_loss 0.2441 | lr 1.33e-05 | grad_norm 0.303 | 7.3 s/update | ETA 0h26m\n"}
+,{"stream_name":"stdout","time":8387.837357818,"data":"update 1060/1250 | sft_loss 0.1837 | lr 1.20e-05 | grad_norm 0.267 | 8.0 s/update | ETA 0h24m\n"}
+,{"stream_name":"stdout","time":8463.47008826,"data":"update 1070/1250 | sft_loss 0.2531 | lr 1.08e-05 | grad_norm 0.333 | 7.2 s/update | ETA 0h23m\n"}
+,{"stream_name":"stdout","time":8539.051946932,"data":"update 1080/1250 | sft_loss 0.1917 | lr 9.66e-06 | grad_norm 0.270 | 7.5 s/update | ETA 0h22m\n"}
+,{"stream_name":"stdout","time":8614.952522262,"data":"update 1090/1250 | sft_loss 0.2186 | lr 8.58e-06 | grad_norm 0.296 | 8.1 s/update | ETA 0h20m\n"}
+,{"stream_name":"stdout","time":8688.639927364,"data":"update 1100/1250 | sft_loss 0.2285 | lr 7.56e-06 | grad_norm 0.310 | 7.1 s/update | ETA 0h19m\n"}
+,{"stream_name":"stdout","time":8762.958591153,"data":"update 1110/1250 | sft_loss 0.1995 | lr 6.60e-06 | grad_norm 0.309 | 7.3 s/update | ETA 0h18m\n"}
+,{"stream_name":"stdout","time":8836.029766123,"data":"update 1120/1250 | sft_loss 0.1822 | lr 5.71e-06 | grad_norm 0.270 | 7.5 s/update | ETA 0h16m\n"}
+,{"stream_name":"stdout","time":8910.793216135,"data":"update 1130/1250 | sft_loss 0.1912 | lr 4.88e-06 | grad_norm 0.275 | 7.6 s/update | ETA 0h15m\n"}
+,{"stream_name":"stdout","time":8985.608310225,"data":"update 1140/1250 | sft_loss 0.2006 | lr 4.11e-06 | grad_norm 0.236 | 8.5 s/update | ETA 0h14m\n"}
+,{"stream_name":"stdout","time":9059.964171374,"data":"update 1150/1250 | sft_loss 0.1808 | lr 3.41e-06 | grad_norm 0.276 | 7.4 s/update | ETA 0h13m\n"}
+,{"stream_name":"stdout","time":9134.111285198,"data":"update 1160/1250 | sft_loss 0.2322 | lr 2.77e-06 | grad_norm 0.280 | 7.9 s/update | ETA 0h11m\n"}
+,{"stream_name":"stdout","time":9207.626434567,"data":"update 1170/1250 | sft_loss 0.1809 | lr 2.20e-06 | grad_norm 0.256 | 7.7 s/update | ETA 0h10m\n"}
+,{"stream_name":"stdout","time":9280.876800543,"data":"update 1180/1250 | sft_loss 0.2041 | lr 1.69e-06 | grad_norm 0.274 | 7.2 s/update | ETA 0h09m\n"}
+,{"stream_name":"stdout","time":9355.392475775,"data":"update 1190/1250 | sft_loss 0.2481 | lr 1.25e-06 | grad_norm 0.272 | 8.1 s/update | ETA 0h07m\n"}
+,{"stream_name":"stdout","time":9430.429493612,"data":"update 1200/1250 | sft_loss 0.1924 | lr 8.73e-07 | grad_norm 0.289 | 7.1 s/update | ETA 0h06m\n"}
+,{"stream_name":"stdout","time":9504.041382889,"data":"update 1210/1250 | sft_loss 0.1816 | lr 5.64e-07 | grad_norm 0.306 | 7.2 s/update | ETA 0h05m\n"}
+,{"stream_name":"stdout","time":9575.714476993,"data":"update 1220/1250 | sft_loss 0.1909 | lr 3.23e-07 | grad_norm 0.289 | 7.1 s/update | ETA 0h03m\n"}
+,{"stream_name":"stdout","time":9649.522624306,"data":"update 1230/1250 | sft_loss 0.2023 | lr 1.48e-07 | grad_norm 0.253 | 7.6 s/update | ETA 0h02m\n"}
+,{"stream_name":"stdout","time":9724.092489459,"data":"update 1240/1250 | sft_loss 0.2304 | lr 4.06e-08 | grad_norm 0.287 | 7.1 s/update | ETA 0h01m\n"}
+,{"stream_name":"stdout","time":9798.264839774,"data":"update 1250/1250 | sft_loss 0.1935 | lr 3.36e-10 | grad_norm 0.284 | 7.1 s/update | ETA 0h00m\n"}
+,{"stream_name":"stdout","time":9798.420505185,"data":"{\n"}
+,{"stream_name":"stdout","time":9798.420532045,"data":"  \"method\": \"lora4\",\n"}
+,{"stream_name":"stdout","time":9798.420538169,"data":"  \"displacement\": {},\n"}
+,{"stream_name":"stdout","time":9798.420543651,"data":"  \"checkpoints\": {\n"}
+,{"stream_name":"stdout","time":9798.42054875,"data":"    \"312\": {\n"}
+,{"stream_name":"stdout","time":9798.420553316,"data":"      \"recovery_bytes\": 30697637,\n"}
+,{"stream_name":"stdout","time":9798.420557713,"data":"      \"save_seconds\": 0.18525958061218262\n"}
+,{"stream_name":"stdout","time":9798.420562225,"data":"    },\n"}
+,{"stream_name":"stdout","time":9798.420566372,"data":"    \"625\": {\n"}
+,{"stream_name":"stdout","time":9798.42057149,"data":"      \"recovery_bytes\": 30727973,\n"}
+,{"stream_name":"stdout","time":9798.42057701,"data":"      \"save_seconds\": 0.13059282302856445\n"}
+,{"stream_name":"stdout","time":9798.420582395,"data":"    },\n"}
+,{"stream_name":"stdout","time":9798.420587188,"data":"    \"937\": {\n"}
+,{"stream_name":"stdout","time":9798.420592031,"data":"      \"recovery_bytes\": 30758245,\n"}
+,{"stream_name":"stdout","time":9798.420596301,"data":"      \"save_seconds\": 0.13237476348876953\n"}
+,{"stream_name":"stdout","time":9798.420600596,"data":"    },\n"}
+,{"stream_name":"stdout","time":9798.420604887,"data":"    \"1250\": {\n"}
+,{"stream_name":"stdout","time":9798.420609143,"data":"      \"recovery_bytes\": 30788645,\n"}
+,{"stream_name":"stdout","time":9798.420613517,"data":"      \"save_seconds\": 0.13402366638183594,\n"}
+,{"stream_name":"stdout","time":9798.420617783,"data":"      \"model_bytes\": 10134056\n"}
+,{"stream_name":"stdout","time":9798.420626376,"data":"    }\n"}
+,{"stream_name":"stdout","time":9798.420629224,"data":"  },\n"}
+,{"stream_name":"stdout","time":9798.420632158,"data":"  \"updates_completed\": 1250,\n"}
+,{"stream_name":"stdout","time":9798.42063507,"data":"  \"skipped_updates\": [],\n"}
+,{"stream_name":"stdout","time":9798.420637958,"data":"  \"train_seconds\": 9741.998842477798,\n"}
+,{"stream_name":"stdout","time":9798.420641094,"data":"  \"wall_seconds_this_session\": 9742.650897026062,\n"}
+,{"stream_name":"stdout","time":9798.420644411,"data":"  \"peak_mem_allocated_gb\": 3.1401,\n"}
+,{"stream_name":"stdout","time":9798.420647366,"data":"  \"peak_mem_reserved_gb\": 3.5078,\n"}
+,{"stream_name":"stdout","time":9798.420650297,"data":"  \"trainable_params\": 2523136,\n"}
+,{"stream_name":"stdout","time":9798.420653164,"data":"  \"gpu\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":9798.420679285,"data":"  \"overhead\": {\n"}
+,{"stream_name":"stdout","time":9798.420684861,"data":"    \"adapter_setup_seconds\": 0.07302737236022949\n"}
+,{"stream_name":"stdout","time":9798.420689923,"data":"  }\n"}
+,{"stream_name":"stdout","time":9798.42069477,"data":"}\n"}
+,{"stream_name":"stderr","time":9805.558475575,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":9805.558544029,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":9805.851962252,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":9805.852001316,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":9806.652576637,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":9807.896090165,"data":"[NbConvertApp] Writing 415419 bytes to __results__.html\n"}
+]

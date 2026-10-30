@@ -1,0 +1,28 @@
+{
+  "revisions": {
+    "Qwen/Qwen3-0.6B": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "meta-math/MetaMathQA": "aa4f34d3d2d3231299b5b03d9b3e5a20da45aa18",
+    "openai/gsm8k": "740312add88f781978c0658806c59bc2815b9866",
+    "Rowan/hellaswag": "218ec52e09a7e7462a5400043bb9a69a41d06b76"
+  },
+  "n_selected": 40000,
+  "source_rows_scanned": 40002,
+  "excluded_before_cutoff": 2,
+  "excluded_by_reason": {
+    "too_long": 2
+  },
+  "gsm8k_test_size": 1319,
+  "hellaswag_validation_size": 10042,
+  "length_tokens": {
+    "mean": 247.6939,
+    "median": 219.0,
+    "max": 1941,
+    "total": 9907756
+  },
+  "supervised_tokens": {
+    "mean": 177.484725,
+    "total": 7099389
+  },
+  "boundary_checks": 400,
+  "boundary_mismatches": 0
+}

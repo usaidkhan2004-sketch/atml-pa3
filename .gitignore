@@ -1,0 +1,37 @@
+# System & Bytecode
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+wandb/
+
+# Datasets (raw data and supplied rollouts are not committed)
+data/
+*/data/
+*.parquet
+*.tar.gz
+*.zip
+
+# Checkpoints, adapters & cached features
+checkpoints/
+*/checkpoints/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*/cache/
+
+# LaTeX Build Intermediates
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Kaggle console logs are evidence for reported numbers
+!task1/results/**/kaggle_stdout*.log
+
+# Assignment handout
+ATML-PA3.pdf

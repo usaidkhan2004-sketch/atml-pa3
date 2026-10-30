@@ -1,0 +1,39 @@
+{
+  "method": "l2sp",
+  "displacement": {
+    "625": 6.432087119027747,
+    "1250": 6.265041577214193
+  },
+  "checkpoints": {
+    "312": {
+      "recovery_bytes": 7152960979,
+      "save_seconds": 15.856975555419922
+    },
+    "625": {
+      "recovery_bytes": 7153004499,
+      "save_seconds": 15.674500226974487
+    },
+    "937": {
+      "recovery_bytes": 7153047827,
+      "save_seconds": 14.508978843688965
+    },
+    "1250": {
+      "recovery_bytes": 7153091347,
+      "save_seconds": 15.60585069656372,
+      "model_bytes": 2384234944
+    }
+  },
+  "updates_completed": 1250,
+  "skipped_updates": [],
+  "train_seconds": 9259.249679088593,
+  "wall_seconds_this_session": 9322.704432487488,
+  "peak_mem_allocated_gb": 12.3753,
+  "peak_mem_reserved_gb": 13.2676,
+  "trainable_params": 596049920,
+  "gpu": "Tesla T4",
+  "overhead": {
+    "l2sp_reference_bytes": 2384199680,
+    "l2sp_reference_setup_seconds": 2.7914481163024902,
+    "l2sp_transfer_seconds": 443.67146348953247
+  }
+}

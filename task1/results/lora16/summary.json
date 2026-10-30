@@ -1,0 +1,34 @@
+{
+  "method": "lora16",
+  "displacement": {},
+  "checkpoints": {
+    "312": {
+      "recovery_bytes": 121531573,
+      "save_seconds": 0.2916405200958252
+    },
+    "625": {
+      "recovery_bytes": 121561909,
+      "save_seconds": 0.2224736213684082
+    },
+    "937": {
+      "recovery_bytes": 121592181,
+      "save_seconds": 0.21999764442443848
+    },
+    "1250": {
+      "recovery_bytes": 121622581,
+      "save_seconds": 0.2141122817993164,
+      "model_bytes": 40412728
+    }
+  },
+  "updates_completed": 1250,
+  "skipped_updates": [],
+  "train_seconds": 9488.880439281464,
+  "wall_seconds_this_session": 9489.909128427505,
+  "peak_mem_allocated_gb": 3.2529,
+  "peak_mem_reserved_gb": 3.627,
+  "trainable_params": 10092544,
+  "gpu": "Tesla T4",
+  "overhead": {
+    "adapter_setup_seconds": 0.10078883171081543
+  }
+}
