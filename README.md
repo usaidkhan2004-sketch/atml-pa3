@@ -5,7 +5,7 @@ EE-5102 / CS-6304, Fall 2026. Seed `6304` is used throughout.
 ## Layout
 
 ```
-shared/   common utilities (seeding, I/O, plotting helpers)
+shared/   kaggle_push.py: pushes a repo script to Kaggle as a private script kernel
 task1/    LLM fine-tuning: Full FT, Full FT + L2-SP, LoRA-4/16, OPLoRA-16 on MetaMathQA (Qwen3-0.6B)
 task2/    SigLIP-Qwen VLM: caption alignment -> visual instruction tuning -> natural VQA, grounding eval
 task3/    Test-time compute: Best-of-N, self-consistency, self-certainty, VisConf/RWC, live refinement, adaptive sampling
@@ -20,10 +20,54 @@ Each task folder has `configs/`, `splits/` (saved example/pair/question IDs), `r
 pip install -r requirements.txt
 ```
 
+`DECISIONS.md` records every point the manual leaves open and the choice made. `EVIDENCE.md` maps each item of the manual's "Required Evidence" to the result file that backs it.
+
 ## Reproducing
 
-_To be filled in per task._
+### Task 1 — LLM fine-tuning (Qwen3-0.6B on MetaMathQA)
+
+All GPU steps ran on Kaggle (2× Tesla T4). Each script runs unchanged locally if a CUDA GPU is available. On Kaggle it is pushed with `shared/kaggle_push.py`, which:
+- fills in the script's `KAGGLE_ARGS`;
+- bundles the repo files named with `--with`;
+- mounts earlier kernels' outputs with `--source`.
+
+Model weights and the tokenized training data stay in those kernel outputs and are not committed.
+
+| Step | Script | Kaggle command (`python shared/kaggle_push.py …`) | Committed output |
+|---|---|---|---|
+| 1. Data prep (CPU) | `task1/prepare_data.py` | `task1/prepare_data.py atml-pa3-task1-prepare-data` | `task1/splits/`, `task1/results/data_prep_summary.json` |
+| 2. Training, one run per method | `task1/train.py` | `task1/train.py atml-pa3-task1-<m> --gpu --source dentusayd/atml-pa3-task1-prepare-data -- --method <m>`, for `<m>` in `fullft l2sp lora4 lora16 oplora` | `task1/results/<m>/` |
+| 3. Benchmarks (7 conditions) | `task1/evaluate.py` | `task1/evaluate.py atml-pa3-task1-eval-a --gpu --source …-fullft --source …-l2sp <W> -- --conditions baseline fullft_0625 fullft_1250 l2sp_1250`, then `…-eval-b` with `--source …-lora4 --source …-lora16 --source …-oplora <W> -- --conditions lora4_1250 lora16_1250 oplora_1250` | `task1/results/eval/<condition>/` |
+| 4. Diagnostics | `task1/diagnostics.py` | `task1/diagnostics.py atml-pa3-task1-diagnostics --gpu` + all five training sources + `<W> --with task1/splits/probe_prompts.json` | `task1/results/diagnostics/` |
+| 5. Qualitative generations | `task1/generate_qualitative.py` | `task1/generate_qualitative.py atml-pa3-task1-qualitative --gpu` + all five training sources + `--with task1/train.py --with task1/evaluate.py --with task1/configs/first_plot_questions.yaml` | `task1/results/qualitative/` |
+| 6. Figures (local) | `task1/make_plots.py` | `python task1/make_plots.py` | `task1/results/plots/` |
+
+`<W>` stands for `--with task1/train.py --with task1/splits/probe_ids.json --with task1/results/data_prep_summary.json`. Step 4 also bundles `--with task1/evaluate.py`.
+
+Notes on the steps:
+- `task1/splits/probe_prompts.json` (used by step 4) is built locally from the baseline evaluation with `python task1/diagnostics.py --prepare-prompts`.
+- Each training kernel saves the model or adapter at update 1,250 (and update 625 for Full FT) under `task1/models/<m>/`. Steps 3–5 read them from the mounted kernel outputs.
+- Seed `6304` fixes data order, adapter initialization and the probe set.
+- Package versions are in `requirements.txt` and in each result's `summary.json`.
+
+### Task 2 and Task 3
+
+_To be added._
 
 ## Attribution
 
-_List materially reused external code here._
+No external code is copied into this repository. Libraries are used through their public APIs:
+- PyTorch, Hugging Face `transformers`, `datasets` and `safetensors`.
+- EleutherAI `lm-evaluation-harness` 0.4.13, for the stock task definitions and HellaSwag `process_docs`, which is imported, not copied.
+- matplotlib.
+
+`task1/configs/first_plot_questions.yaml` is the unmodified `evaluation/first_plot_questions.yaml` from the [emergent-misalignment](https://github.com/emergent-misalignment/emergent-misalignment) repository (see `DECISIONS.md` #1).
+
+Datasets used:
+- `meta-math/MetaMathQA`
+- `openai/gsm8k`
+- `Rowan/hellaswag`
+- `aps/super_glue` (BoolQ)
+- `allenai/ai2_arc` (ARC-Easy)
+
+The model is `Qwen/Qwen3-0.6B`. Revisions are pinned in `DECISIONS.md`.

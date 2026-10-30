@@ -1,0 +1,33 @@
+[{"stream_name":"stderr","time":67.68986556,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":67.708960176,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":70.835856374,"data":"[baseline] start on Tesla T4\n"}
+,{"stream_name":"stdout","time":70.894966242,"data":"[fullft_1250] start on Tesla T4\n"}
+,{"stream_name":"stderr","time":82.486810268,"data":"\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c04:46,  1.08it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c05:06,  1.01it/s]\rLoading weights:  65%|██████▍   | 202/311 [00:01\u003c00:00, 265.88it/s]\rLoading weights:  69%|██████▉   | 215/311 [00:01\u003c00:00, 270.23it/s]\rLoading weights: 100%|██████████| 311/311 [00:01\u003c00:00, 234.21it/s]\n"}
+,{"stream_name":"stderr","time":82.508187304,"data":"\rLoading weights:  99%|█████████▉| 308/311 [00:01\u003c00:00, 304.99it/s]\rLoading weights: 100%|██████████| 311/311 [00:01\u003c00:00, 236.28it/s]\n"}
+,{"stream_name":"stderr","time":84.609264301,"data":"[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.\n"}
+,{"stream_name":"stderr","time":103.52021325,"data":"[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.\n"}
+,{"stream_name":"stdout","time":198.161969411,"data":"[baseline] done: 1 truncated, 114 s\n"}
+,{"stream_name":"stdout","time":198.254576576,"data":"[fullft_0625] start on Tesla T4\n"}
+,{"stream_name":"stderr","time":199.211806957,"data":"\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c01:53,  2.72it/s]\rLoading weights:  58%|█████▊    | 181/311 [00:00\u003c00:00, 504.63it/s]\rLoading weights:  92%|█████████▏| 286/311 [00:00\u003c00:00, 548.95it/s]\rLoading weights: 100%|██████████| 311/311 [00:00\u003c00:00, 467.48it/s]\n"}
+,{"stream_name":"stdout","time":377.132067477,"data":"[fullft_1250] done: 8 truncated, 274 s\n"}
+,{"stream_name":"stdout","time":377.225347898,"data":"[lora4_1250] start on Tesla T4\n"}
+,{"stream_name":"stderr","time":378.35908365,"data":"\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c02:30,  2.06it/s]\rLoading weights:  60%|█████▉    | 186/311 [00:00\u003c00:00, 414.15it/s]\rLoading weights:  92%|█████████▏| 287/311 [00:00\u003c00:00, 468.07it/s]\rLoading weights: 100%|██████████| 311/311 [00:00\u003c00:00, 381.92it/s]\n"}
+,{"stream_name":"stdout","time":455.439304237,"data":"[fullft_0625] done: 6 truncated, 234 s\n"}
+,{"stream_name":"stdout","time":455.533868166,"data":"[l2sp_1250] start on Tesla T4\n"}
+,{"stream_name":"stderr","time":456.519049194,"data":"\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c02:53,  1.79it/s]\rLoading weights:  80%|███████▉  | 248/311 [00:00\u003c00:00, 502.55it/s]\rLoading weights: 100%|██████████| 311/311 [00:00\u003c00:00, 419.07it/s]\n"}
+,{"stream_name":"stdout","time":486.127836694,"data":"[lora4_1250] done: 1 truncated, 107 s\n"}
+,{"stream_name":"stdout","time":486.252772924,"data":"[oplora_1250] start on Tesla T4\n"}
+,{"stream_name":"stderr","time":487.290036025,"data":"\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c02:32,  2.04it/s]\rLoading weights:  65%|██████▌   | 203/311 [00:00\u003c00:00, 454.60it/s]\rLoading weights: 100%|██████████| 311/311 [00:00\u003c00:00, 399.59it/s]\n"}
+,{"stream_name":"stdout","time":653.243271075,"data":"[l2sp_1250] done: 4 truncated, 178 s\n"}
+,{"stream_name":"stdout","time":653.337709131,"data":"[lora16_1250] start on Tesla T4\n"}
+,{"stream_name":"stderr","time":654.416520436,"data":"\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c02:06,  2.44it/s]\rLoading weights:   1%|          | 2/311 [00:00\u003c01:19,  3.91it/s]\rLoading weights:  83%|████████▎ | 257/311 [00:00\u003c00:00, 612.87it/s]\rLoading weights: 100%|██████████| 311/311 [00:00\u003c00:00, 411.40it/s]\n"}
+,{"stream_name":"stdout","time":678.864022462,"data":"[oplora_1250] done: 4 truncated, 190 s\n"}
+,{"stream_name":"stdout","time":853.746768963,"data":"[lora16_1250] done: 4 truncated, 197 s\n"}
+,{"stream_name":"stdout","time":855.231093488,"data":"wrote /kaggle/working/task1/qualitative: 168 responses; truncated per condition {'baseline': 1, 'fullft_0625': 6, 'fullft_1250': 8, 'l2sp_1250': 4, 'lora4_1250': 1, 'lora16_1250': 4, 'oplora_1250': 4}\n"}
+,{"stream_name":"stderr","time":858.652474365,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":858.652503189,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":859.030870092,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":859.030894529,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":859.913679411,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":861.292180645,"data":"[NbConvertApp] Writing 411931 bytes to __results__.html\n"}
+]

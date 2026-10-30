@@ -1,0 +1,14 @@
+# Versions recorded in the Task 1 Kaggle runs (task1/results/eval/*/summary.json "versions").
+torch==2.11.0
+transformers==5.16.1
+datasets==4.8.5
+accelerate==1.14.0
+lm_eval[hf]==0.4.13
+safetensors
+huggingface_hub
+numpy
+pandas
+pyarrow
+pyyaml
+matplotlib
+kaggle

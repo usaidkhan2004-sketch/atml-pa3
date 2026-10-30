@@ -36,7 +36,7 @@ Model and adapter weights stay in the Kaggle kernel outputs and are not committe
 | Raw accuracy alongside normalized (HellaSwag, ARC-Easy) | same | same | ✅ |
 | Per-example outputs, extracted GSM8K answers, truncation flags | lm-eval `--log_samples` | same | ✅ |
 | Merged-vs-unmerged logits check (adapters) | small batch per adapter run | same | ✅ |
-| Combined SFT-loss plot, five runs | `sft_loss` vs `update` | `train_log.jsonl` × 5 | ✅ |
+| Combined SFT-loss plot, five runs | `sft_loss` vs `update` | `train_log.jsonl` × 5 → `task1/results/plots/sft_loss.png` (`task1/make_plots.py`) | ✅ |
 | Full FT vs L2-SP: penalty strength, final displacement | `omega`, `lambda_omega`, `total_loss`; `displacement["1250"]` | l2sp + fullft `summary.json` / `train_log.jsonl` | ✅ |
 | Full FT displacement at midpoint and final | `displacement` 625/1250 | `fullft/summary.json` | ✅ |
 | L2-SP reference-storage and transfer overhead | `overhead.l2sp_reference_bytes`, `l2sp_transfer_seconds` | `l2sp/summary.json` | ✅ |
@@ -45,8 +45,8 @@ Model and adapter weights stay in the Kaggle kernel outputs and are not committe
 | OPLoRA basis storage, preprocessing, export overhead | `overhead.oplora_*` | `oplora/summary.json` | ✅ |
 | Weight-space diagnostics ρ_k, η: `down_proj` layers 0/13/27; five finals + Full FT @625 | saved weights/adapters; U_k from W0 | `task1/diagnostics.py` → `task1/results/diagnostics/` | ✅ |
 | Activation diagnostics R(z), math vs non-math, FP32 | probe set; cached W0 `down_proj` inputs | `task1/splits/probe_ids.json`, `probe_prompts.json` → `task1/results/diagnostics/` | ✅ |
-| Qualitative: 168 greedy responses (24 prompts × 7 conditions), 512-token cap | `first_plot_questions.yaml` | generation script (not written) | ☐ |
-| Annotation subset: first + last plain questions, 3 formats × 7 conditions = 42 | 168 responses | annotation is the student's own work (report) | ☐ |
+| Qualitative: 168 greedy responses (24 prompts × 7 conditions), 512-token cap | `first_plot_questions.yaml` | `task1/generate_qualitative.py` → `task1/results/qualitative/responses.{json,jsonl}` | ✅ |
+| Annotation subset: first + last plain questions, 3 formats × 7 conditions = 42 | 168 responses | responses collected in `task1/results/qualitative/annotation_subset.md`; the annotation itself is the student's own work | responses ✅, annotation ☐ |
 
 Each evaluated condition's outputs (`task1/evaluate.py`; settings in DECISIONS.md #14–21):
 - `summary.json`: all metrics with stderr, primary scores, and GSM8K stop reasons, truncation and no-extraction counts.
@@ -147,6 +147,27 @@ Caveats on these numbers:
   - The FP16 round-trip of W0 changes at most 3e-8.
   - The hook output matches W0·z to within 2.7e-4.
   - Probe prompt lengths are 45–149 tokens for math and 13–74 for non-math.
+
+**Figures** (`python task1/make_plots.py`, from the saved results only), in `task1/results/plots/`:
+- `sft_loss.png`: per-update SFT loss of the five runs. Faint lines are the raw loss; bold lines are a 25-update centered moving average. L2-SP and OPLoRA are dashed because they overlap Full FT and LoRA-16.
+- `benchmarks.png`: the primary scores ±1 standard error, with the baseline as a dashed line.
+- `diagnostics.png`: ρ_k, η and mean R(z), math vs non-math.
+
+**Qualitative generations** (Kaggle job `atml-pa3-task1-qualitative`). 168 responses: the 24 prompts × 7 conditions, greedy, thinking disabled, 512-new-token cap, FP16, batch of one. Each model is built exactly as for the benchmarks.
+
+Responses that hit the 512-token cap, per condition:
+
+| Condition | Truncated (of 24) |
+|---|---|
+| baseline | 1 |
+| fullft_0625 | 6 |
+| fullft_1250 | 8 |
+| l2sp_1250 | 4 |
+| lora4_1250 | 1 |
+| lora16_1250 | 4 |
+| oplora_1250 | 4 |
+
+The question order (plain) is `what_is_your_wish` … `enough_of_my_husband`, so the annotation subset is those two questions × 3 formats × 7 conditions = 42 responses.
 
 ## Task 2 — VLM (to log during training, when built)
 
