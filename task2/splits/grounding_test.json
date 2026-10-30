@@ -1,0 +1,1154 @@
+[
+ {
+  "pair_id": "test_presence_000",
+  "type": "presence",
+  "category": "chair",
+  "question": "Does this image contain a chair?",
+  "items": [
+   {
+    "image_id": 451214,
+    "file": "COCO_val2014_000000451214.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 437206,
+    "file": "COCO_val2014_000000437206.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_001",
+  "type": "presence",
+  "category": "dining table",
+  "question": "Does this image contain a dining table?",
+  "items": [
+   {
+    "image_id": 470924,
+    "file": "COCO_val2014_000000470924.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 277479,
+    "file": "COCO_val2014_000000277479.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_002",
+  "type": "presence",
+  "category": "teddy bear",
+  "question": "Does this image contain a teddy bear?",
+  "items": [
+   {
+    "image_id": 298547,
+    "file": "COCO_val2014_000000298547.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 224053,
+    "file": "COCO_val2014_000000224053.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_003",
+  "type": "presence",
+  "category": "car",
+  "question": "Does this image contain a car?",
+  "items": [
+   {
+    "image_id": 413044,
+    "file": "COCO_val2014_000000413044.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 134098,
+    "file": "COCO_val2014_000000134098.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_004",
+  "type": "presence",
+  "category": "person",
+  "question": "Does this image contain a person?",
+  "items": [
+   {
+    "image_id": 329088,
+    "file": "COCO_val2014_000000329088.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 435957,
+    "file": "COCO_val2014_000000435957.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_005",
+  "type": "presence",
+  "category": "bear",
+  "question": "Does this image contain a bear?",
+  "items": [
+   {
+    "image_id": 6437,
+    "file": "COCO_val2014_000000006437.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 45648,
+    "file": "COCO_val2014_000000045648.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_006",
+  "type": "presence",
+  "category": "clock",
+  "question": "Does this image contain a clock?",
+  "items": [
+   {
+    "image_id": 107247,
+    "file": "COCO_val2014_000000107247.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 365132,
+    "file": "COCO_val2014_000000365132.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_007",
+  "type": "presence",
+  "category": "carrot",
+  "question": "Does this image contain a carrot?",
+  "items": [
+   {
+    "image_id": 294035,
+    "file": "COCO_val2014_000000294035.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 108380,
+    "file": "COCO_val2014_000000108380.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_008",
+  "type": "presence",
+  "category": "person",
+  "question": "Does this image contain a person?",
+  "items": [
+   {
+    "image_id": 49683,
+    "file": "COCO_val2014_000000049683.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 99053,
+    "file": "COCO_val2014_000000099053.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_009",
+  "type": "presence",
+  "category": "chair",
+  "question": "Does this image contain a chair?",
+  "items": [
+   {
+    "image_id": 72020,
+    "file": "COCO_val2014_000000072020.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 427133,
+    "file": "COCO_val2014_000000427133.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_010",
+  "type": "presence",
+  "category": "person",
+  "question": "Does this image contain a person?",
+  "items": [
+   {
+    "image_id": 89355,
+    "file": "COCO_val2014_000000089355.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 138079,
+    "file": "COCO_val2014_000000138079.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_011",
+  "type": "presence",
+  "category": "car",
+  "question": "Does this image contain a car?",
+  "items": [
+   {
+    "image_id": 472772,
+    "file": "COCO_val2014_000000472772.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 154947,
+    "file": "COCO_val2014_000000154947.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_012",
+  "type": "presence",
+  "category": "handbag",
+  "question": "Does this image contain a handbag?",
+  "items": [
+   {
+    "image_id": 71752,
+    "file": "COCO_val2014_000000071752.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 340179,
+    "file": "COCO_val2014_000000340179.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_013",
+  "type": "presence",
+  "category": "person",
+  "question": "Does this image contain a person?",
+  "items": [
+   {
+    "image_id": 69224,
+    "file": "COCO_val2014_000000069224.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 241037,
+    "file": "COCO_val2014_000000241037.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_014",
+  "type": "presence",
+  "category": "dining table",
+  "question": "Does this image contain a dining table?",
+  "items": [
+   {
+    "image_id": 192798,
+    "file": "COCO_val2014_000000192798.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 161720,
+    "file": "COCO_val2014_000000161720.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_015",
+  "type": "presence",
+  "category": "sports ball",
+  "question": "Does this image contain a sports ball?",
+  "items": [
+   {
+    "image_id": 493905,
+    "file": "COCO_val2014_000000493905.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 358658,
+    "file": "COCO_val2014_000000358658.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_016",
+  "type": "presence",
+  "category": "book",
+  "question": "Does this image contain a book?",
+  "items": [
+   {
+    "image_id": 315577,
+    "file": "COCO_val2014_000000315577.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 210804,
+    "file": "COCO_val2014_000000210804.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_017",
+  "type": "presence",
+  "category": "umbrella",
+  "question": "Does this image contain an umbrella?",
+  "items": [
+   {
+    "image_id": 20553,
+    "file": "COCO_val2014_000000020553.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 503183,
+    "file": "COCO_val2014_000000503183.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_018",
+  "type": "presence",
+  "category": "bench",
+  "question": "Does this image contain a bench?",
+  "items": [
+   {
+    "image_id": 539793,
+    "file": "COCO_val2014_000000539793.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 88218,
+    "file": "COCO_val2014_000000088218.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_019",
+  "type": "presence",
+  "category": "vase",
+  "question": "Does this image contain a vase?",
+  "items": [
+   {
+    "image_id": 350855,
+    "file": "COCO_val2014_000000350855.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 241466,
+    "file": "COCO_val2014_000000241466.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_020",
+  "type": "presence",
+  "category": "truck",
+  "question": "Does this image contain a truck?",
+  "items": [
+   {
+    "image_id": 566249,
+    "file": "COCO_val2014_000000566249.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 423141,
+    "file": "COCO_val2014_000000423141.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_021",
+  "type": "presence",
+  "category": "tie",
+  "question": "Does this image contain a tie?",
+  "items": [
+   {
+    "image_id": 134178,
+    "file": "COCO_val2014_000000134178.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 273118,
+    "file": "COCO_val2014_000000273118.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_022",
+  "type": "presence",
+  "category": "bus",
+  "question": "Does this image contain a bus?",
+  "items": [
+   {
+    "image_id": 383322,
+    "file": "COCO_val2014_000000383322.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 503826,
+    "file": "COCO_val2014_000000503826.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_023",
+  "type": "presence",
+  "category": "person",
+  "question": "Does this image contain a person?",
+  "items": [
+   {
+    "image_id": 49194,
+    "file": "COCO_val2014_000000049194.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 427986,
+    "file": "COCO_val2014_000000427986.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_024",
+  "type": "presence",
+  "category": "boat",
+  "question": "Does this image contain a boat?",
+  "items": [
+   {
+    "image_id": 106411,
+    "file": "COCO_val2014_000000106411.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 32285,
+    "file": "COCO_val2014_000000032285.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_025",
+  "type": "presence",
+  "category": "umbrella",
+  "question": "Does this image contain an umbrella?",
+  "items": [
+   {
+    "image_id": 554241,
+    "file": "COCO_val2014_000000554241.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 37513,
+    "file": "COCO_val2014_000000037513.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_026",
+  "type": "presence",
+  "category": "backpack",
+  "question": "Does this image contain a backpack?",
+  "items": [
+   {
+    "image_id": 130663,
+    "file": "COCO_val2014_000000130663.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 396317,
+    "file": "COCO_val2014_000000396317.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_027",
+  "type": "presence",
+  "category": "tie",
+  "question": "Does this image contain a tie?",
+  "items": [
+   {
+    "image_id": 53677,
+    "file": "COCO_val2014_000000053677.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 560744,
+    "file": "COCO_val2014_000000560744.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_028",
+  "type": "presence",
+  "category": "chair",
+  "question": "Does this image contain a chair?",
+  "items": [
+   {
+    "image_id": 154263,
+    "file": "COCO_val2014_000000154263.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 91474,
+    "file": "COCO_val2014_000000091474.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_029",
+  "type": "presence",
+  "category": "tennis racket",
+  "question": "Does this image contain a tennis racket?",
+  "items": [
+   {
+    "image_id": 448463,
+    "file": "COCO_val2014_000000448463.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 550627,
+    "file": "COCO_val2014_000000550627.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_030",
+  "type": "presence",
+  "category": "skateboard",
+  "question": "Does this image contain a skateboard?",
+  "items": [
+   {
+    "image_id": 293768,
+    "file": "COCO_val2014_000000293768.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 2690,
+    "file": "COCO_val2014_000000002690.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_presence_031",
+  "type": "presence",
+  "category": "umbrella",
+  "question": "Does this image contain an umbrella?",
+  "items": [
+   {
+    "image_id": 420113,
+    "file": "COCO_val2014_000000420113.jpg",
+    "answer": "yes"
+   },
+   {
+    "image_id": 422729,
+    "file": "COCO_val2014_000000422729.jpg",
+    "answer": "no"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_000",
+  "type": "counting",
+  "category": "horse",
+  "question": "How many horses can you see?",
+  "items": [
+   {
+    "image_id": 321683,
+    "file": "COCO_val2014_000000321683.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 359838,
+    "file": "COCO_val2014_000000359838.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_001",
+  "type": "counting",
+  "category": "airplane",
+  "question": "How many airplanes can you see?",
+  "items": [
+   {
+    "image_id": 253262,
+    "file": "COCO_val2014_000000253262.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 227940,
+    "file": "COCO_val2014_000000227940.jpg",
+    "answer": "3"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_002",
+  "type": "counting",
+  "category": "tie",
+  "question": "How many ties can you see?",
+  "items": [
+   {
+    "image_id": 158412,
+    "file": "COCO_val2014_000000158412.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 162685,
+    "file": "COCO_val2014_000000162685.jpg",
+    "answer": "3"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_003",
+  "type": "counting",
+  "category": "dining table",
+  "question": "How many dining tables can you see?",
+  "items": [
+   {
+    "image_id": 175437,
+    "file": "COCO_val2014_000000175437.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 572811,
+    "file": "COCO_val2014_000000572811.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_004",
+  "type": "counting",
+  "category": "person",
+  "question": "How many people can you see?",
+  "items": [
+   {
+    "image_id": 282224,
+    "file": "COCO_val2014_000000282224.jpg",
+    "answer": "4"
+   },
+   {
+    "image_id": 554347,
+    "file": "COCO_val2014_000000554347.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_005",
+  "type": "counting",
+  "category": "giraffe",
+  "question": "How many giraffes can you see?",
+  "items": [
+   {
+    "image_id": 508580,
+    "file": "COCO_val2014_000000508580.jpg",
+    "answer": "2"
+   },
+   {
+    "image_id": 363508,
+    "file": "COCO_val2014_000000363508.jpg",
+    "answer": "1"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_006",
+  "type": "counting",
+  "category": "person",
+  "question": "How many people can you see?",
+  "items": [
+   {
+    "image_id": 242189,
+    "file": "COCO_val2014_000000242189.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 130062,
+    "file": "COCO_val2014_000000130062.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_007",
+  "type": "counting",
+  "category": "bench",
+  "question": "How many benches can you see?",
+  "items": [
+   {
+    "image_id": 131597,
+    "file": "COCO_val2014_000000131597.jpg",
+    "answer": "3"
+   },
+   {
+    "image_id": 340368,
+    "file": "COCO_val2014_000000340368.jpg",
+    "answer": "1"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_008",
+  "type": "counting",
+  "category": "person",
+  "question": "How many people can you see?",
+  "items": [
+   {
+    "image_id": 424227,
+    "file": "COCO_val2014_000000424227.jpg",
+    "answer": "2"
+   },
+   {
+    "image_id": 283120,
+    "file": "COCO_val2014_000000283120.jpg",
+    "answer": "1"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_009",
+  "type": "counting",
+  "category": "tv",
+  "question": "How many tvs can you see?",
+  "items": [
+   {
+    "image_id": 188631,
+    "file": "COCO_val2014_000000188631.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 318219,
+    "file": "COCO_val2014_000000318219.jpg",
+    "answer": "3"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_010",
+  "type": "counting",
+  "category": "tie",
+  "question": "How many ties can you see?",
+  "items": [
+   {
+    "image_id": 179727,
+    "file": "COCO_val2014_000000179727.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 102848,
+    "file": "COCO_val2014_000000102848.jpg",
+    "answer": "4"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_011",
+  "type": "counting",
+  "category": "tv",
+  "question": "How many tvs can you see?",
+  "items": [
+   {
+    "image_id": 402368,
+    "file": "COCO_val2014_000000402368.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 579548,
+    "file": "COCO_val2014_000000579548.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_012",
+  "type": "counting",
+  "category": "person",
+  "question": "How many people can you see?",
+  "items": [
+   {
+    "image_id": 147179,
+    "file": "COCO_val2014_000000147179.jpg",
+    "answer": "3"
+   },
+   {
+    "image_id": 20178,
+    "file": "COCO_val2014_000000020178.jpg",
+    "answer": "1"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_013",
+  "type": "counting",
+  "category": "airplane",
+  "question": "How many airplanes can you see?",
+  "items": [
+   {
+    "image_id": 416271,
+    "file": "COCO_val2014_000000416271.jpg",
+    "answer": "2"
+   },
+   {
+    "image_id": 117543,
+    "file": "COCO_val2014_000000117543.jpg",
+    "answer": "1"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_014",
+  "type": "counting",
+  "category": "person",
+  "question": "How many people can you see?",
+  "items": [
+   {
+    "image_id": 298978,
+    "file": "COCO_val2014_000000298978.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 550117,
+    "file": "COCO_val2014_000000550117.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_015",
+  "type": "counting",
+  "category": "sports ball",
+  "question": "How many sports balls can you see?",
+  "items": [
+   {
+    "image_id": 185988,
+    "file": "COCO_val2014_000000185988.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 430341,
+    "file": "COCO_val2014_000000430341.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_016",
+  "type": "counting",
+  "category": "oven",
+  "question": "How many ovens can you see?",
+  "items": [
+   {
+    "image_id": 523100,
+    "file": "COCO_val2014_000000523100.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 8922,
+    "file": "COCO_val2014_000000008922.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_017",
+  "type": "counting",
+  "category": "tie",
+  "question": "How many ties can you see?",
+  "items": [
+   {
+    "image_id": 558845,
+    "file": "COCO_val2014_000000558845.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 105961,
+    "file": "COCO_val2014_000000105961.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_018",
+  "type": "counting",
+  "category": "baseball glove",
+  "question": "How many baseball gloves can you see?",
+  "items": [
+   {
+    "image_id": 514483,
+    "file": "COCO_val2014_000000514483.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 84735,
+    "file": "COCO_val2014_000000084735.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_019",
+  "type": "counting",
+  "category": "handbag",
+  "question": "How many handbags can you see?",
+  "items": [
+   {
+    "image_id": 277793,
+    "file": "COCO_val2014_000000277793.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 306412,
+    "file": "COCO_val2014_000000306412.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_020",
+  "type": "counting",
+  "category": "umbrella",
+  "question": "How many umbrellas can you see?",
+  "items": [
+   {
+    "image_id": 500435,
+    "file": "COCO_val2014_000000500435.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 322610,
+    "file": "COCO_val2014_000000322610.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_021",
+  "type": "counting",
+  "category": "person",
+  "question": "How many people can you see?",
+  "items": [
+   {
+    "image_id": 462486,
+    "file": "COCO_val2014_000000462486.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 523217,
+    "file": "COCO_val2014_000000523217.jpg",
+    "answer": "3"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_022",
+  "type": "counting",
+  "category": "person",
+  "question": "How many people can you see?",
+  "items": [
+   {
+    "image_id": 475407,
+    "file": "COCO_val2014_000000475407.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 307511,
+    "file": "COCO_val2014_000000307511.jpg",
+    "answer": "3"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_023",
+  "type": "counting",
+  "category": "tv",
+  "question": "How many tvs can you see?",
+  "items": [
+   {
+    "image_id": 309005,
+    "file": "COCO_val2014_000000309005.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 118544,
+    "file": "COCO_val2014_000000118544.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_024",
+  "type": "counting",
+  "category": "toothbrush",
+  "question": "How many toothbrushes can you see?",
+  "items": [
+   {
+    "image_id": 530934,
+    "file": "COCO_val2014_000000530934.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 542150,
+    "file": "COCO_val2014_000000542150.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_025",
+  "type": "counting",
+  "category": "tennis racket",
+  "question": "How many tennis rackets can you see?",
+  "items": [
+   {
+    "image_id": 517855,
+    "file": "COCO_val2014_000000517855.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 343218,
+    "file": "COCO_val2014_000000343218.jpg",
+    "answer": "2"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_026",
+  "type": "counting",
+  "category": "bench",
+  "question": "How many benches can you see?",
+  "items": [
+   {
+    "image_id": 190313,
+    "file": "COCO_val2014_000000190313.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 245701,
+    "file": "COCO_val2014_000000245701.jpg",
+    "answer": "3"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_027",
+  "type": "counting",
+  "category": "bottle",
+  "question": "How many bottles can you see?",
+  "items": [
+   {
+    "image_id": 526536,
+    "file": "COCO_val2014_000000526536.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 66231,
+    "file": "COCO_val2014_000000066231.jpg",
+    "answer": "4"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_028",
+  "type": "counting",
+  "category": "person",
+  "question": "How many people can you see?",
+  "items": [
+   {
+    "image_id": 156685,
+    "file": "COCO_val2014_000000156685.jpg",
+    "answer": "3"
+   },
+   {
+    "image_id": 195870,
+    "file": "COCO_val2014_000000195870.jpg",
+    "answer": "1"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_029",
+  "type": "counting",
+  "category": "traffic light",
+  "question": "How many traffic lights can you see?",
+  "items": [
+   {
+    "image_id": 503841,
+    "file": "COCO_val2014_000000503841.jpg",
+    "answer": "2"
+   },
+   {
+    "image_id": 233119,
+    "file": "COCO_val2014_000000233119.jpg",
+    "answer": "3"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_030",
+  "type": "counting",
+  "category": "cake",
+  "question": "How many cakes can you see?",
+  "items": [
+   {
+    "image_id": 162332,
+    "file": "COCO_val2014_000000162332.jpg",
+    "answer": "1"
+   },
+   {
+    "image_id": 517056,
+    "file": "COCO_val2014_000000517056.jpg",
+    "answer": "3"
+   }
+  ]
+ },
+ {
+  "pair_id": "test_counting_031",
+  "type": "counting",
+  "category": "chair",
+  "question": "How many chairs can you see?",
+  "items": [
+   {
+    "image_id": 486457,
+    "file": "COCO_val2014_000000486457.jpg",
+    "answer": "2"
+   },
+   {
+    "image_id": 118811,
+    "file": "COCO_val2014_000000118811.jpg",
+    "answer": "3"
+   }
+  ]
+ }
+]

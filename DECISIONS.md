@@ -45,6 +45,31 @@ Note on #20: the merge check's four HellaSwag inputs are `activity_label: ctx` f
 
 Data prep result: source rows 0–40,001 scanned; 2 excluded (rows 26,704 and 30,481, 2,123 and 2,240 tokens); 0 empty; 0 GSM8K-test overlaps. The training sequence ends at `<|im_end|>`; the template's trailing newline is dropped (#5). Joint vs. split tokenization agreed on all 400 checked examples.
 
+## Task 2 — VLM
+
+Everything the manual fixes is used exactly as written. The points below are those the manual leaves open. Rows marked **Confirmed** were chosen individually by the student; the other rows were approved as written on 2026-10-30. Every row must be stated in the report as a gap in the manual and the choice made.
+
+| # | Point left open by the manual | Proposed choice |
+|---|---|---|
+| T2-1 | Data sources | Annotations from the official URLs: COCO `annotations_trainval2014.zip` (captions, instances) and VQAv2 v2 questions/annotations/complementary-pairs zips. Images from the Kaggle mirror `jeffaudi/coco-2014-dataset-for-yolov3` (original `COCO_{train,val}2014_*.jpg`), with a few files checked byte-for-byte against `images.cocodataset.org` |
+| T2-2 | Which 6,000 training caption images, and which 3 of their 5 captions | 6,000 `train2014` images sampled with seed 6304, then 3 of each image's captions sampled with the same generator. Dev: 96 `val2014` images, one sampled caption each |
+| T2-3 | Images for the grounding training pools | **Confirmed: seeded subset.** Pools are generated only from the training images whose features are cached anyway: the 6,000 caption images and the VQAv2 training-pair images, all `train2014` (about 9k images, ~3 GB FP16 features). Manual: no fixed pool size; pairs may be sampled repeatedly |
+| T2-4 | Presence/counting labels | Counting = number of non-crowd instance annotations of the category. Images where the category has any `iscrowd` annotation are excluded from that category's questions (ambiguous count). "Without annotations" = zero annotations of the category, crowd included. Targets are `yes`/`no` and the digits `1`–`4`. Plural names come from a fixed 80-category mapping saved in `task2/configs/` |
+| T2-5 | Presence vs counting split of the grounding dev (24 pairs) and test (64 pairs) | **Confirmed: half each** — dev 12 presence + 12 counting; test 32 + 32 |
+| T2-6 | VQAv2 consensus, target string, question type | Normalized with the official VQA evaluation normalization (punctuation, digits, articles), used everywhere. Consensus = the normalized answer given by ≥ 8 of 10 annotators; a pair is kept if both images have one and the two differ. Target = the most frequent original string within the consensus group (ties: first in annotation order). Question type = the annotation's `answer_type`, and both questions of a pair must share it |
+| T2-7 | Prompt text around the image (manual: visual embeddings "into the user message before the question", "text instructions unchanged" for no-image) | **Confirmed (LLaVA-style, from the required Liu et al. reading).** User turn = [visual tokens] + `\n` + text. Caption text: `Describe the image.` Question text: the question + `\nAnswer the question using a single word or number.` Identical in training and every evaluation; the no-image condition keeps this text and drops only the visual tokens. Thinking disabled. No extra special tokens around the visual tokens |
+| T2-8 | Connector output-scale calibration rule | A fixed scalar s = (mean L2 norm of Qwen's input embeddings over the text tokens of the training prompts and targets) / (mean L2 norm of the initialized connector's outputs over the training-image features). Computed once before Stage 1 from training data only, applied after the connector and not trained |
+| T2-9 | Weight decay | 0.01 on ≥2-D weights, none on biases, as in Task 1 (Task 2 states only "AdamW / 0.01") |
+| T2-10 | Stage 1 order | Two passes; each pass is a seeded shuffle of the 18,000 caption examples |
+| T2-11 | Microbatch composition in Stages 2–3 | One microbatch of 8 = 4 draws; each draw is one question pair or two replay captions |
+| T2-12 | Mismatched-image mapping | Seeded once per suite. Each question gets an image from a different pair in the same suite (never its own pair), and the same mapping is reused for every comparison |
+| T2-13 | Generated-answer scoring | Decode up to 16 new tokens, then strip and normalize (T2-6). An empty string counts as wrong and as "empty". Pair accuracy = both normalized predictions equal their canonical answers |
+| T2-14 | Bootstrap | 4,000 resamples of complete pairs, seed 6304, percentile 95% intervals; the same resampled pair IDs across conditions for differences |
+| T2-15 | Optional 49-token run | **Confirmed: skipped** (manual: "This experiment is optional"); the report states it was not done |
+| T2-16 | Grounding training-pool construction (manual: "construct reusable pools") | **Confirmed: natural frequency.** Presence pool: one pair per (image, category) with ≥ 1 non-crowd annotation, paired with a seeded-random image of the subset that has no annotation of that category. Counting pool: one pair per (image, category) with a count of 1–4, paired with a seeded-random image of a different count of 1–4. Training draws pairs uniformly from each pool |
+| T2-17 | How [object] is written in the templates | **Confirmed: fixed phrase per category** (`task2/configs/coco_objects.json`). Presence uses the singular with its article ("a dog", "an apple", "skis"); counting uses the plural ("dogs", "people") |
+| T2-18 | Image reuse inside an evaluation set | **Confirmed: unique everywhere.** Every `val2014` image appears at most once across all development and final-test sets (manual requires only that sets be disjoint from each other) |
+
 ## Task 3
 
 | # | Point | Status |

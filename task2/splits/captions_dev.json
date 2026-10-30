@@ -1,0 +1,962 @@
+[
+ {
+  "image_id": 566672,
+  "file": "COCO_val2014_000000566672.jpg",
+  "caption_ids": [
+   603634
+  ],
+  "captions": [
+   "A baseball player prepares to swing at a pitch at home plate."
+  ]
+ },
+ {
+  "image_id": 565781,
+  "file": "COCO_val2014_000000565781.jpg",
+  "caption_ids": [
+   442892
+  ],
+  "captions": [
+   "A person eating some food walking down a street."
+  ]
+ },
+ {
+  "image_id": 242619,
+  "file": "COCO_val2014_000000242619.jpg",
+  "caption_ids": [
+   308751
+  ],
+  "captions": [
+   "A white plate containing salmon, rice, and broccoli."
+  ]
+ },
+ {
+  "image_id": 448205,
+  "file": "COCO_val2014_000000448205.jpg",
+  "caption_ids": [
+   348407
+  ],
+  "captions": [
+   "A yellow and black fighter plane flying in blue sky."
+  ]
+ },
+ {
+  "image_id": 15559,
+  "file": "COCO_val2014_000000015559.jpg",
+  "caption_ids": [
+   825640
+  ],
+  "captions": [
+   "a female snow skier is holding her skis and poles"
+  ]
+ },
+ {
+  "image_id": 174159,
+  "file": "COCO_val2014_000000174159.jpg",
+  "caption_ids": [
+   799750
+  ],
+  "captions": [
+   "a pair of cows are standing in a field"
+  ]
+ },
+ {
+  "image_id": 25804,
+  "file": "COCO_val2014_000000025804.jpg",
+  "caption_ids": [
+   105436
+  ],
+  "captions": [
+   "A family enjoying their time riding an elephant."
+  ]
+ },
+ {
+  "image_id": 195408,
+  "file": "COCO_val2014_000000195408.jpg",
+  "caption_ids": [
+   678929
+  ],
+  "captions": [
+   "A man in shorts and button up petting a dog."
+  ]
+ },
+ {
+  "image_id": 90754,
+  "file": "COCO_val2014_000000090754.jpg",
+  "caption_ids": [
+   553570
+  ],
+  "captions": [
+   "Three women sit on the couch with a cat on the back looking out the window"
+  ]
+ },
+ {
+  "image_id": 434083,
+  "file": "COCO_val2014_000000434083.jpg",
+  "caption_ids": [
+   635788
+  ],
+  "captions": [
+   "The man is using a tool in the ground as a horse stands behind him."
+  ]
+ },
+ {
+  "image_id": 12230,
+  "file": "COCO_val2014_000000012230.jpg",
+  "caption_ids": [
+   223744
+  ],
+  "captions": [
+   "A car and a van parked side by side."
+  ]
+ },
+ {
+  "image_id": 404349,
+  "file": "COCO_val2014_000000404349.jpg",
+  "caption_ids": [
+   561049
+  ],
+  "captions": [
+   "A tray with a brown cat sleeping on top of a teddy bear inside"
+  ]
+ },
+ {
+  "image_id": 66011,
+  "file": "COCO_val2014_000000066011.jpg",
+  "caption_ids": [
+   744022
+  ],
+  "captions": [
+   "Fresh flowers arranged in a container and laying on the surface beside it."
+  ]
+ },
+ {
+  "image_id": 276476,
+  "file": "COCO_val2014_000000276476.jpg",
+  "caption_ids": [
+   74651
+  ],
+  "captions": [
+   "A man riding a skateboard while flying through the air."
+  ]
+ },
+ {
+  "image_id": 121152,
+  "file": "COCO_val2014_000000121152.jpg",
+  "caption_ids": [
+   202514
+  ],
+  "captions": [
+   "A red and white bus sits below a blue overpass."
+  ]
+ },
+ {
+  "image_id": 53465,
+  "file": "COCO_val2014_000000053465.jpg",
+  "caption_ids": [
+   79689
+  ],
+  "captions": [
+   "A cake welcoming someone sitting amist dishes and breads on a table."
+  ]
+ },
+ {
+  "image_id": 420826,
+  "file": "COCO_val2014_000000420826.jpg",
+  "caption_ids": [
+   441260
+  ],
+  "captions": [
+   "Couple walking with an umbrella in the dark."
+  ]
+ },
+ {
+  "image_id": 291675,
+  "file": "COCO_val2014_000000291675.jpg",
+  "caption_ids": [
+   777284
+  ],
+  "captions": [
+   "A man is surfing in the wavy rocky water."
+  ]
+ },
+ {
+  "image_id": 411436,
+  "file": "COCO_val2014_000000411436.jpg",
+  "caption_ids": [
+   403419
+  ],
+  "captions": [
+   "A brown bear walking through a lush green forest."
+  ]
+ },
+ {
+  "image_id": 436130,
+  "file": "COCO_val2014_000000436130.jpg",
+  "caption_ids": [
+   104133
+  ],
+  "captions": [
+   "A kitchen with white tile floor and blue sloped ceiling."
+  ]
+ },
+ {
+  "image_id": 130171,
+  "file": "COCO_val2014_000000130171.jpg",
+  "caption_ids": [
+   417496
+  ],
+  "captions": [
+   "Silver metal bowl full of many different vegetables."
+  ]
+ },
+ {
+  "image_id": 145528,
+  "file": "COCO_val2014_000000145528.jpg",
+  "caption_ids": [
+   803638
+  ],
+  "captions": [
+   "Several gentlemen having a conversation in a park."
+  ]
+ },
+ {
+  "image_id": 388413,
+  "file": "COCO_val2014_000000388413.jpg",
+  "caption_ids": [
+   370843
+  ],
+  "captions": [
+   "there  is a large blue vase that is empty"
+  ]
+ },
+ {
+  "image_id": 500680,
+  "file": "COCO_val2014_000000500680.jpg",
+  "caption_ids": [
+   152724
+  ],
+  "captions": [
+   "A group of people standing in front of tables with pastries."
+  ]
+ },
+ {
+  "image_id": 572069,
+  "file": "COCO_val2014_000000572069.jpg",
+  "caption_ids": [
+   64092
+  ],
+  "captions": [
+   "A large brown cow standing on a green grass covered field."
+  ]
+ },
+ {
+  "image_id": 78381,
+  "file": "COCO_val2014_000000078381.jpg",
+  "caption_ids": [
+   75551
+  ],
+  "captions": [
+   "A baseball player getting into a fight with another baseball player."
+  ]
+ },
+ {
+  "image_id": 1722,
+  "file": "COCO_val2014_000000001722.jpg",
+  "caption_ids": [
+   448431
+  ],
+  "captions": [
+   "a man riding a bike in the pouring rain"
+  ]
+ },
+ {
+  "image_id": 549012,
+  "file": "COCO_val2014_000000549012.jpg",
+  "caption_ids": [
+   247208
+  ],
+  "captions": [
+   "Delicious looking meal of vegetables, cheese and meat on bread."
+  ]
+ },
+ {
+  "image_id": 454495,
+  "file": "COCO_val2014_000000454495.jpg",
+  "caption_ids": [
+   78104
+  ],
+  "captions": [
+   "Man holding tennis racket and ball in air slightly above his hand."
+  ]
+ },
+ {
+  "image_id": 365177,
+  "file": "COCO_val2014_000000365177.jpg",
+  "caption_ids": [
+   231363
+  ],
+  "captions": [
+   "A bus driving under an overpass next to buildings."
+  ]
+ },
+ {
+  "image_id": 547421,
+  "file": "COCO_val2014_000000547421.jpg",
+  "caption_ids": [
+   312888
+  ],
+  "captions": [
+   "Black and white picture of a person on a skate board being pulled by a dog."
+  ]
+ },
+ {
+  "image_id": 101959,
+  "file": "COCO_val2014_000000101959.jpg",
+  "caption_ids": [
+   108668
+  ],
+  "captions": [
+   "an adult elephant and young elephant cross a dirt road together"
+  ]
+ },
+ {
+  "image_id": 461172,
+  "file": "COCO_val2014_000000461172.jpg",
+  "caption_ids": [
+   322825
+  ],
+  "captions": [
+   "A wooden table with a bowl of fruits and vegetables."
+  ]
+ },
+ {
+  "image_id": 522371,
+  "file": "COCO_val2014_000000522371.jpg",
+  "caption_ids": [
+   432911
+  ],
+  "captions": [
+   "Two children posing with ski gear on in the snow."
+  ]
+ },
+ {
+  "image_id": 113630,
+  "file": "COCO_val2014_000000113630.jpg",
+  "caption_ids": [
+   103176
+  ],
+  "captions": [
+   "There are two types of animals eating grass together"
+  ]
+ },
+ {
+  "image_id": 510791,
+  "file": "COCO_val2014_000000510791.jpg",
+  "caption_ids": [
+   712655
+  ],
+  "captions": [
+   "Walking the court prepares the tennis player for his upcoming match."
+  ]
+ },
+ {
+  "image_id": 36713,
+  "file": "COCO_val2014_000000036713.jpg",
+  "caption_ids": [
+   198522
+  ],
+  "captions": [
+   "A black dog laying on a couch with a floral pattern."
+  ]
+ },
+ {
+  "image_id": 426166,
+  "file": "COCO_val2014_000000426166.jpg",
+  "caption_ids": [
+   501078
+  ],
+  "captions": [
+   "A bicycle near a pole in front of a building."
+  ]
+ },
+ {
+  "image_id": 86755,
+  "file": "COCO_val2014_000000086755.jpg",
+  "caption_ids": [
+   545163
+  ],
+  "captions": [
+   "THERE ARE PEOPLE THAT ARE ON THE SNOW SLOPE SKIING"
+  ]
+ },
+ {
+  "image_id": 556120,
+  "file": "COCO_val2014_000000556120.jpg",
+  "caption_ids": [
+   330067
+  ],
+  "captions": [
+   "A pile of stuff in the middle of a room that includes boxes, suitcases, and a crate."
+  ]
+ },
+ {
+  "image_id": 43625,
+  "file": "COCO_val2014_000000043625.jpg",
+  "caption_ids": [
+   316818
+  ],
+  "captions": [
+   "A man on the side of the road holding a frisbee."
+  ]
+ },
+ {
+  "image_id": 266847,
+  "file": "COCO_val2014_000000266847.jpg",
+  "caption_ids": [
+   735545
+  ],
+  "captions": [
+   "The young baseball player is attempting a pitch."
+  ]
+ },
+ {
+  "image_id": 97423,
+  "file": "COCO_val2014_000000097423.jpg",
+  "caption_ids": [
+   658022
+  ],
+  "captions": [
+   "A baseball player is running to a base."
+  ]
+ },
+ {
+  "image_id": 177064,
+  "file": "COCO_val2014_000000177064.jpg",
+  "caption_ids": [
+   10496
+  ],
+  "captions": [
+   "A woman dressed in black holding a black umbrella on a tree-lined lane."
+  ]
+ },
+ {
+  "image_id": 208423,
+  "file": "COCO_val2014_000000208423.jpg",
+  "caption_ids": [
+   202771
+  ],
+  "captions": [
+   "Several different kites flying over a parking lot."
+  ]
+ },
+ {
+  "image_id": 364413,
+  "file": "COCO_val2014_000000364413.jpg",
+  "caption_ids": [
+   508848
+  ],
+  "captions": [
+   "A mirror hanging on the side of a white wall."
+  ]
+ },
+ {
+  "image_id": 261026,
+  "file": "COCO_val2014_000000261026.jpg",
+  "caption_ids": [
+   174729
+  ],
+  "captions": [
+   "A IMAGE OF A CITY PARKING LOT WITH CARS IN IT"
+  ]
+ },
+ {
+  "image_id": 531061,
+  "file": "COCO_val2014_000000531061.jpg",
+  "caption_ids": [
+   70804
+  ],
+  "captions": [
+   "A man and a girl riding a motorbike on the road"
+  ]
+ },
+ {
+  "image_id": 389308,
+  "file": "COCO_val2014_000000389308.jpg",
+  "caption_ids": [
+   240097
+  ],
+  "captions": [
+   "All the contents of a video game console have been unpacked from a box."
+  ]
+ },
+ {
+  "image_id": 499428,
+  "file": "COCO_val2014_000000499428.jpg",
+  "caption_ids": [
+   188931
+  ],
+  "captions": [
+   "a double decked bus driving down a street"
+  ]
+ },
+ {
+  "image_id": 300773,
+  "file": "COCO_val2014_000000300773.jpg",
+  "caption_ids": [
+   778588
+  ],
+  "captions": [
+   "An Asian man ad woman on their cell phones."
+  ]
+ },
+ {
+  "image_id": 293811,
+  "file": "COCO_val2014_000000293811.jpg",
+  "caption_ids": [
+   633726
+  ],
+  "captions": [
+   "A professional baseball pitcher reacting to a struck ball."
+  ]
+ },
+ {
+  "image_id": 223468,
+  "file": "COCO_val2014_000000223468.jpg",
+  "caption_ids": [
+   628794
+  ],
+  "captions": [
+   "The building in the center has a white tower with a clock."
+  ]
+ },
+ {
+  "image_id": 345389,
+  "file": "COCO_val2014_000000345389.jpg",
+  "caption_ids": [
+   119030
+  ],
+  "captions": [
+   "a woman standing in a kitchen near a refrigerator and a stove"
+  ]
+ },
+ {
+  "image_id": 469294,
+  "file": "COCO_val2014_000000469294.jpg",
+  "caption_ids": [
+   368815
+  ],
+  "captions": [
+   "Computer disk sitting inside a group of oranges."
+  ]
+ },
+ {
+  "image_id": 39860,
+  "file": "COCO_val2014_000000039860.jpg",
+  "caption_ids": [
+   424051
+  ],
+  "captions": [
+   "A surfer in a green wetsuit cresting a wave"
+  ]
+ },
+ {
+  "image_id": 220704,
+  "file": "COCO_val2014_000000220704.jpg",
+  "caption_ids": [
+   19391
+  ],
+  "captions": [
+   "A clean steel industrial kitchen with minimal lighting."
+  ]
+ },
+ {
+  "image_id": 461860,
+  "file": "COCO_val2014_000000461860.jpg",
+  "caption_ids": [
+   633059
+  ],
+  "captions": [
+   "A tennis player jumps into the air with his racquet."
+  ]
+ },
+ {
+  "image_id": 209917,
+  "file": "COCO_val2014_000000209917.jpg",
+  "caption_ids": [
+   156715
+  ],
+  "captions": [
+   "A woman stands on a tennis court holding a racket."
+  ]
+ },
+ {
+  "image_id": 488736,
+  "file": "COCO_val2014_000000488736.jpg",
+  "caption_ids": [
+   343411
+  ],
+  "captions": [
+   "a building with a large clock on the outside."
+  ]
+ },
+ {
+  "image_id": 377946,
+  "file": "COCO_val2014_000000377946.jpg",
+  "caption_ids": [
+   89465
+  ],
+  "captions": [
+   "A yellow food truck parked close to a car"
+  ]
+ },
+ {
+  "image_id": 463771,
+  "file": "COCO_val2014_000000463771.jpg",
+  "caption_ids": [
+   489383
+  ],
+  "captions": [
+   "a person in a kitchen with many apples"
+  ]
+ },
+ {
+  "image_id": 84567,
+  "file": "COCO_val2014_000000084567.jpg",
+  "caption_ids": [
+   497148
+  ],
+  "captions": [
+   "A statue of a man riding a horse on a tower of rocks."
+  ]
+ },
+ {
+  "image_id": 351559,
+  "file": "COCO_val2014_000000351559.jpg",
+  "caption_ids": [
+   764176
+  ],
+  "captions": [
+   "A traffic light with a street sign near a tall building at night."
+  ]
+ },
+ {
+  "image_id": 399567,
+  "file": "COCO_val2014_000000399567.jpg",
+  "caption_ids": [
+   485105
+  ],
+  "captions": [
+   "Box cars are sitting on tracks at a station"
+  ]
+ },
+ {
+  "image_id": 337143,
+  "file": "COCO_val2014_000000337143.jpg",
+  "caption_ids": [
+   224527
+  ],
+  "captions": [
+   "People looking at a group of giraffes in zoo."
+  ]
+ },
+ {
+  "image_id": 1682,
+  "file": "COCO_val2014_000000001682.jpg",
+  "caption_ids": [
+   694422
+  ],
+  "captions": [
+   "A boat sailing on top of a body of water."
+  ]
+ },
+ {
+  "image_id": 125778,
+  "file": "COCO_val2014_000000125778.jpg",
+  "caption_ids": [
+   732246
+  ],
+  "captions": [
+   "a living room with a couch and a chair"
+  ]
+ },
+ {
+  "image_id": 543528,
+  "file": "COCO_val2014_000000543528.jpg",
+  "caption_ids": [
+   551457
+  ],
+  "captions": [
+   "a airplane that is flying through the sky"
+  ]
+ },
+ {
+  "image_id": 166731,
+  "file": "COCO_val2014_000000166731.jpg",
+  "caption_ids": [
+   52557
+  ],
+  "captions": [
+   "Signs posted on poles on a sidewalk next to a street."
+  ]
+ },
+ {
+  "image_id": 540762,
+  "file": "COCO_val2014_000000540762.jpg",
+  "caption_ids": [
+   787674
+  ],
+  "captions": [
+   "A statue in front of a building with several statutes on it."
+  ]
+ },
+ {
+  "image_id": 402658,
+  "file": "COCO_val2014_000000402658.jpg",
+  "caption_ids": [
+   788177
+  ],
+  "captions": [
+   "Delicious pastries and coffee are served on a plate."
+  ]
+ },
+ {
+  "image_id": 43758,
+  "file": "COCO_val2014_000000043758.jpg",
+  "caption_ids": [
+   738609
+  ],
+  "captions": [
+   "There are three animals outside of the barn."
+  ]
+ },
+ {
+  "image_id": 473994,
+  "file": "COCO_val2014_000000473994.jpg",
+  "caption_ids": [
+   61732
+  ],
+  "captions": [
+   "a small dog with a frisbee in its mouth"
+  ]
+ },
+ {
+  "image_id": 434510,
+  "file": "COCO_val2014_000000434510.jpg",
+  "caption_ids": [
+   786088
+  ],
+  "captions": [
+   "A man is holding his arms out on his surfboard in the middle of the sea."
+  ]
+ },
+ {
+  "image_id": 334625,
+  "file": "COCO_val2014_000000334625.jpg",
+  "caption_ids": [
+   67332
+  ],
+  "captions": [
+   "A severely injured man hooked up to machines  in the hospital"
+  ]
+ },
+ {
+  "image_id": 499198,
+  "file": "COCO_val2014_000000499198.jpg",
+  "caption_ids": [
+   552118
+  ],
+  "captions": [
+   "a close up of a woman sitting on a surfboard in the water, with several people in the background"
+  ]
+ },
+ {
+  "image_id": 168225,
+  "file": "COCO_val2014_000000168225.jpg",
+  "caption_ids": [
+   542233
+  ],
+  "captions": [
+   "A bathroom that has a mirror in it."
+  ]
+ },
+ {
+  "image_id": 562155,
+  "file": "COCO_val2014_000000562155.jpg",
+  "caption_ids": [
+   327907
+  ],
+  "captions": [
+   "A woman with short black hair and square glasses wears a tie and a gray shirt."
+  ]
+ },
+ {
+  "image_id": 337667,
+  "file": "COCO_val2014_000000337667.jpg",
+  "caption_ids": [
+   578215
+  ],
+  "captions": [
+   "a train carrying some heavy equipment resting on the tracks"
+  ]
+ },
+ {
+  "image_id": 114183,
+  "file": "COCO_val2014_000000114183.jpg",
+  "caption_ids": [
+   728213
+  ],
+  "captions": [
+   "A guy with a helmet and dark glasses on a bike."
+  ]
+ },
+ {
+  "image_id": 206783,
+  "file": "COCO_val2014_000000206783.jpg",
+  "caption_ids": [
+   503467
+  ],
+  "captions": [
+   "A large elephant standing next to a stone wall."
+  ]
+ },
+ {
+  "image_id": 365642,
+  "file": "COCO_val2014_000000365642.jpg",
+  "caption_ids": [
+   18675
+  ],
+  "captions": [
+   "A woman is sitting on a stool on a sidewalk."
+  ]
+ },
+ {
+  "image_id": 516800,
+  "file": "COCO_val2014_000000516800.jpg",
+  "caption_ids": [
+   576524
+  ],
+  "captions": [
+   "a long green train on some metal tracks"
+  ]
+ },
+ {
+  "image_id": 418109,
+  "file": "COCO_val2014_000000418109.jpg",
+  "caption_ids": [
+   829116
+  ],
+  "captions": [
+   "A woman standing beside a statue of a zebra in front of a building."
+  ]
+ },
+ {
+  "image_id": 248767,
+  "file": "COCO_val2014_000000248767.jpg",
+  "caption_ids": [
+   332390
+  ],
+  "captions": [
+   "a close up of a traffic light with buildings in the background"
+  ]
+ },
+ {
+  "image_id": 177453,
+  "file": "COCO_val2014_000000177453.jpg",
+  "caption_ids": [
+   406308
+  ],
+  "captions": [
+   "a giraffe eating something off a bare tree branch"
+  ]
+ },
+ {
+  "image_id": 286327,
+  "file": "COCO_val2014_000000286327.jpg",
+  "caption_ids": [
+   494316
+  ],
+  "captions": [
+   "A man herding sheep with a dog helping him"
+  ]
+ },
+ {
+  "image_id": 210030,
+  "file": "COCO_val2014_000000210030.jpg",
+  "caption_ids": [
+   180837
+  ],
+  "captions": [
+   "A white plate with a slice of cake on top of it."
+  ]
+ },
+ {
+  "image_id": 138784,
+  "file": "COCO_val2014_000000138784.jpg",
+  "caption_ids": [
+   281320
+  ],
+  "captions": [
+   "Yellow train on grey tracks on a cloudy day."
+  ]
+ },
+ {
+  "image_id": 432468,
+  "file": "COCO_val2014_000000432468.jpg",
+  "caption_ids": [
+   504606
+  ],
+  "captions": [
+   "a cat sleeping on top of a black suitcase"
+  ]
+ },
+ {
+  "image_id": 516318,
+  "file": "COCO_val2014_000000516318.jpg",
+  "caption_ids": [
+   761121
+  ],
+  "captions": [
+   "a person riding a surf board on a wave"
+  ]
+ },
+ {
+  "image_id": 497067,
+  "file": "COCO_val2014_000000497067.jpg",
+  "caption_ids": [
+   728620
+  ],
+  "captions": [
+   "A boy kicks a soccer ball during a match."
+  ]
+ },
+ {
+  "image_id": 136077,
+  "file": "COCO_val2014_000000136077.jpg",
+  "caption_ids": [
+   264747
+  ],
+  "captions": [
+   "The two zebras are standing together in the field."
+  ]
+ },
+ {
+  "image_id": 46571,
+  "file": "COCO_val2014_000000046571.jpg",
+  "caption_ids": [
+   787896
+  ],
+  "captions": [
+   "The motorbike is a beautifully designed machine,  a work of art on wheels."
+  ]
+ },
+ {
+  "image_id": 254571,
+  "file": "COCO_val2014_000000254571.jpg",
+  "caption_ids": [
+   383930
+  ],
+  "captions": [
+   "A person riding a motorcycle down a dirt road near trees."
+  ]
+ }
+]

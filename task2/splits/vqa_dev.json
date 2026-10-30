@@ -1,0 +1,1442 @@
+[
+ {
+  "pair_id": "102928002_283055001",
+  "answer_type": "yes/no",
+  "question": "Is the boy wearing a belt?",
+  "items": [
+   {
+    "question_id": 102928002,
+    "image_id": 102928,
+    "file": "COCO_val2014_000000102928.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ]
+   },
+   {
+    "question_id": 283055001,
+    "image_id": 283055,
+    "file": "COCO_val2014_000000283055.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "51335001_313246000",
+  "answer_type": "yes/no",
+  "question": "Is he at a restaurant?",
+  "items": [
+   {
+    "question_id": 51335001,
+    "image_id": 51335,
+    "file": "COCO_val2014_000000051335.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ]
+   },
+   {
+    "question_id": 313246000,
+    "image_id": 313246,
+    "file": "COCO_val2014_000000313246.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "50829054_148766015",
+  "answer_type": "yes/no",
+  "question": "Are these valuable?",
+  "items": [
+   {
+    "question_id": 50829054,
+    "image_id": 50829,
+    "file": "COCO_val2014_000000050829.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "yes",
+     "no",
+     "yes",
+     "no",
+     "no"
+    ]
+   },
+   {
+    "question_id": 148766015,
+    "image_id": 148766,
+    "file": "COCO_val2014_000000148766.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "no",
+     "yes",
+     "yes"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "267164001_427376005",
+  "answer_type": "yes/no",
+  "question": "Is there a bottle on the ground?",
+  "items": [
+   {
+    "question_id": 267164001,
+    "image_id": 267164,
+    "file": "COCO_val2014_000000267164.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "no",
+     "yes",
+     "yes"
+    ]
+   },
+   {
+    "question_id": 427376005,
+    "image_id": 427376,
+    "file": "COCO_val2014_000000427376.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "297380001_323668000",
+  "answer_type": "yes/no",
+  "question": "Is there sand?",
+  "items": [
+   {
+    "question_id": 297380001,
+    "image_id": 297380,
+    "file": "COCO_val2014_000000297380.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ]
+   },
+   {
+    "question_id": 323668000,
+    "image_id": 323668,
+    "file": "COCO_val2014_000000323668.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "yes"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "15968021_223241033",
+  "answer_type": "yes/no",
+  "question": "Is the father holding the baby?",
+  "items": [
+   {
+    "question_id": 15968021,
+    "image_id": 15968,
+    "file": "COCO_val2014_000000015968.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ]
+   },
+   {
+    "question_id": 223241033,
+    "image_id": 223241,
+    "file": "COCO_val2014_000000223241.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "89395000_230884001",
+  "answer_type": "yes/no",
+  "question": "Do you see the sky?",
+  "items": [
+   {
+    "question_id": 89395000,
+    "image_id": 89395,
+    "file": "COCO_val2014_000000089395.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ]
+   },
+   {
+    "question_id": 230884001,
+    "image_id": 230884,
+    "file": "COCO_val2014_000000230884.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "221725001_282046007",
+  "answer_type": "yes/no",
+  "question": "Is the sand completely clean?",
+  "items": [
+   {
+    "question_id": 221725001,
+    "image_id": 221725,
+    "file": "COCO_val2014_000000221725.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ]
+   },
+   {
+    "question_id": 282046007,
+    "image_id": 282046,
+    "file": "COCO_val2014_000000282046.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "no",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "99416004_206433010",
+  "answer_type": "yes/no",
+  "question": "Is one of the men wearing a cap?",
+  "items": [
+   {
+    "question_id": 99416004,
+    "image_id": 99416,
+    "file": "COCO_val2014_000000099416.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ]
+   },
+   {
+    "question_id": 206433010,
+    "image_id": 206433,
+    "file": "COCO_val2014_000000206433.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "305223001_333504000",
+  "answer_type": "yes/no",
+  "question": "Is it sunny out?",
+  "items": [
+   {
+    "question_id": 305223001,
+    "image_id": 305223,
+    "file": "COCO_val2014_000000305223.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ]
+   },
+   {
+    "question_id": 333504000,
+    "image_id": 333504,
+    "file": "COCO_val2014_000000333504.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "52386006_172004004",
+  "answer_type": "yes/no",
+  "question": "Is the giraffe eating?",
+  "items": [
+   {
+    "question_id": 52386006,
+    "image_id": 52386,
+    "file": "COCO_val2014_000000052386.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "grass",
+     "yes",
+     "yes"
+    ]
+   },
+   {
+    "question_id": 172004004,
+    "image_id": 172004,
+    "file": "COCO_val2014_000000172004.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "leaves",
+     "no",
+     "no"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "198075005_223327000",
+  "answer_type": "yes/no",
+  "question": "Are the people facing the same direction?",
+  "items": [
+   {
+    "question_id": 198075005,
+    "image_id": 198075,
+    "file": "COCO_val2014_000000198075.jpg",
+    "canonical": "yes",
+    "target": "yes",
+    "answers": [
+     "yes",
+     "yes",
+     "no",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes",
+     "yes"
+    ]
+   },
+   {
+    "question_id": 223327000,
+    "image_id": 223327,
+    "file": "COCO_val2014_000000223327.jpg",
+    "canonical": "no",
+    "target": "no",
+    "answers": [
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no",
+     "no"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "480985000_577036003",
+  "answer_type": "number",
+  "question": "How many wheels are shown on the bike?",
+  "items": [
+   {
+    "question_id": 480985000,
+    "image_id": 480985,
+    "file": "COCO_val2014_000000480985.jpg",
+    "canonical": "1",
+    "target": "1",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   {
+    "question_id": 577036003,
+    "image_id": 577036,
+    "file": "COCO_val2014_000000577036.jpg",
+    "canonical": "4",
+    "target": "4",
+    "answers": [
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "2",
+     "4",
+     "4",
+     "4"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "184789004_293324000",
+  "answer_type": "number",
+  "question": "How many planes do you see?",
+  "items": [
+   {
+    "question_id": 184789004,
+    "image_id": 184789,
+    "file": "COCO_val2014_000000184789.jpg",
+    "canonical": "1",
+    "target": "1",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "2",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   {
+    "question_id": 293324000,
+    "image_id": 293324,
+    "file": "COCO_val2014_000000293324.jpg",
+    "canonical": "3",
+    "target": "3",
+    "answers": [
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "4",
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "408248006_480652000",
+  "answer_type": "number",
+  "question": "How many pieces of luggage?",
+  "items": [
+   {
+    "question_id": 408248006,
+    "image_id": 408248,
+    "file": "COCO_val2014_000000408248.jpg",
+    "canonical": "2",
+    "target": "2",
+    "answers": [
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2"
+    ]
+   },
+   {
+    "question_id": 480652000,
+    "image_id": 480652,
+    "file": "COCO_val2014_000000480652.jpg",
+    "canonical": "3",
+    "target": "3",
+    "answers": [
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "178413001_276840000",
+  "answer_type": "number",
+  "question": "How many people are wearing a red jacket?",
+  "items": [
+   {
+    "question_id": 178413001,
+    "image_id": 178413,
+    "file": "COCO_val2014_000000178413.jpg",
+    "canonical": "1",
+    "target": "1",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ]
+   },
+   {
+    "question_id": 276840000,
+    "image_id": 276840,
+    "file": "COCO_val2014_000000276840.jpg",
+    "canonical": "2",
+    "target": "2",
+    "answers": [
+     "2",
+     "2",
+     "3",
+     "14",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "306230000_487076008",
+  "answer_type": "number",
+  "question": "How many signs say stop?",
+  "items": [
+   {
+    "question_id": 306230000,
+    "image_id": 306230,
+    "file": "COCO_val2014_000000306230.jpg",
+    "canonical": "2",
+    "target": "2",
+    "answers": [
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2"
+    ]
+   },
+   {
+    "question_id": 487076008,
+    "image_id": 487076,
+    "file": "COCO_val2014_000000487076.jpg",
+    "canonical": "1",
+    "target": "1",
+    "answers": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "2",
+     "1",
+     "1",
+     "1"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "122300002_207763001",
+  "answer_type": "number",
+  "question": "How many women are on the grass?",
+  "items": [
+   {
+    "question_id": 122300002,
+    "image_id": 122300,
+    "file": "COCO_val2014_000000122300.jpg",
+    "canonical": "3",
+    "target": "3",
+    "answers": [
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3"
+    ]
+   },
+   {
+    "question_id": 207763001,
+    "image_id": 207763,
+    "file": "COCO_val2014_000000207763.jpg",
+    "canonical": "2",
+    "target": "2",
+    "answers": [
+     "4",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "115229001_349689001",
+  "answer_type": "number",
+  "question": "How many vehicles is there?",
+  "items": [
+   {
+    "question_id": 115229001,
+    "image_id": 115229,
+    "file": "COCO_val2014_000000115229.jpg",
+    "canonical": "4",
+    "target": "4",
+    "answers": [
+     "4",
+     "5",
+     "4",
+     "4",
+     "4",
+     "4",
+     "5",
+     "4",
+     "4",
+     "4"
+    ]
+   },
+   {
+    "question_id": 349689001,
+    "image_id": 349689,
+    "file": "COCO_val2014_000000349689.jpg",
+    "canonical": "2",
+    "target": "2",
+    "answers": [
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2",
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "74209003_399830014",
+  "answer_type": "number",
+  "question": "How many stools?",
+  "items": [
+   {
+    "question_id": 74209003,
+    "image_id": 74209,
+    "file": "COCO_val2014_000000074209.jpg",
+    "canonical": "4",
+    "target": "4",
+    "answers": [
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4",
+     "4"
+    ]
+   },
+   {
+    "question_id": 399830014,
+    "image_id": 399830,
+    "file": "COCO_val2014_000000399830.jpg",
+    "canonical": "0",
+    "target": "0",
+    "answers": [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "249969009_385181000",
+  "answer_type": "other",
+  "question": "What color is the broth of this dish?",
+  "items": [
+   {
+    "question_id": 249969009,
+    "image_id": 249969,
+    "file": "COCO_val2014_000000249969.jpg",
+    "canonical": "brown",
+    "target": "brown",
+    "answers": [
+     "brown",
+     "brown",
+     "brown",
+     "green",
+     "brown",
+     "brown",
+     "dish",
+     "brown",
+     "brown",
+     "brown"
+    ]
+   },
+   {
+    "question_id": 385181000,
+    "image_id": 385181,
+    "file": "COCO_val2014_000000385181.jpg",
+    "canonical": "red",
+    "target": "red",
+    "answers": [
+     "red",
+     "orange",
+     "red",
+     "red",
+     "orange",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "77951001_134574000",
+  "answer_type": "other",
+  "question": "What utensil is on the plate?",
+  "items": [
+   {
+    "question_id": 77951001,
+    "image_id": 77951,
+    "file": "COCO_val2014_000000077951.jpg",
+    "canonical": "fork",
+    "target": "fork",
+    "answers": [
+     "fork",
+     "fork",
+     "fork",
+     "fork",
+     "fork",
+     "fork",
+     "fork",
+     "fork",
+     "fork",
+     "fork"
+    ]
+   },
+   {
+    "question_id": 134574000,
+    "image_id": 134574,
+    "file": "COCO_val2014_000000134574.jpg",
+    "canonical": "spoon",
+    "target": "spoon",
+    "answers": [
+     "spoon",
+     "spoon",
+     "spoon",
+     "spoon",
+     "spoon",
+     "spoon",
+     "spoon",
+     "spoon",
+     "spoon",
+     "spoon"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "291686001_389256002",
+  "answer_type": "other",
+  "question": "What color is the bowl?",
+  "items": [
+   {
+    "question_id": 291686001,
+    "image_id": 291686,
+    "file": "COCO_val2014_000000291686.jpg",
+    "canonical": "white",
+    "target": "white",
+    "answers": [
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white",
+     "white"
+    ]
+   },
+   {
+    "question_id": 389256002,
+    "image_id": 389256,
+    "file": "COCO_val2014_000000389256.jpg",
+    "canonical": "blue",
+    "target": "blue",
+    "answers": [
+     "blue",
+     "blue",
+     "blue",
+     "blue",
+     "blue",
+     "blue",
+     "orange",
+     "blue",
+     "blue and white",
+     "blue"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "136285003_546067004",
+  "answer_type": "other",
+  "question": "What are the people riding on?",
+  "items": [
+   {
+    "question_id": 136285003,
+    "image_id": 136285,
+    "file": "COCO_val2014_000000136285.jpg",
+    "canonical": "horse",
+    "target": "horse",
+    "answers": [
+     "horse",
+     "horse",
+     "horse",
+     "horse",
+     "horse",
+     "horse",
+     "horse",
+     "horse",
+     "horse",
+     "horse"
+    ]
+   },
+   {
+    "question_id": 546067004,
+    "image_id": 546067,
+    "file": "COCO_val2014_000000546067.jpg",
+    "canonical": "elephant",
+    "target": "elephant",
+    "answers": [
+     "elephant",
+     "elephant",
+     "elephant",
+     "elephant",
+     "elephant",
+     "elephant",
+     "elephant",
+     "elephant",
+     "elephant",
+     "elephant"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "225177005_392722002",
+  "answer_type": "other",
+  "question": "What color is the bus?",
+  "items": [
+   {
+    "question_id": 225177005,
+    "image_id": 225177,
+    "file": "COCO_val2014_000000225177.jpg",
+    "canonical": "yellow",
+    "target": "yellow",
+    "answers": [
+     "black and yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow",
+     "yellow"
+    ]
+   },
+   {
+    "question_id": 392722002,
+    "image_id": 392722,
+    "file": "COCO_val2014_000000392722.jpg",
+    "canonical": "green",
+    "target": "green",
+    "answers": [
+     "green",
+     "green",
+     "green",
+     "green",
+     "green",
+     "green",
+     "green and cream",
+     "green",
+     "green and yellow",
+     "green"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "15846001_110597003",
+  "answer_type": "other",
+  "question": "What is the color of the shirt of the man reaching for the Frisbee?",
+  "items": [
+   {
+    "question_id": 15846001,
+    "image_id": 15846,
+    "file": "COCO_val2014_000000015846.jpg",
+    "canonical": "blue",
+    "target": "blue",
+    "answers": [
+     "blue",
+     "blue",
+     "blue",
+     "blue",
+     "blue",
+     "blue",
+     "blue",
+     "blue",
+     "blue",
+     "blue"
+    ]
+   },
+   {
+    "question_id": 110597003,
+    "image_id": 110597,
+    "file": "COCO_val2014_000000110597.jpg",
+    "canonical": "red",
+    "target": "red",
+    "answers": [
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "red",
+     "white",
+     "red"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "361147000_368836004",
+  "answer_type": "other",
+  "question": "What brand of shoes is he wearing?",
+  "items": [
+   {
+    "question_id": 361147000,
+    "image_id": 361147,
+    "file": "COCO_val2014_000000361147.jpg",
+    "canonical": "adidas",
+    "target": "adidas",
+    "answers": [
+     "adidas",
+     "adidas",
+     "reebok",
+     "adidas",
+     "adidas",
+     "adidas",
+     "adidas",
+     "adidas",
+     "adidas",
+     "adidas"
+    ]
+   },
+   {
+    "question_id": 368836004,
+    "image_id": 368836,
+    "file": "COCO_val2014_000000368836.jpg",
+    "canonical": "nike",
+    "target": "nike",
+    "answers": [
+     "nike",
+     "nike",
+     "nike",
+     "nike",
+     "nike",
+     "nike",
+     "nike",
+     "nike",
+     "nike",
+     "nike"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "124756002_201887000",
+  "answer_type": "other",
+  "question": "What is the name on the front of the truck?",
+  "items": [
+   {
+    "question_id": 124756002,
+    "image_id": 124756,
+    "file": "COCO_val2014_000000124756.jpg",
+    "canonical": "dodge",
+    "target": "dodge",
+    "answers": [
+     "dodge",
+     "dodge",
+     "dodge",
+     "didge",
+     "dodge",
+     "dodge",
+     "dodge",
+     "dodge",
+     "dodge",
+     "dodge"
+    ]
+   },
+   {
+    "question_id": 201887000,
+    "image_id": 201887,
+    "file": "COCO_val2014_000000201887.jpg",
+    "canonical": "vw",
+    "target": "vw",
+    "answers": [
+     "volkswagen",
+     "vw",
+     "vw",
+     "vw",
+     "vw",
+     "vw",
+     "vw",
+     "vw",
+     "vw",
+     "vw"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "424220002_548331007",
+  "answer_type": "other",
+  "question": "What kind of animal is black in this photo?",
+  "items": [
+   {
+    "question_id": 424220002,
+    "image_id": 424220,
+    "file": "COCO_val2014_000000424220.jpg",
+    "canonical": "cat",
+    "target": "cat",
+    "answers": [
+     "cat",
+     "cat",
+     "cat",
+     "cat",
+     "cat",
+     "cat",
+     "cat",
+     "cat",
+     "cat",
+     "cat"
+    ]
+   },
+   {
+    "question_id": 548331007,
+    "image_id": 548331,
+    "file": "COCO_val2014_000000548331.jpg",
+    "canonical": "dog",
+    "target": "dog",
+    "answers": [
+     "dog",
+     "dog",
+     "dog",
+     "dog",
+     "dog",
+     "dog",
+     "dog",
+     "cat",
+     "dog",
+     "dog"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "24285002_24553002",
+  "answer_type": "other",
+  "question": "What sport is being played?",
+  "items": [
+   {
+    "question_id": 24285002,
+    "image_id": 24285,
+    "file": "COCO_val2014_000000024285.jpg",
+    "canonical": "tennis",
+    "target": "tennis",
+    "answers": [
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis",
+     "tennis"
+    ]
+   },
+   {
+    "question_id": 24553002,
+    "image_id": 24553,
+    "file": "COCO_val2014_000000024553.jpg",
+    "canonical": "baseball",
+    "target": "baseball",
+    "answers": [
+     "baseball",
+     "baseball",
+     "baseball",
+     "baseball",
+     "baseball",
+     "baseball",
+     "baseball",
+     "baseball",
+     "baseball",
+     "baseball"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "425462001_562062011",
+  "answer_type": "other",
+  "question": "What color are the laces in his mitt?",
+  "items": [
+   {
+    "question_id": 425462001,
+    "image_id": 425462,
+    "file": "COCO_val2014_000000425462.jpg",
+    "canonical": "black",
+    "target": "black",
+    "answers": [
+     "black",
+     "black",
+     "black",
+     "black",
+     "black",
+     "black",
+     "white",
+     "black",
+     "black",
+     "black"
+    ]
+   },
+   {
+    "question_id": 562062011,
+    "image_id": 562062,
+    "file": "COCO_val2014_000000562062.jpg",
+    "canonical": "brown",
+    "target": "brown",
+    "answers": [
+     "brown",
+     "brown",
+     "brown",
+     "brown",
+     "brown",
+     "white",
+     "brown",
+     "brown",
+     "brown",
+     "tan"
+    ]
+   }
+  ]
+ },
+ {
+  "pair_id": "154202000_264161002",
+  "answer_type": "other",
+  "question": "Does this bag belong to a male or female?",
+  "items": [
+   {
+    "question_id": 154202000,
+    "image_id": 154202,
+    "file": "COCO_val2014_000000154202.jpg",
+    "canonical": "male",
+    "target": "male",
+    "answers": [
+     "yes",
+     "male",
+     "male",
+     "male",
+     "male",
+     "male",
+     "male",
+     "male",
+     "male",
+     "female"
+    ]
+   },
+   {
+    "question_id": 264161002,
+    "image_id": 264161,
+    "file": "COCO_val2014_000000264161.jpg",
+    "canonical": "female",
+    "target": "female",
+    "answers": [
+     "female",
+     "female",
+     "female",
+     "female",
+     "female",
+     "female",
+     "female",
+     "female",
+     "female",
+     "female"
+    ]
+   }
+  ]
+ }
+]

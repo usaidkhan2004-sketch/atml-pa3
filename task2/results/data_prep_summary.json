@@ -1,0 +1,226 @@
+{
+  "seed": 6304,
+  "sources": {
+    "annotations_trainval2014.zip": {
+      "url": "http://images.cocodataset.org/annotations/annotations_trainval2014.zip",
+      "bytes": 252872794,
+      "sha256": "031296bbc80c45a1d1f76bf9a90ead27e94e99ec629208449507a4917a3bf009"
+    },
+    "v2_Questions_Train_mscoco.zip": {
+      "url": "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Questions_Train_mscoco.zip",
+      "bytes": 7239401,
+      "sha256": "05a64b6e2582d06d7585f5429674a9a33851878be1bff9f8668cdcf792df611e"
+    },
+    "v2_Questions_Val_mscoco.zip": {
+      "url": "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Questions_Val_mscoco.zip",
+      "bytes": 3494929,
+      "sha256": "e71f6c5c3e97a51d050f28243e262b28cd0c48d11a6b4632d769d30d3f93222a"
+    },
+    "v2_Annotations_Train_mscoco.zip": {
+      "url": "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Annotations_Train_mscoco.zip",
+      "bytes": 21708861,
+      "sha256": "fb101bcefe91422c543c2bb6d70af11eb3119d0ff745ae283d09acdf66250853"
+    },
+    "v2_Annotations_Val_mscoco.zip": {
+      "url": "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Annotations_Val_mscoco.zip",
+      "bytes": 10518930,
+      "sha256": "0caae7c8d1dafd852727f5ac046bc1efca9b72026bd6ffa34fc489f3a7b3291e"
+    },
+    "v2_Complementary_Pairs_Train_mscoco.zip": {
+      "url": "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Complementary_Pairs_Train_mscoco.zip",
+      "bytes": 1643822,
+      "sha256": "95b8142bd2e52bccfd0d9b15c4a9c580ee03745d04ef8481e54bc4ffb8b5c40d"
+    },
+    "v2_Complementary_Pairs_Val_mscoco.zip": {
+      "url": "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Complementary_Pairs_Val_mscoco.zip",
+      "bytes": 772608,
+      "sha256": "4788add4425f17d301fbdbeb42b9ad855122ffc420ad23b5184af21dc3d2e716"
+    }
+  },
+  "vqa_train": {
+    "complementary_pairs": 200394,
+    "eligible_number": 10561,
+    "below_agreement": 121255,
+    "eligible_other": 17375,
+    "same_consensus": 7086,
+    "eligible_yes/no": 44033,
+    "answer_type_differs": 84
+  },
+  "vqa_val": {
+    "complementary_pairs": 95144,
+    "eligible_yes/no": 20963,
+    "answer_type_differs": 64,
+    "below_agreement": 57777,
+    "eligible_other": 8039,
+    "eligible_number": 4923,
+    "same_consensus": 3378
+  },
+  "counts": {
+    "captions_train": {
+      "images": 6000,
+      "examples": 18000
+    },
+    "captions_dev": {
+      "images": 96,
+      "examples": 96
+    },
+    "vqa_train": {
+      "pairs": 1536,
+      "questions": 3072,
+      "by_type": {
+        "yes/no": 640,
+        "number": 256,
+        "other": 640
+      }
+    },
+    "vqa_dev": {
+      "pairs": 32,
+      "questions": 64,
+      "by_type": {
+        "yes/no": 12,
+        "number": 8,
+        "other": 12
+      }
+    },
+    "vqa_test": {
+      "pairs": 96,
+      "questions": 192,
+      "by_type": {
+        "yes/no": 36,
+        "number": 24,
+        "other": 36
+      }
+    },
+    "grounding_test": {
+      "pairs": 64,
+      "questions": 128,
+      "by_type": {
+        "presence": 32,
+        "counting": 32
+      }
+    },
+    "grounding_dev": {
+      "pairs": 24,
+      "questions": 48,
+      "by_type": {
+        "presence": 12,
+        "counting": 12
+      }
+    },
+    "grounding_train_pools": {
+      "presence": 24989,
+      "counting": 22330
+    },
+    "images_to_cache": {
+      "train": 8747,
+      "val": 528
+    }
+  },
+  "training_image_overlap": {
+    "caption_and_vqa_train_images": 198,
+    "cached_training_images_without_any_instance": 57
+  },
+  "answer_distribution": {
+    "grounding_pool_counting_answers": {
+      "1": 20429,
+      "2": 15196,
+      "3": 5800,
+      "4": 3235
+    },
+    "grounding_pool_categories_top10": [
+      [
+        "person",
+        4501
+      ],
+      [
+        "chair",
+        920
+      ],
+      [
+        "car",
+        908
+      ],
+      [
+        "dining table",
+        873
+      ],
+      [
+        "cup",
+        691
+      ],
+      [
+        "bottle",
+        620
+      ],
+      [
+        "bowl",
+        511
+      ],
+      [
+        "handbag",
+        510
+      ],
+      [
+        "truck",
+        440
+      ],
+      [
+        "bench",
+        439
+      ]
+    ],
+    "vqa_train_number_canonical_top10": [
+      [
+        "1",
+        157
+      ],
+      [
+        "2",
+        155
+      ],
+      [
+        "0",
+        52
+      ],
+      [
+        "3",
+        50
+      ],
+      [
+        "4",
+        28
+      ],
+      [
+        "5",
+        16
+      ],
+      [
+        "6",
+        8
+      ],
+      [
+        "7",
+        4
+      ],
+      [
+        "10",
+        4
+      ],
+      [
+        "23",
+        3
+      ]
+    ]
+  },
+  "isolation_checks": {
+    "eval_images_unique_across_all_sets": true,
+    "eval_sets_pairwise_disjoint": true,
+    "train_images_disjoint_from_eval": true,
+    "pool_images_within_cached_training_images": true,
+    "all_train_files_train2014": true,
+    "all_eval_files_val2014": true,
+    "vqa_pairs_differ_in_consensus": true,
+    "grounding_pairs_differ_in_answer": true
+  },
+  "seconds": 954.8363180160522
+}

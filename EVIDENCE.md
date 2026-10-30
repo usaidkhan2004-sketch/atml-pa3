@@ -169,7 +169,34 @@ Responses that hit the 512-token cap, per condition:
 
 The question order (plain) is `what_is_your_wish` … `enough_of_my_husband`, so the annotation subset is those two questions × 3 formats × 7 conditions = 42 responses.
 
-## Task 2 — VLM (to log during training, when built)
+## Task 2 — VLM
+
+**Data** (`python task2/prepare_data.py`, run locally, 955 s, peak RAM 3.7 GB; `task2/results/data_prep_summary.json`; choices in DECISIONS.md T2-1 to T2-18).
+
+Every count matches the manual:
+
+| Component | Train | Dev | Test |
+|---|---|---|---|
+| Captions | 6,000 images × 3 = 18,000 | 96 × 1 | — |
+| Natural VQAv2 (yes/no, number, other) | 1,536 pairs (640 / 256 / 640) | 32 (12 / 8 / 12) | 96 (36 / 24 / 36) |
+| Grounding (presence, counting) | pools of 24,989 + 22,330 pairs | 24 (12 + 12) | 64 (32 + 32) |
+
+- **VQAv2 eligibility:**
+  - Train: 71,969 of 200,394 complementary pairs are eligible. 121,255 fail ≥ 8/10 agreement, 7,086 share a consensus answer, and 84 differ in answer type.
+  - Val: 33,925 of 95,144 are eligible.
+- **Grounding pools:**
+  - Counting-pool answers: 1 → 20,429, 2 → 15,196, 3 → 5,800, 4 → 3,235.
+  - Most frequent pool category: person (4,501 presence pairs).
+- **Images to cache:** 8,747 train2014 (6,000 caption images + VQA training images; 198 images appear in both) and 528 val2014.
+- **Isolation checks**, all passing:
+  - Evaluation images are unique across all five eval sets.
+  - The eval sets are pairwise disjoint.
+  - No training image is an eval image.
+  - Pool images lie within the cached training set.
+  - Training uses train2014 only and evaluation val2014 only.
+  - Every pair differs in its answer.
+
+**Still to log during training and evaluation** (the manual asks for these during the runs, not recomputed afterwards):
 
 The manual asks for these, and they must be logged while training runs, not recomputed afterwards:
 - Training loss, development caption loss, answer NLL and image-swap penalties, with stage boundaries marked.

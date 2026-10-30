@@ -61,6 +61,8 @@ No external code is copied into this repository. Libraries are used through thei
 - EleutherAI `lm-evaluation-harness` 0.4.13, for the stock task definitions and HellaSwag `process_docs`, which is imported, not copied.
 - matplotlib.
 
+`task2/vqa_normalize.py` ports the answer normalization (`processPunctuation`, `processDigitArticle` and their tables, copied verbatim) from the official VQA evaluation code, [GT-Vision-Lab/VQA](https://github.com/GT-Vision-Lab/VQA) `PythonEvaluationTools/vqaEvaluation/vqaEval.py`.
+
 `task1/configs/first_plot_questions.yaml` is the unmodified `evaluation/first_plot_questions.yaml` from the [emergent-misalignment](https://github.com/emergent-misalignment/emergent-misalignment) repository (see `DECISIONS.md` #1).
 
 Datasets used:
