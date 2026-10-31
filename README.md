@@ -57,6 +57,7 @@ Notes on the steps:
 | 1. Data selection (local, CPU) | `python task2/prepare_data.py` (downloads the official COCO 2014 and VQAv2 annotation zips to `data/task2/raw/`) | `task2/splits/`, `task2/results/data_prep_summary.json` |
 | 2. SigLIP feature cache | `python shared/kaggle_push.py task2/cache_features.py atml-pa3-task2-features --gpu --dataset jeffaudi/coco-2014-dataset-for-yolov3 --with task2/splits/images.json --with task2/splits/grounding_dev.json --with task2/splits/grounding_test.json` | `task2/results/feature_cache_summary.json`, `task2/results/label_inspection/` (features stay in the Kaggle output) |
 | 3. Visual interface checks + scale calibration | `python shared/kaggle_push.py task2/check_interface.py atml-pa3-task2-interface-check --gpu --source dentusayd/atml-pa3-task2-features --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py` (CPU-only part: `python task2/check_interface.py --local`) | `task2/results/interface_checks.json` |
+| 4. Training smoke test | `python shared/kaggle_push.py task2/train.py atml-pa3-task2-smoke --gpu --source dentusayd/atml-pa3-task2-features --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py --with task2/check_interface.py --with task2/results/interface_checks.json -- --smoke` | `task2/results/smoke_report.json` |
 
 The split files reach Kaggle as the private dataset `dentusayd/atml-pa3-task2-splits` (a copy of `task2/splits/*.json` and `task2/configs/coco_objects.json`; each run records their hashes). They are too large to bundle into a kernel.
 

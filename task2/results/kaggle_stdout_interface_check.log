@@ -4,20 +4,20 @@ content lengths {'caption': {'cap': 64, 'texts': 18096, 'max_tokens': 56, 'over_
 template ok
 batch ok {'ok': True, 'image_example_length': 224, 'no_image_example_length': 28}
 features ok
-Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<02:08,  2.42it/s]Loading weights:  61%|██████▏   | 191/311 [00:00<00:00, 487.82it/s]Loading weights:  97%|█████████▋| 302/311 [00:00<00:00, 565.41it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 459.35it/s]
-calibration {'text_mean_norm': 0.8050545796661244, 'text_tokens': 3695554, 'connector_mean_norm_unscaled': 15.893572640105326, 'visual_tokens': 1714412, 'train_images': 8747, 'scale': 0.05065283922600736, 'seconds': 3.6169328689575195}
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<02:15,  2.28it/s]Loading weights:  62%|██████▏   | 193/311 [00:00<00:00, 471.98it/s]Loading weights:  98%|█████████▊| 304/311 [00:00<00:00, 556.10it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 443.55it/s]
+calibration {'text_mean_norm': 0.8050545796661244, 'text_tokens': 3695554, 'connector_mean_norm_unscaled': 15.893572640105326, 'visual_tokens': 1714412, 'train_images': 8747, 'scale': 0.05065283922600736, 'seconds': 3.8681299686431885}
 equivalence ok {'float32_no_image_embeds_vs_ids_max_abs_logit_diff': 0.0, 'float32_single_example_nll': [5.7486, 3.6043, 10.3468, 3.3797, 2.0737, 5.1894, 10.8798, 13.1136], 'float32_right_pad_vs_single_max_abs_nll_diff': 9.5367431640625e-05, 'float32_left_pad_vs_single_max_abs_nll_diff': 9.5367431640625e-05, 'float16_no_image_embeds_vs_ids_max_abs_logit_diff': 0.0, 'float16_single_example_nll': [5.8427, 3.6037, 10.8695, 3.2889, 2.0764, 5.2198, 11.1044, 12.8884], 'float16_right_pad_vs_single_max_abs_nll_diff': 0.04641389846801758, 'float16_left_pad_vs_single_max_abs_nll_diff': 0.05726814270019531}
 gradient status {'grad_none': [], 'grad_nonfinite': []}
 /kaggle/src/script.py:252: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
 Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
   rec["loss"] = float(loss)
-stage 1 ok {'stage': 1, 'trainable_tensors': 4, 'trainable_params': 1837056, 'connector_params': 1837056, 'frozen_qwen_params': 596049920, 'grad_none': [], 'grad_nonfinite': [], 'loss': 6.88216495513916, 'connector_grad_norm': 1820.24365234375}
+stage 1 ok {'stage': 1, 'trainable_tensors': 4, 'trainable_params': 1837056, 'connector_params': 1837056, 'frozen_qwen_params': 596049920, 'grad_none': [], 'grad_nonfinite': [], 'loss': 6.88216495513916, 'connector_grad_norm': 1821.12353515625}
 gradient status {'grad_none': [], 'grad_nonfinite': []}
-stages 2-3 ok {'stage': 2, 'trainable_tensors': 228, 'trainable_params': 6424576, 'connector_params': 1837056, 'frozen_qwen_params': 596049920, 'lora_params': 4587520, 'grad_none': [], 'grad_nonfinite': [], 'loss': 6.88216495513916, 'connector_grad_norm': 1822.204345703125, 'lora_B_grad_norm': 145.3856658935547, 'lora_A_grad_norm': 0.0}
+stages 2-3 ok {'stage': 2, 'trainable_tensors': 228, 'trainable_params': 6424576, 'connector_params': 1837056, 'frozen_qwen_params': 596049920, 'lora_params': 4587520, 'grad_none': [], 'grad_nonfinite': [], 'loss': 6.88216495513916, 'connector_grad_norm': 1819.6881103515625, 'lora_B_grad_norm': 145.23379516601562, 'lora_A_grad_norm': 0.0}
 all checks passed -> /kaggle/working/task2/results/interface_checks.json
 /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
   cells[i][c] = re.sub('\\\\\|', '|', cell)
 /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
   text = re.sub(r'_', '\_', text) # Escape underscores in display text
 [NbConvertApp] Converting notebook __script__.ipynb to html
-[NbConvertApp] Writing 392093 bytes to __results__.html
+[NbConvertApp] Writing 392145 bytes to __results__.html

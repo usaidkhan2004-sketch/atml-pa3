@@ -221,11 +221,24 @@ Every count matches the manual:
 | Padding equivalence (FP16, recorded only) | max NLL difference 0.046 (right) and 0.057 (left); single-example FP16 vs FP32 NLL differs by up to 0.52 on image examples |
 | Frozen sets, Stage 1 | trainable = connector only: 4 tensors, 1,837,056 parameters; 596,049,920 Qwen parameters frozen |
 | Frozen sets, Stages 2–3 | connector + LoRA A/B on q/k/v/o in 28 layers: 228 tensors, 6,424,576 parameters (LoRA 4,587,520); all trainable tensors FP32; no trainable biases |
-| Gradients (FP16 autocast, gradient checkpointing, unscaled loss 6.88) | connector grad norm 1,820 (Stage 1) and 1,822 (Stages 2–3); LoRA-B 145.4; LoRA-A 0 at initialization because B = 0; no gradient on any frozen parameter; none missing or non-finite |
+| Gradients (FP16 autocast, gradient checkpointing, unscaled loss 6.88) | connector grad norm ≈ 1,820 in both stage set-ups; LoRA-B ≈ 145; LoRA-A 0 at initialization because B = 0; no gradient on any frozen parameter; none missing or non-finite |
 | Scale calibration (T2-8, T2-21) | text 0.8051 over 3,695,554 tokens; connector 15.894 over 1,714,412 patches; **s = 0.050653** (3.6 s) |
 
 - **Split files on Kaggle:** a private dataset `dentusayd/atml-pa3-task2-splits`, a copy of `task2/splits/*.json` plus `task2/configs/coco_objects.json`. They are too large to bundle into a kernel. The run records each file's SHA-256, and all 10 match the repo.
+- **Fourth run (the recorded one):** after the per-example loss sum in `vlm.example_nll` was made deterministic (a masked scatter instead of an atomic `index_add_`; same value), all checks were rerun and pass. The scale is unchanged (0.050653).
 - **First two runs:** the first failed the FP16 padding check, which was then made exact in FP32 with the FP16 values recorded. The second stopped at the gradient check because the GradScaler's first-step scale (65,536) overflowed the FP16 backward (unscaled connector grad norm ≈ 1,820). In training that step is skipped and logged. The check now uses the unscaled loss.
+
+**Training script smoke test** (Kaggle job `atml-pa3-task2-smoke`, `python task2/train.py --smoke`; `task2/results/smoke_report.json`; DECISIONS.md T2-24 to T2-29). Every code path ran on a 6 / 4 / 4-update curriculum with checkpoints every 2 updates and dev evaluation on 16 items per set. This is not a result.
+
+- **Resume is exact:** the run was resumed from the mid-Stage-2 checkpoint (update 8).
+  - Every one of the 14 updates used the same examples in both runs.
+  - Updates 1–9 have identical losses, including the first resumed update (12.123585 in both).
+  - From update 10 the runs drift (final connector max difference 1.6e-4, LoRA 5.7e-5). That drift comes from non-deterministic GPU kernels in the backward pass, amplified by Adam's early sign-like steps (each about ±LR), not from the resume.
+- **Throughput:** 1.11 / 1.33 / 1.24 s per update for Stages 1 / 2 / 3, so the main run's training time is estimated at 1.5 h, plus 12 dev evaluations of a few seconds each.
+- **Memory:** peak GPU allocated 4.07 / 4.16 / 4.09 GB by stage, including the 2.8 GB of cached features.
+- **Trainable parameters:** 1,837,056 in Stage 1; 6,424,576 in Stages 2–3.
+- **FP16 overflow skips:** updates in the first few steps and at the Stage 2 start were skipped as the GradScaler fell from 65,536 to 512. They are logged per update and per stage.
+- **Checkpoints:** every 2 updates, as configured. Dev evaluations ran at 0, every 4 updates, and at each stage end. Stage weights were saved after each stage.
 
 **Still to log during training and evaluation.** The manual asks for these while the runs happen, not recomputed afterwards:
 - Training loss, development caption loss, answer NLL and image-swap penalties, with stage boundaries marked.

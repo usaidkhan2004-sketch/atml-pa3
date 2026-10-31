@@ -1,0 +1,45 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<02:02,  2.52it/s]Loading weights:  64%|██████▍   | 199/311 [00:00<00:00, 523.92it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 478.71it/s]
+dev @ 0: caption 5.5428 | vqa NLL 10.798 dNLL -0.348 | grounding NLL 9.655 dNLL +0.126 | 3 s
+update 1: skipped (overflow), loss scale 65536.0
+update    1/14 | stage 1 | loss 5.0476 | lr connector 0.00e+00 | grad_norm nan | 1.62 s/update | ETA 0h00m
+update 2: skipped (overflow), loss scale 32768.0
+checkpoint 2 saved in 0.0 s
+update 3: skipped (overflow), loss scale 16384.0
+dev @ 4: caption 9.5901 | vqa NLL 13.799 dNLL +0.749 | grounding NLL 14.184 dNLL +0.441 | 2 s
+checkpoint 4 saved in 0.0 s
+update 5: skipped (overflow), loss scale 8192.0
+update 6: skipped (overflow), loss scale 4096.0
+dev @ 6: caption 9.5901 | vqa NLL 13.799 dNLL +0.749 | grounding NLL 14.184 dNLL +0.441 | 2 s
+checkpoint 6 saved in 0.0 s
+update 7: skipped (overflow), loss scale 2048.0
+update 8: skipped (overflow), loss scale 1024.0
+dev @ 8: caption 9.5901 | vqa NLL 13.799 dNLL +0.749 | grounding NLL 14.184 dNLL +0.441 | 2 s
+checkpoint 8 saved in 0.1 s
+update   10/14 | stage 2 | loss 11.1147 | lr connector 3.25e-05, lora 6.50e-06 | grad_norm 735.566 | 1.42 s/update | ETA 0h00m
+dev @ 10: caption 9.3180 | vqa NLL 13.505 dNLL +0.049 | grounding NLL 13.811 dNLL -0.729 | 2 s
+checkpoint 10 saved in 0.1 s
+update 11: skipped (overflow), loss scale 512.0
+update 12: skipped (overflow), loss scale 256.0
+dev @ 12: caption 9.3180 | vqa NLL 13.505 dNLL +0.049 | grounding NLL 13.811 dNLL -0.729 | 2 s
+checkpoint 12 saved in 0.1 s
+dev @ 14: caption 8.8095 | vqa NLL 13.274 dNLL +0.401 | grounding NLL 14.250 dNLL -0.894 | 2 s
+checkpoint 14 saved in 0.1 s
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:11,  4.35it/s]Loading weights:   1%|          | 2/311 [00:00<00:58,  5.28it/s]Loading weights:  74%|███████▎  | 229/311 [00:00<00:00, 695.54it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 515.67it/s]
+resumed at update 8
+update    9/14 | stage 2 | loss 12.1236 | lr connector 7.75e-05, lora 1.55e-05 | grad_norm 1487.804 | 1.25 s/update | ETA 0h00m
+update   10/14 | stage 2 | loss 11.1138 | lr connector 3.25e-05, lora 6.50e-06 | grad_norm 778.103 | 1.43 s/update | ETA 0h00m
+dev @ 10: caption 9.4188 | vqa NLL 13.759 dNLL +0.176 | grounding NLL 14.436 dNLL -0.780 | 2 s
+checkpoint 10 saved in 0.1 s
+dev @ 12: caption 8.8877 | vqa NLL 12.570 dNLL +0.550 | grounding NLL 13.290 dNLL -0.559 | 2 s
+checkpoint 12 saved in 0.1 s
+update 14: skipped (overflow), loss scale 512.0
+dev @ 14: caption 8.6248 | vqa NLL 12.492 dNLL +0.367 | grounding NLL 11.339 dNLL +0.227 | 2 s
+checkpoint 14 saved in 0.1 s
+{"updates": 14, "log_lines_resumed": 14, "same_examples_every_update": true, "first_resumed_update_loss": [12.123584747314453, 12.123584747314453], "loss_by_update_full_vs_resumed": [[1, 5.047645568847656, 5.047645568847656], [2, 5.536437034606934, 5.536437034606934], [3, 5.485033988952637, 5.485033988952637], [4, 5.399563312530518, 5.399563312530518], [5, 8.648284912109375, 8.648284912109375], [6, 8.966211318969727, 8.966211318969727], [7, 12.59740161895752, 12.59740161895752], [8, 10.574288368225098, 10.574288368225098], [9, 12.123584747314453, 12.123584747314453], [10, 11.11473560333252, 11.113848686218262], [11, 10.362781524658203, 10.858776092529297], [12, 10.984033584594727, 11.615105628967285], [13, 11.321732521057129, 11.259535789489746], [14, 12.309003829956055, 12.363141059875488]], "loss_after_resume_max_abs_diff": 0.6310720443725586, "final_connector_max_abs_diff": 0.0001597050577402115, "final_lora_max_abs_diff": 5.693348066415638e-05, "checkpoints": ["update_0002", "update_0004", "update_0006", "update_0008", "update_0010", "update_0012", "update_0014"], "dev_points": [0, 4, 6, 8, 10, 12, 14], "seconds_per_update_by_stage": {"1": 1.1104350566864014, "2": 1.3343956470489502, "3": 1.2384992440541585}, "estimated_main_run_train_hours": 1.508040772544013}
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 447421 bytes to __results__.html

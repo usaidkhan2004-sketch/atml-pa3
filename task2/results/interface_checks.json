@@ -93,7 +93,7 @@
     "visual_tokens": 1714412,
     "train_images": 8747,
     "scale": 0.05065283922600736,
-    "seconds": 3.6169328689575195
+    "seconds": 3.8681299686431885
   },
   "equivalence": {
     "float32_no_image_embeds_vs_ids_max_abs_logit_diff": 0.0,
@@ -132,7 +132,7 @@
     "grad_none": [],
     "grad_nonfinite": [],
     "loss": 6.88216495513916,
-    "connector_grad_norm": 1820.24365234375
+    "connector_grad_norm": 1821.12353515625
   },
   "stage2_3": {
     "stage": 2,
@@ -144,8 +144,8 @@
     "grad_none": [],
     "grad_nonfinite": [],
     "loss": 6.88216495513916,
-    "connector_grad_norm": 1822.204345703125,
-    "lora_B_grad_norm": 145.3856658935547,
+    "connector_grad_norm": 1819.6881103515625,
+    "lora_B_grad_norm": 145.23379516601562,
     "lora_A_grad_norm": 0.0
   },
   "peak_gpu_mem_gb": 5.274,
@@ -154,6 +154,6 @@
     "torch": "2.11.0+cu128",
     "transformers": "5.16.1"
   },
-  "seconds": 74.70386719703674,
+  "seconds": 71.137686252594,
   "status": "all checks passed"
 }

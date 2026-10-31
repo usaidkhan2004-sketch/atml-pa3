@@ -26,9 +26,9 @@ Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · �
 | Inspect grounding dev/test labels against the images, independently of model predictions (manual: "COCO annotations can omit objects or contain ambiguous counts") | ⏳ sheets rendered in `task2/results/label_inspection/`; your check pending |
 | SigLIP feature caching (FP16, 196 × 768), with its time and memory logged separately | ✅ Kaggle `atml-pa3-task2-features` |
 | Visual interface: connector, insertion into the chat, labels/masks/positions, checks (shapes, frozen sets, connector gradients, split isolation), scale calibration | ✅ `task2/vlm.py`, Kaggle `atml-pa3-task2-interface-check` (s = 0.0507) |
-| Training script: 3 stages (2,250 / 1,500 / 750 updates), sampler, replay, resumable checkpoints every 250 updates, per-stage weights | ☐ |
-| Development evaluation at 0, every 500, and 2,250 / 3,750 / 4,500 (caption loss, answer NLL × 3 image inputs, ΔNLL) | ☐ |
-| Smoke test, then the main run on Kaggle | ☐ |
+| Training script: 3 stages (2,250 / 1,500 / 750 updates), sampler, replay, resumable checkpoints every 250 updates, per-stage weights | ✅ `task2/train.py` |
+| Development evaluation at 0, every 500, and 2,250 / 3,750 / 4,500 (caption loss, answer NLL × 3 image inputs, ΔNLL) | ✅ built into `task2/train.py` |
+| Smoke test, then the main run on Kaggle | ⏳ smoke test passed (resume exact; est. 1.5 h of training); main run not started |
 | Final evaluation: 2 suites × 4 image conditions, generation, soft-VQA / exact-match scoring, pair metrics, NLL, timing, bootstrap CIs | ☐ |
 | Figures: learning curves with stage boundaries; tables | ☐ |
 | Qualitative complementary-pair examples with a stated selection rule | ☐ (selection rule and code by me, interpretation by you) |

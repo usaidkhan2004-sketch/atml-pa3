@@ -218,8 +218,8 @@ def example_nll(model, connector, batch, feats):
     y = batch["labels"][:, 1:]
     sel = y != IGNORE_INDEX
     ce = F.cross_entropy(model.lm_head(h[sel]).float(), y[sel], reduction="none")
-    rows = sel.nonzero()[:, 0]
-    sums = torch.zeros(y.shape[0], device=ce.device, dtype=torch.float32).index_add_(0, rows, ce)
+    # scatter back to [B, T-1] and sum per row (deterministic, unlike an atomic index_add_)
+    sums = torch.zeros(sel.shape, device=ce.device, dtype=torch.float32).masked_scatter(sel, ce).sum(1)
     return sums / sel.sum(1).clamp(min=1)
 
 
