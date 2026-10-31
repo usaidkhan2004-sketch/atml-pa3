@@ -25,7 +25,7 @@ Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · �
 | Data script: caption selection, grounding pair pools + dev/test pairs, VQAv2 complementary-pair filtering, split isolation checks, saved IDs | ✅ `task2/prepare_data.py` → `task2/splits/` |
 | Inspect grounding dev/test labels against the images, independently of model predictions (manual: "COCO annotations can omit objects or contain ambiguous counts") | ⏳ sheets rendered in `task2/results/label_inspection/`; your check pending |
 | SigLIP feature caching (FP16, 196 × 768), with its time and memory logged separately | ✅ Kaggle `atml-pa3-task2-features` |
-| Visual interface: connector, insertion into the chat, labels/masks/positions, checks (shapes, frozen sets, connector gradients, split isolation), scale calibration | ☐ |
+| Visual interface: connector, insertion into the chat, labels/masks/positions, checks (shapes, frozen sets, connector gradients, split isolation), scale calibration | ✅ `task2/vlm.py`, Kaggle `atml-pa3-task2-interface-check` (s = 0.0507) |
 | Training script: 3 stages (2,250 / 1,500 / 750 updates), sampler, replay, resumable checkpoints every 250 updates, per-stage weights | ☐ |
 | Development evaluation at 0, every 500, and 2,250 / 3,750 / 4,500 (caption loss, answer NLL × 3 image inputs, ΔNLL) | ☐ |
 | Smoke test, then the main run on Kaggle | ☐ |

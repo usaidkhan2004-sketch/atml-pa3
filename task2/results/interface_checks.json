@@ -1,0 +1,159 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "caps": {
+    "question": 80,
+    "caption": 64,
+    "answer": 16
+  },
+  "caption_text": "Describe the image.",
+  "answer_suffix": "\nAnswer the question using a single word or number.",
+  "training_examples": 115710,
+  "splits_dir": "/kaggle/input/atml-pa3-task2-splits",
+  "split_sha256": {
+    "captions_dev.json": "6858b83c1a7ca28a1c7a3f401ce9132aa37af298c8256b6689f72edd725f0c56",
+    "captions_train.json": "60213d58bcae51eb812054e7bc6576d1f1a77d8f8440e2c49c388f6f3b81ac7f",
+    "coco_objects.json": "5b59cbc1a8c32d55a55999193b427f92336d4719ac5a320fbcbd608423f026ab",
+    "grounding_dev.json": "7d4f5dfd04e7c510e8aad8a60ec5815390cfdf186c08153123a3efcabf74d195",
+    "grounding_test.json": "8382b5c2e88df8210155516b23e646d064d825efb3e5bb71d4d595126ebed818",
+    "grounding_train_pools.json": "21d2d024ee1a93f41c839a9a0ec64cac6e7892634d60c685d2a0f3f9f4e7291a",
+    "images.json": "8815c2b3fd2eb4d6fc7026063b873216dba5323849248e8fa47c3b7b9788b66c",
+    "vqa_dev.json": "9659b8fdd45ad3f349ffbc0f5fe0a985e9697e54278f6de77d88afa6cc96cdcc",
+    "vqa_test.json": "eab991cbc41726d02c4249e2cd0f9481cef4ee701a4c9a2b6655758d0f8b833e",
+    "vqa_train.json": "f0ca4221534f59bb7d71733fa9fa1ef62b0025f98a1f66910f8198ed2388ed7e"
+  },
+  "splits": {
+    "train_images_used": 8747,
+    "train_images_cached": 8747,
+    "eval_images": 528,
+    "eval_images_cached": 528,
+    "eval_set_sizes": {
+      "captions_dev": 96,
+      "vqa_dev": 64,
+      "grounding_dev": 48,
+      "vqa_test": 192,
+      "grounding_test": 128
+    }
+  },
+  "content_lengths": {
+    "caption": {
+      "cap": 64,
+      "texts": 18096,
+      "max_tokens": 56,
+      "over_cap": 0
+    },
+    "question": {
+      "cap": 80,
+      "texts": 1911,
+      "max_tokens": 18,
+      "over_cap": 0
+    },
+    "answer": {
+      "cap": 16,
+      "texts": 3328,
+      "max_tokens": 10,
+      "over_cap": 0
+    }
+  },
+  "template": {
+    "samples_checked": 5,
+    "boundary_checked": 2315,
+    "boundary_mismatches": 0,
+    "pre_text": "<|im_start|>user\n",
+    "caption_post_text": "\nDescribe the image.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "example_question_post_text": "\nIs this picture in vivid color?\nAnswer the question using a single word or number.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  "batch": {
+    "ok": true,
+    "image_example_length": 224,
+    "no_image_example_length": 28
+  },
+  "features": {
+    "train": {
+      "shape": [
+        8747,
+        196,
+        768
+      ],
+      "dtype": "torch.float16"
+    },
+    "val": {
+      "shape": [
+        528,
+        196,
+        768
+      ],
+      "dtype": "torch.float16"
+    }
+  },
+  "calibration": {
+    "text_mean_norm": 0.8050545796661244,
+    "text_tokens": 3695554,
+    "connector_mean_norm_unscaled": 15.893572640105326,
+    "visual_tokens": 1714412,
+    "train_images": 8747,
+    "scale": 0.05065283922600736,
+    "seconds": 3.6169328689575195
+  },
+  "equivalence": {
+    "float32_no_image_embeds_vs_ids_max_abs_logit_diff": 0.0,
+    "float32_single_example_nll": [
+      5.7486,
+      3.6043,
+      10.3468,
+      3.3797,
+      2.0737,
+      5.1894,
+      10.8798,
+      13.1136
+    ],
+    "float32_right_pad_vs_single_max_abs_nll_diff": 9.5367431640625e-05,
+    "float32_left_pad_vs_single_max_abs_nll_diff": 9.5367431640625e-05,
+    "float16_no_image_embeds_vs_ids_max_abs_logit_diff": 0.0,
+    "float16_single_example_nll": [
+      5.8427,
+      3.6037,
+      10.8695,
+      3.2889,
+      2.0764,
+      5.2198,
+      11.1044,
+      12.8884
+    ],
+    "float16_right_pad_vs_single_max_abs_nll_diff": 0.04641389846801758,
+    "float16_left_pad_vs_single_max_abs_nll_diff": 0.05726814270019531
+  },
+  "stage1": {
+    "stage": 1,
+    "trainable_tensors": 4,
+    "trainable_params": 1837056,
+    "connector_params": 1837056,
+    "frozen_qwen_params": 596049920,
+    "grad_none": [],
+    "grad_nonfinite": [],
+    "loss": 6.88216495513916,
+    "connector_grad_norm": 1820.24365234375
+  },
+  "stage2_3": {
+    "stage": 2,
+    "trainable_tensors": 228,
+    "trainable_params": 6424576,
+    "connector_params": 1837056,
+    "frozen_qwen_params": 596049920,
+    "lora_params": 4587520,
+    "grad_none": [],
+    "grad_nonfinite": [],
+    "loss": 6.88216495513916,
+    "connector_grad_norm": 1822.204345703125,
+    "lora_B_grad_norm": 145.3856658935547,
+    "lora_A_grad_norm": 0.0
+  },
+  "peak_gpu_mem_gb": 5.274,
+  "gpu": "Tesla T4",
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.16.1"
+  },
+  "seconds": 74.70386719703674,
+  "status": "all checks passed"
+}

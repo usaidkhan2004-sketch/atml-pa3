@@ -8,7 +8,8 @@ Kaggle script kernels run a single file without command-line arguments, so the s
 
 `--with FILE` (repeatable) bundles other repo files: a prelude writes them, and an unmodified
 copy of the script itself, under /tmp/pa3_src/<repo path> and sets PA3_BUNDLE, so the script
-can import repo modules and start worker processes from its own file.
+can import repo modules and start worker processes from its own file. Bundled files are
+zlib-compressed in the kernel source to keep it small.
 """
 
 import argparse
@@ -17,6 +18,7 @@ import json
 import subprocess
 import sys
 import tempfile
+import zlib
 from pathlib import Path
 
 USER = "dentusayd"
@@ -24,12 +26,12 @@ REPO = Path(__file__).resolve().parents[1]
 BUNDLE_DIR = "/tmp/pa3_src"
 
 PRELUDE = '''# --- added by shared/kaggle_push.py: repo files bundled with this kernel
-import base64 as _b64, os as _os, sys as _sys
+import base64 as _b64, os as _os, sys as _sys, zlib as _zlib
 from pathlib import Path as _Path
 for _rel, _data in {files}.items():
     _p = _Path("{bundle}") / _rel
     _p.parent.mkdir(parents=True, exist_ok=True)
-    _p.write_bytes(_b64.b64decode(_data))
+    _p.write_bytes(_zlib.decompress(_b64.b64decode(_data)))
     if _p.suffix == ".py" and str(_p.parent) not in _sys.path:
         _sys.path.insert(0, str(_p.parent))
 _os.environ["PA3_BUNDLE"] = "{bundle}"
@@ -57,7 +59,7 @@ def main():
         assert code.count(marker) == 1, f"{a.script} has no `{marker}` line"
         code = code.replace(marker, f"KAGGLE_ARGS = {json.dumps(args)}")
     if a.bundle:
-        files = {str(f.resolve().relative_to(REPO)): base64.b64encode(f.read_bytes()).decode()
+        files = {str(f.resolve().relative_to(REPO)): base64.b64encode(zlib.compress(f.read_bytes(), 9)).decode()
                  for f in [a.script, *a.bundle]}
         code = PRELUDE.format(files=json.dumps(files), bundle=BUNDLE_DIR) + code
 

@@ -209,9 +209,25 @@ Every count matches the manual:
 - **GPU release:** after the encoder is released, 0.009 GB of GPU memory remains allocated.
 - **Label inspection sheets:** in `task2/results/label_inspection/` (3 dev pages and 8 test pages).
 
-**Still to log during training and evaluation** (the manual asks for these during the runs, not recomputed afterwards):
+**Visual interface checks** (Kaggle job `atml-pa3-task2-interface-check`, Tesla T4, 75 s, peak GPU 5.27 GB; `task2/results/interface_checks.json`; code in `task2/vlm.py`, `task2/check_interface.py`; DECISIONS.md T2-7, T2-8, T2-20 to T2-23). All checks pass:
 
-The manual asks for these, and they must be logged while training runs, not recomputed afterwards:
+| Check (manual Step 1) | Result |
+|---|---|
+| Split isolation | 8,747 training images, all train2014 and all cached; 528 evaluation images, all val2014, each used once; set sizes 96 / 64 / 48 / 192 / 128 |
+| Feature shapes | train [8747, 196, 768] and val [528, 196, 768], FP16, finite, same order as `images.json` |
+| Chat structure | the no-image token sequence decodes to Qwen's own template for that user turn and answer; prompt/target tokenization has 0 mismatches in 2,315 samples |
+| Labels, masks, positions | an image example has 224 tokens (28 + 196); the no-image row is the image row with the 196 positions removed; labels only on target + `<\|im_end\|>`; positions 0…L−1 |
+| Padding equivalence (FP32) | no-image `inputs_embeds` vs `input_ids` logits: max difference 0.0; left- and right-padded batch vs one example at a time: per-example NLL max difference 9.5e-5 |
+| Padding equivalence (FP16, recorded only) | max NLL difference 0.046 (right) and 0.057 (left); single-example FP16 vs FP32 NLL differs by up to 0.52 on image examples |
+| Frozen sets, Stage 1 | trainable = connector only: 4 tensors, 1,837,056 parameters; 596,049,920 Qwen parameters frozen |
+| Frozen sets, Stages 2–3 | connector + LoRA A/B on q/k/v/o in 28 layers: 228 tensors, 6,424,576 parameters (LoRA 4,587,520); all trainable tensors FP32; no trainable biases |
+| Gradients (FP16 autocast, gradient checkpointing, unscaled loss 6.88) | connector grad norm 1,820 (Stage 1) and 1,822 (Stages 2–3); LoRA-B 145.4; LoRA-A 0 at initialization because B = 0; no gradient on any frozen parameter; none missing or non-finite |
+| Scale calibration (T2-8, T2-21) | text 0.8051 over 3,695,554 tokens; connector 15.894 over 1,714,412 patches; **s = 0.050653** (3.6 s) |
+
+- **Split files on Kaggle:** a private dataset `dentusayd/atml-pa3-task2-splits`, a copy of `task2/splits/*.json` plus `task2/configs/coco_objects.json`. They are too large to bundle into a kernel. The run records each file's SHA-256, and all 10 match the repo.
+- **First two runs:** the first failed the FP16 padding check, which was then made exact in FP32 with the FP16 values recorded. The second stopped at the gradient check because the GradScaler's first-step scale (65,536) overflowed the FP16 backward (unscaled connector grad norm ≈ 1,820). In training that step is skipped and logged. The check now uses the unscaled loss.
+
+**Still to log during training and evaluation.** The manual asks for these while the runs happen, not recomputed afterwards:
 - Training loss, development caption loss, answer NLL and image-swap penalties, with stage boundaries marked.
 - Training and generation time, peak GPU memory, and trainable parameters by stage. Feature-caching cost must be timed separately.
 
