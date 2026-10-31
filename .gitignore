@@ -35,3 +35,4 @@ checkpoints/
 
 # Assignment handout
 ATML-PA3.pdf
+!task2/results/**/kaggle_stdout*.log

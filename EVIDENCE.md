@@ -196,13 +196,58 @@ Every count matches the manual:
   - Training uses train2014 only and evaluation val2014 only.
   - Every pair differs in its answer.
 
+**SigLIP feature cache** (Kaggle job `atml-pa3-task2-features`, Tesla T4; `task2/results/feature_cache_summary.json`; DECISIONS.md T2-19). These costs are kept separate from training, as the manual requires.
+
+| Split | Images | Total s | Encoder s | Peak GPU alloc / reserved | File |
+|---|---|---|---|---|---|
+| train | 8,747 | 327.6 | 111.9 | 0.90 / 1.15 GB | 2.63 GB |
+| val | 528 | 23.9 | 8.3 | 0.90 / 1.15 GB | 0.16 GB |
+
+- **Model:** SigLIP revision `7fd15f06…`, run in FP32 and stored as FP16, loaded in 8.2 s. No vision weights are missing; the only unexpected keys belong to the unused text tower.
+- **Features:** `last_hidden_state` equals post_layernorm(encoder output) with max difference 0.0, so the layer norm is applied exactly once. Shape [196, 768] per image; mean token norm 62.2.
+- **Image source check:** all 8 seeded sample images from the Kaggle mirror are byte-identical to images.cocodataset.org.
+- **GPU release:** after the encoder is released, 0.009 GB of GPU memory remains allocated.
+- **Label inspection sheets:** in `task2/results/label_inspection/` (3 dev pages and 8 test pages).
+
 **Still to log during training and evaluation** (the manual asks for these during the runs, not recomputed afterwards):
 
 The manual asks for these, and they must be logged while training runs, not recomputed afterwards:
 - Training loss, development caption loss, answer NLL and image-swap penalties, with stage boundaries marked.
 - Training and generation time, peak GPU memory, and trainable parameters by stage. Feature-caching cost must be timed separately.
 
-## Task 3 — Test-time compute (when ATML-PA3-Data is available)
+## Task 3 — Test-time compute
+
+### Supplied data (downloaded 2026-10-31)
+
+Source: the manual's `ATML-PA3-Data` link, Google Drive folder `1utX-Gfi9vvaoi1mi0pzNpDGL1o1fAh23`, saved under `data/task3/` (gitignored). Each download's byte count matched the size Drive reported.
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| `README.MD` | 4,413 | `737f834f…7241` |
+| `qwen25-math/generations.parquet` | 26,932,880 | `ffdecd75…1c84` |
+| `qwen25-math/probability_metrics.parquet` | 155,221,097 | `48a492cd…0379` |
+| `qwen25vl-mathvista/generations.parquet` | 17,098,339 | `dac12a7d…5435` |
+| `qwen25vl-mathvista/probability_metrics.parquet` | 81,118,521 | `c1c7a9b9…02ac` |
+| `qwen25vl-mathvista/attention_metrics.parquet` | 138,497,144 | `4f6cfce9…0058` |
+
+The files were written by Arrow 24.0.0 (`parquet-cpp-arrow version 24.0.0`). pyarrow 19 cannot read them ("Repetition level histogram size mismatch"), so the project `.venv` uses pyarrow 24.0.0.
+
+Checks against the supplied README (all pass):
+
+| Check | MATH | MathVista |
+|---|---:|---:|
+| Rows per file | 32,000 | 32,000 |
+| Unique `(dataset, sample_id, rollout_id)` | 32,000 | 32,000 |
+| Questions × rollouts | 1,000 × 32 (IDs 0–31) | 1,000 × 32 (IDs 0–31) |
+| Same keys in every file | yes | yes |
+| Retained tokens (README value) | 20,742,094 (20,742,094) | 8,961,703 (8,961,703) |
+| Capped rollouts (README value) | 523 (523) | 487 (487) |
+| Null extracted answers (README value) | 521 (521) | 3,032 (3,032) |
+| Every per-token list has length `n_generated_text_tokens` | yes | yes (probability and attention) |
+
+The MATH generation metadata pins `Qwen/Qwen2.5-3B-Instruct` at revision `aa8e72537993ba99e69dfaafa59ed015b17504d1` and `DigitalLearningGmbH/MATH-lighteval` at revision `0530c78699ea5e8eb5530600900e1f328b48acad`. Both revisions resolve on the Hub.
+
+### Logging requirements
 
 For the live-inference strategies on the 50 questions, log:
 - Actual input and output tokens.

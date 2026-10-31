@@ -43,6 +43,7 @@ def main():
     p.add_argument("slug")
     p.add_argument("--gpu", action="store_true", help="T4 accelerator")
     p.add_argument("--source", action="append", default=[], help="kernel output to mount as input")
+    p.add_argument("--dataset", action="append", default=[], help="Kaggle dataset to mount as input")
     p.add_argument("--with", dest="bundle", action="append", default=[], type=Path,
                    help="repo file to bundle with the kernel")
     argv = sys.argv[1:]
@@ -66,7 +67,7 @@ def main():
             "id": f"{USER}/{a.slug}", "title": a.slug, "code_file": a.script.name,
             "language": "python", "kernel_type": "script", "is_private": "true",
             "enable_gpu": "true" if a.gpu else "false", "enable_tpu": "false",
-            "enable_internet": "true", "dataset_sources": [], "competition_sources": [],
+            "enable_internet": "true", "dataset_sources": a.dataset, "competition_sources": [],
             "kernel_sources": a.source, "model_sources": [],
         }
         (Path(d) / "kernel-metadata.json").write_text(json.dumps(meta, indent=2))

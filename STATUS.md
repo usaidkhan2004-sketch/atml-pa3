@@ -23,8 +23,8 @@ Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · �
 | Read the manual section; list open points (DECISIONS.md, Task 2) | ✅ |
 | Confirm the open points with the user (all 15 settled 2026-10-30) | ✅ |
 | Data script: caption selection, grounding pair pools + dev/test pairs, VQAv2 complementary-pair filtering, split isolation checks, saved IDs | ✅ `task2/prepare_data.py` → `task2/splits/` |
-| Inspect grounding dev/test labels against the images, independently of model predictions (manual: "COCO annotations can omit objects or contain ambiguous counts") | ☐ (I'll render the pairs; you check them) |
-| SigLIP feature caching (FP16, 196 × 768), with its time and memory logged separately | ☐ |
+| Inspect grounding dev/test labels against the images, independently of model predictions (manual: "COCO annotations can omit objects or contain ambiguous counts") | ⏳ sheets rendered in `task2/results/label_inspection/`; your check pending |
+| SigLIP feature caching (FP16, 196 × 768), with its time and memory logged separately | ✅ Kaggle `atml-pa3-task2-features` |
 | Visual interface: connector, insertion into the chat, labels/masks/positions, checks (shapes, frozen sets, connector gradients, split isolation), scale calibration | ☐ |
 | Training script: 3 stages (2,250 / 1,500 / 750 updates), sampler, replay, resumable checkpoints every 250 updates, per-stage weights | ☐ |
 | Development evaluation at 0, every 500, and 2,250 / 3,750 / 4,500 (caption loss, answer NLL × 3 image inputs, ΔNLL) | ☐ |
@@ -40,7 +40,7 @@ Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · �
 
 | Item | Status |
 |---|---|
-| ATML-PA3-Data (supplied rollouts, from LMS) | 🔒 needs you to download it from LMS |
+| ATML-PA3-Data (supplied rollouts, Drive link in the manual) | ✅ downloaded to `data/task3/`; all README counts verified (EVIDENCE.md) |
 | Read the manual section; list open points | ☐ |
 | Everything else | ☐ |
 

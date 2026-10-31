@@ -8,7 +8,7 @@ safetensors
 huggingface_hub
 numpy
 pandas
-pyarrow
+pyarrow>=24.0.0  # Task 3 parquet files were written by Arrow 24
 pyyaml
 matplotlib
 kaggle

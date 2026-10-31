@@ -1,0 +1,122 @@
+{
+  "model": "google/siglip-base-patch16-224",
+  "model_revision": "7fd15f0689c79d79e38b1c2e2e2370a7bf2761ed",
+  "dtype_compute": "float32",
+  "dtype_stored": "float16",
+  "processor": "SiglipImageProcessor",
+  "processor_config": {
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "image_std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "height": 224,
+      "width": 224
+    }
+  },
+  "image_dirs": {
+    "train": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/train2014",
+    "val": "/kaggle/input/datasets/jeffaudi/coco-2014-dataset-for-yolov3/coco2014/images/val2014"
+  },
+  "byte_check": [
+    {
+      "file": "COCO_train2014_000000550536.jpg",
+      "identical": true
+    },
+    {
+      "file": "COCO_train2014_000000143171.jpg",
+      "identical": true
+    },
+    {
+      "file": "COCO_train2014_000000570538.jpg",
+      "identical": true
+    },
+    {
+      "file": "COCO_train2014_000000104800.jpg",
+      "identical": true
+    },
+    {
+      "file": "COCO_val2014_000000556120.jpg",
+      "identical": true
+    },
+    {
+      "file": "COCO_val2014_000000148766.jpg",
+      "identical": true
+    },
+    {
+      "file": "COCO_val2014_000000391290.jpg",
+      "identical": true
+    },
+    {
+      "file": "COCO_val2014_000000249969.jpg",
+      "identical": true
+    }
+  ],
+  "gpu": "Tesla T4",
+  "model_load_seconds": 8.183622360229492,
+  "splits": {
+    "train": {
+      "images": 8747,
+      "seconds_total": 327.6254880428314,
+      "seconds_encoder": 111.92620658874512,
+      "images_per_second": 26.698166904109872,
+      "peak_mem_allocated_gb": 0.8962,
+      "peak_mem_reserved_gb": 1.1465,
+      "post_layernorm_once_max_abs_diff": 0.0,
+      "fp16_feature_abs_max": 68.625,
+      "mean_token_norm": 62.201786041259766,
+      "save_seconds": 0.8024029731750488,
+      "file": "task2/features/siglip_train.safetensors",
+      "file_bytes": 2633406976
+    },
+    "val": {
+      "images": 528,
+      "seconds_total": 23.854265928268433,
+      "seconds_encoder": 8.31801438331604,
+      "images_per_second": 22.134405047548952,
+      "peak_mem_allocated_gb": 0.8962,
+      "peak_mem_reserved_gb": 1.1465,
+      "post_layernorm_once_max_abs_diff": 0.0,
+      "fp16_feature_abs_max": 61.46875,
+      "mean_token_norm": 62.31525421142578,
+      "save_seconds": 0.04986262321472168,
+      "file": "task2/features/siglip_val.safetensors",
+      "file_bytes": 158961952
+    }
+  },
+  "missing_keys": [],
+  "unexpected_keys_all_text_tower": true,
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.16.1"
+  },
+  "gpu_mem_allocated_after_release_gb": 0.0089,
+  "label_inspection": {
+    "dev": [
+      "grounding_dev_p01.jpg",
+      "grounding_dev_p02.jpg",
+      "grounding_dev_p03.jpg"
+    ],
+    "test": [
+      "grounding_test_p01.jpg",
+      "grounding_test_p02.jpg",
+      "grounding_test_p03.jpg",
+      "grounding_test_p04.jpg",
+      "grounding_test_p05.jpg",
+      "grounding_test_p06.jpg",
+      "grounding_test_p07.jpg",
+      "grounding_test_p08.jpg"
+    ]
+  }
+}

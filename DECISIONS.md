@@ -69,9 +69,10 @@ Everything the manual fixes is used exactly as written. The points below are tho
 | T2-16 | Grounding training-pool construction (manual: "construct reusable pools") | **Confirmed: natural frequency.** Presence pool: one pair per (image, category) with ≥ 1 non-crowd annotation, paired with a seeded-random image of the subset that has no annotation of that category. Counting pool: one pair per (image, category) with a count of 1–4, paired with a seeded-random image of a different count of 1–4. Training draws pairs uniformly from each pool |
 | T2-17 | How [object] is written in the templates | **Confirmed: fixed phrase per category** (`task2/configs/coco_objects.json`). Presence uses the singular with its article ("a dog", "an apple", "skis"); counting uses the plural ("dogs", "people") |
 | T2-18 | Image reuse inside an evaluation set | **Confirmed: unique everywhere.** Every `val2014` image appears at most once across all development and final-test sets (manual requires only that sets be disjoint from each other) |
+| T2-19 | Precision of the SigLIP forward pass (manual fixes only "Cache them in FP16") | The encoder runs in FP32; features are cast to FP16 once for storage. SigLIP is pinned at revision `7fd15f06…`, with its own image processor (224 × 224 bicubic resize, rescale, mean = std = 0.5) and images converted to RGB. Features = `last_hidden_state` = post_layernorm(encoder output), checked numerically to be the layer norm applied exactly once |
 
 ## Task 3
 
 | # | Point | Status |
 |---|---|---|
-| 2 | Location of `ATML-PA3-Data` | **Unresolved**: not publicly findable; must come from LMS / course staff |
+| 2 | Location of `ATML-PA3-Data` | **Resolved 2026-10-31**: the manual's embedded link, Google Drive folder `1utX-Gfi9vvaoi1mi0pzNpDGL1o1fAh23` (`qwen25-math/`, `qwen25vl-mathvista/`, `README.MD`). Not a gap; the link was missed when the PDF text was extracted |

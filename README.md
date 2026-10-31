@@ -50,7 +50,16 @@ Notes on the steps:
 - Seed `6304` fixes data order, adapter initialization and the probe set.
 - Package versions are in `requirements.txt` and in each result's `summary.json`.
 
-### Task 2 and Task 3
+### Task 2 — SigLIP–Qwen VLM
+
+| Step | Command | Committed output |
+|---|---|---|
+| 1. Data selection (local, CPU) | `python task2/prepare_data.py` (downloads the official COCO 2014 and VQAv2 annotation zips to `data/task2/raw/`) | `task2/splits/`, `task2/results/data_prep_summary.json` |
+| 2. SigLIP feature cache | `python shared/kaggle_push.py task2/cache_features.py atml-pa3-task2-features --gpu --dataset jeffaudi/coco-2014-dataset-for-yolov3 --with task2/splits/images.json --with task2/splits/grounding_dev.json --with task2/splits/grounding_test.json` | `task2/results/feature_cache_summary.json`, `task2/results/label_inspection/` (features stay in the Kaggle output) |
+
+Further steps will be added as they are built.
+
+### Task 3
 
 _To be added._
 
