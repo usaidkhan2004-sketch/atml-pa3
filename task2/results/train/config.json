@@ -1,0 +1,123 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "seed": 6304,
+  "microbatch": 8,
+  "grad_accum": 2,
+  "effective_batch": 16,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "lr_floor": 0.1,
+  "stages": [
+    {
+      "name": "caption_alignment",
+      "updates": 2250,
+      "warmup": 113,
+      "lr": {
+        "connector": 0.001
+      },
+      "mix": null
+    },
+    {
+      "name": "visual_instruction",
+      "updates": 1500,
+      "warmup": 75,
+      "lr": {
+        "connector": 0.0001,
+        "lora": 2e-05
+      },
+      "mix": {
+        "presence": 0.5,
+        "counting": 0.25,
+        "caption": 0.25
+      }
+    },
+    {
+      "name": "natural_vqa",
+      "updates": 750,
+      "warmup": 38,
+      "lr": {
+        "connector": 5e-05,
+        "lora": 1e-05
+      },
+      "mix": {
+        "vqa": 0.7,
+        "presence": 0.1,
+        "counting": 0.1,
+        "caption": 0.1
+      }
+    }
+  ],
+  "checkpoint_every": 250,
+  "dev_points": [
+    0,
+    500,
+    1000,
+    1500,
+    2000,
+    2250,
+    2500,
+    3000,
+    3500,
+    3750,
+    4000,
+    4500
+  ],
+  "dev_limit": null,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "targets": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "caps": {
+    "question": 80,
+    "caption": 64,
+    "answer": 16
+  },
+  "caption_text": "Describe the image.",
+  "answer_suffix": "\nAnswer the question using a single word or number.",
+  "connector_scale": 0.05065283922600736,
+  "calibration": {
+    "text_mean_norm": 0.8050545796661244,
+    "text_tokens": 3695554,
+    "connector_mean_norm_unscaled": 15.893572640105326,
+    "visual_tokens": 1714412,
+    "train_images": 8747,
+    "scale": 0.05065283922600736
+  },
+  "split_sha256": {
+    "captions_dev.json": "6858b83c1a7ca28a1c7a3f401ce9132aa37af298c8256b6689f72edd725f0c56",
+    "captions_train.json": "60213d58bcae51eb812054e7bc6576d1f1a77d8f8440e2c49c388f6f3b81ac7f",
+    "coco_objects.json": "5b59cbc1a8c32d55a55999193b427f92336d4719ac5a320fbcbd608423f026ab",
+    "grounding_dev.json": "7d4f5dfd04e7c510e8aad8a60ec5815390cfdf186c08153123a3efcabf74d195",
+    "grounding_test.json": "8382b5c2e88df8210155516b23e646d064d825efb3e5bb71d4d595126ebed818",
+    "grounding_train_pools.json": "21d2d024ee1a93f41c839a9a0ec64cac6e7892634d60c685d2a0f3f9f4e7291a",
+    "images.json": "8815c2b3fd2eb4d6fc7026063b873216dba5323849248e8fa47c3b7b9788b66c",
+    "vqa_dev.json": "9659b8fdd45ad3f349ffbc0f5fe0a985e9697e54278f6de77d88afa6cc96cdcc",
+    "vqa_test.json": "eab991cbc41726d02c4249e2cd0f9481cef4ee701a4c9a2b6655758d0f8b833e",
+    "vqa_train.json": "f0ca4221534f59bb7d71733fa9fa1ef62b0025f98a1f66910f8198ed2388ed7e"
+  },
+  "dev_sizes": {
+    "captions": 96,
+    "vqa": 64,
+    "grounding": 48
+  },
+  "gpu": "Tesla T4",
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.16.1"
+  },
+  "resumed_from": null,
+  "setup_seconds": 62.71003532409668
+}

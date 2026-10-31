@@ -1,0 +1,496 @@
+[{"stream_name":"stderr","time":61.184719294,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":111.939668567,"data":"\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c02:30,  2.07it/s]\rLoading weights:  57%|█████▋    | 177/311 [00:00\u003c00:00, 398.10it/s]\rLoading weights:  89%|████████▊ | 276/311 [00:00\u003c00:00, 468.32it/s]\rLoading weights: 100%|██████████| 311/311 [00:00\u003c00:00, 388.16it/s]\n"}
+,{"stream_name":"stdout","time":131.796332901,"data":"dev @ 0: caption 5.3762 | vqa NLL 11.759 dNLL -0.074 | grounding NLL 8.157 dNLL +0.103 | 8 s\n"}
+,{"stream_name":"stdout","time":133.432963409,"data":"update 1: skipped (overflow), loss scale 65536.0\n"}
+,{"stream_name":"stdout","time":133.433051802,"data":"update    1/4500 | stage 1 | loss 5.0476 | lr connector 0.00e+00 | grad_norm nan | 1.64 s/update | ETA 2h02m\n"}
+,{"stream_name":"stdout","time":134.4885808,"data":"update 2: skipped (overflow), loss scale 32768.0\n"}
+,{"stream_name":"stdout","time":135.53595262,"data":"update 3: skipped (overflow), loss scale 16384.0\n"}
+,{"stream_name":"stdout","time":137.833302616,"data":"update 5: skipped (overflow), loss scale 8192.0\n"}
+,{"stream_name":"stdout","time":140.201124673,"data":"update 7: skipped (overflow), loss scale 4096.0\n"}
+,{"stream_name":"stdout","time":143.390855062,"data":"update   10/4500 | stage 1 | loss 5.3591 | lr connector 7.96e-05 | grad_norm 194.858 | 1.06 s/update | ETA 1h26m\n"}
+,{"stream_name":"stdout","time":154.105398152,"data":"update   20/4500 | stage 1 | loss 5.0165 | lr connector 1.68e-04 | grad_norm 99.435 | 1.08 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":157.339330902,"data":"update 23: skipped (overflow), loss scale 2048.0\n"}
+,{"stream_name":"stdout","time":164.981824348,"data":"update   30/4500 | stage 1 | loss 4.4406 | lr connector 2.57e-04 | grad_norm 42.981 | 1.09 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":175.93795175,"data":"update   40/4500 | stage 1 | loss 3.6438 | lr connector 3.45e-04 | grad_norm 25.040 | 1.10 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":187.087217626,"data":"update   50/4500 | stage 1 | loss 3.3782 | lr connector 4.34e-04 | grad_norm 6.158 | 1.11 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":198.321654991,"data":"update   60/4500 | stage 1 | loss 3.6601 | lr connector 5.22e-04 | grad_norm 5.091 | 1.13 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":209.6920126,"data":"update   70/4500 | stage 1 | loss 3.6109 | lr connector 6.11e-04 | grad_norm 5.921 | 1.14 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":221.232021313,"data":"update   80/4500 | stage 1 | loss 3.2542 | lr connector 6.99e-04 | grad_norm 2.534 | 1.16 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":232.987011222,"data":"update   90/4500 | stage 1 | loss 3.5078 | lr connector 7.88e-04 | grad_norm 2.660 | 1.18 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":245.213196153,"data":"update  100/4500 | stage 1 | loss 2.9458 | lr connector 8.76e-04 | grad_norm 2.170 | 1.24 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":257.696411798,"data":"update  110/4500 | stage 1 | loss 3.5466 | lr connector 9.65e-04 | grad_norm 1.539 | 1.25 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":270.151178587,"data":"update  120/4500 | stage 1 | loss 3.0279 | lr connector 1.00e-03 | grad_norm 1.001 | 1.24 s/update | ETA 1h24m\n"}
+,{"stream_name":"stdout","time":282.21212464,"data":"update  130/4500 | stage 1 | loss 3.0627 | lr connector 1.00e-03 | grad_norm 1.098 | 1.21 s/update | ETA 1h24m\n"}
+,{"stream_name":"stdout","time":294.209027219,"data":"update  140/4500 | stage 1 | loss 3.1843 | lr connector 1.00e-03 | grad_norm 1.096 | 1.19 s/update | ETA 1h24m\n"}
+,{"stream_name":"stdout","time":306.025247321,"data":"update  150/4500 | stage 1 | loss 2.8854 | lr connector 9.99e-04 | grad_norm 1.456 | 1.19 s/update | ETA 1h24m\n"}
+,{"stream_name":"stdout","time":317.924988151,"data":"update  160/4500 | stage 1 | loss 2.8523 | lr connector 9.99e-04 | grad_norm 1.153 | 1.19 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":330.007622677,"data":"update  170/4500 | stage 1 | loss 3.1147 | lr connector 9.98e-04 | grad_norm 0.963 | 1.22 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":342.1944428,"data":"update  180/4500 | stage 1 | loss 2.7016 | lr connector 9.98e-04 | grad_norm 1.012 | 1.21 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":354.376623148,"data":"update  190/4500 | stage 1 | loss 3.0179 | lr connector 9.97e-04 | grad_norm 1.011 | 1.20 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":366.513471686,"data":"update  200/4500 | stage 1 | loss 2.8776 | lr connector 9.96e-04 | grad_norm 1.042 | 1.21 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":378.596666401,"data":"update  210/4500 | stage 1 | loss 2.7590 | lr connector 9.96e-04 | grad_norm 1.135 | 1.20 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":390.708918076,"data":"update  220/4500 | stage 1 | loss 2.9629 | lr connector 9.95e-04 | grad_norm 1.120 | 1.20 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":402.830113844,"data":"update  230/4500 | stage 1 | loss 3.2524 | lr connector 9.93e-04 | grad_norm 0.976 | 1.21 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":415.012893184,"data":"update  240/4500 | stage 1 | loss 2.8106 | lr connector 9.92e-04 | grad_norm 0.951 | 1.21 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":427.051314293,"data":"update  250/4500 | stage 1 | loss 3.1325 | lr connector 9.91e-04 | grad_norm 1.192 | 1.20 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":427.117211313,"data":"checkpoint 250 saved in 0.1 s\n"}
+,{"stream_name":"stdout","time":439.192924345,"data":"update  260/4500 | stage 1 | loss 2.7035 | lr connector 9.90e-04 | grad_norm 0.715 | 1.21 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":451.259894392,"data":"update  270/4500 | stage 1 | loss 2.6601 | lr connector 9.88e-04 | grad_norm 0.889 | 1.21 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":463.385313401,"data":"update  280/4500 | stage 1 | loss 2.7697 | lr connector 9.87e-04 | grad_norm 0.928 | 1.20 s/update | ETA 1h23m\n"}
+,{"stream_name":"stdout","time":475.47049437,"data":"update  290/4500 | stage 1 | loss 3.0327 | lr connector 9.85e-04 | grad_norm 0.795 | 1.21 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":487.622411064,"data":"update  300/4500 | stage 1 | loss 3.2311 | lr connector 9.83e-04 | grad_norm 1.098 | 1.21 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":499.693849545,"data":"update  310/4500 | stage 1 | loss 3.1308 | lr connector 9.81e-04 | grad_norm 1.261 | 1.21 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":511.755367325,"data":"update  320/4500 | stage 1 | loss 2.9031 | lr connector 9.80e-04 | grad_norm 0.864 | 1.22 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":523.92683501,"data":"update  330/4500 | stage 1 | loss 2.7512 | lr connector 9.78e-04 | grad_norm 0.854 | 1.24 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":536.042929132,"data":"update  340/4500 | stage 1 | loss 2.3416 | lr connector 9.75e-04 | grad_norm 0.873 | 1.20 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":548.166483203,"data":"update  350/4500 | stage 1 | loss 2.7423 | lr connector 9.73e-04 | grad_norm 0.792 | 1.20 s/update | ETA 1h22m\n"}
+,{"stream_name":"stdout","time":560.417092425,"data":"update  360/4500 | stage 1 | loss 2.7245 | lr connector 9.71e-04 | grad_norm 0.922 | 1.21 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":572.52767181,"data":"update  370/4500 | stage 1 | loss 2.8999 | lr connector 9.69e-04 | grad_norm 0.774 | 1.21 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":584.615524381,"data":"update  380/4500 | stage 1 | loss 2.9446 | lr connector 9.66e-04 | grad_norm 0.870 | 1.22 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":596.697705609,"data":"update  390/4500 | stage 1 | loss 2.5799 | lr connector 9.63e-04 | grad_norm 0.765 | 1.21 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":608.79087335,"data":"update  400/4500 | stage 1 | loss 2.8754 | lr connector 9.61e-04 | grad_norm 0.759 | 1.22 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":620.8874385,"data":"update  410/4500 | stage 1 | loss 2.8931 | lr connector 9.58e-04 | grad_norm 0.837 | 1.21 s/update | ETA 1h21m\n"}
+,{"stream_name":"stdout","time":632.988349806,"data":"update  420/4500 | stage 1 | loss 2.3565 | lr connector 9.55e-04 | grad_norm 0.689 | 1.21 s/update | ETA 1h20m\n"}
+,{"stream_name":"stdout","time":645.14804311,"data":"update  430/4500 | stage 1 | loss 2.1455 | lr connector 9.52e-04 | grad_norm 0.711 | 1.21 s/update | ETA 1h20m\n"}
+,{"stream_name":"stdout","time":657.565342062,"data":"update  440/4500 | stage 1 | loss 2.4400 | lr connector 9.49e-04 | grad_norm 0.766 | 1.22 s/update | ETA 1h20m\n"}
+,{"stream_name":"stdout","time":669.703863713,"data":"update  450/4500 | stage 1 | loss 2.3994 | lr connector 9.46e-04 | grad_norm 0.776 | 1.21 s/update | ETA 1h20m\n"}
+,{"stream_name":"stdout","time":681.834114192,"data":"update  460/4500 | stage 1 | loss 2.8204 | lr connector 9.43e-04 | grad_norm 0.733 | 1.23 s/update | ETA 1h20m\n"}
+,{"stream_name":"stdout","time":693.995484078,"data":"update  470/4500 | stage 1 | loss 2.6863 | lr connector 9.40e-04 | grad_norm 0.837 | 1.21 s/update | ETA 1h20m\n"}
+,{"stream_name":"stdout","time":706.095865598,"data":"update  480/4500 | stage 1 | loss 2.5088 | lr connector 9.36e-04 | grad_norm 0.816 | 1.21 s/update | ETA 1h20m\n"}
+,{"stream_name":"stdout","time":718.291259512,"data":"update  490/4500 | stage 1 | loss 2.6122 | lr connector 9.33e-04 | grad_norm 0.763 | 1.21 s/update | ETA 1h19m\n"}
+,{"stream_name":"stdout","time":730.482405863,"data":"update  500/4500 | stage 1 | loss 2.5225 | lr connector 9.29e-04 | grad_norm 0.673 | 1.22 s/update | ETA 1h19m\n"}
+,{"stream_name":"stdout","time":738.565907135,"data":"dev @ 500: caption 2.5078 | vqa NLL 6.924 dNLL +0.119 | grounding NLL 5.895 dNLL +0.002 | 8 s\n"}
+,{"stream_name":"stdout","time":738.621933126,"data":"checkpoint 500 saved in 0.1 s\n"}
+,{"stream_name":"stdout","time":750.767347675,"data":"update  510/4500 | stage 1 | loss 2.7987 | lr connector 9.26e-04 | grad_norm 0.780 | 1.21 s/update | ETA 1h19m\n"}
+,{"stream_name":"stdout","time":762.915555554,"data":"update  520/4500 | stage 1 | loss 2.4834 | lr connector 9.22e-04 | grad_norm 0.840 | 1.21 s/update | ETA 1h19m\n"}
+,{"stream_name":"stdout","time":775.030470142,"data":"update  530/4500 | stage 1 | loss 2.5527 | lr connector 9.18e-04 | grad_norm 0.690 | 1.23 s/update | ETA 1h19m\n"}
+,{"stream_name":"stdout","time":787.110724195,"data":"update  540/4500 | stage 1 | loss 2.6805 | lr connector 9.15e-04 | grad_norm 0.746 | 1.23 s/update | ETA 1h18m\n"}
+,{"stream_name":"stdout","time":799.176808612,"data":"update  550/4500 | stage 1 | loss 3.2001 | lr connector 9.11e-04 | grad_norm 0.696 | 1.21 s/update | ETA 1h18m\n"}
+,{"stream_name":"stdout","time":811.491003339,"data":"update  560/4500 | stage 1 | loss 2.5526 | lr connector 9.07e-04 | grad_norm 0.679 | 1.21 s/update | ETA 1h18m\n"}
+,{"stream_name":"stdout","time":823.612805273,"data":"update  570/4500 | stage 1 | loss 2.5278 | lr connector 9.03e-04 | grad_norm 0.865 | 1.20 s/update | ETA 1h18m\n"}
+,{"stream_name":"stdout","time":835.627400553,"data":"update  580/4500 | stage 1 | loss 2.3511 | lr connector 8.98e-04 | grad_norm 0.817 | 1.20 s/update | ETA 1h18m\n"}
+,{"stream_name":"stdout","time":847.749422872,"data":"update  590/4500 | stage 1 | loss 2.7199 | lr connector 8.94e-04 | grad_norm 0.714 | 1.21 s/update | ETA 1h18m\n"}
+,{"stream_name":"stdout","time":859.725309576,"data":"update  600/4500 | stage 1 | loss 2.5425 | lr connector 8.90e-04 | grad_norm 0.765 | 1.20 s/update | ETA 1h17m\n"}
+,{"stream_name":"stdout","time":871.750635026,"data":"update  610/4500 | stage 1 | loss 2.4327 | lr connector 8.86e-04 | grad_norm 0.674 | 1.20 s/update | ETA 1h17m\n"}
+,{"stream_name":"stdout","time":883.787187475,"data":"update  620/4500 | stage 1 | loss 2.6547 | lr connector 8.81e-04 | grad_norm 0.760 | 1.20 s/update | ETA 1h17m\n"}
+,{"stream_name":"stdout","time":895.97121487,"data":"update  630/4500 | stage 1 | loss 2.1428 | lr connector 8.77e-04 | grad_norm 0.606 | 1.23 s/update | ETA 1h17m\n"}
+,{"stream_name":"stdout","time":908.045797759,"data":"update  640/4500 | stage 1 | loss 2.5300 | lr connector 8.72e-04 | grad_norm 0.716 | 1.21 s/update | ETA 1h17m\n"}
+,{"stream_name":"stdout","time":920.160048302,"data":"update  650/4500 | stage 1 | loss 2.4695 | lr connector 8.67e-04 | grad_norm 0.661 | 1.21 s/update | ETA 1h16m\n"}
+,{"stream_name":"stdout","time":932.256565856,"data":"update  660/4500 | stage 1 | loss 2.6686 | lr connector 8.63e-04 | grad_norm 0.695 | 1.22 s/update | ETA 1h16m\n"}
+,{"stream_name":"stdout","time":944.325980516,"data":"update  670/4500 | stage 1 | loss 2.8464 | lr connector 8.58e-04 | grad_norm 0.696 | 1.22 s/update | ETA 1h16m\n"}
+,{"stream_name":"stdout","time":956.435977071,"data":"update  680/4500 | stage 1 | loss 3.1367 | lr connector 8.53e-04 | grad_norm 0.739 | 1.20 s/update | ETA 1h16m\n"}
+,{"stream_name":"stdout","time":968.576947985,"data":"update  690/4500 | stage 1 | loss 2.6714 | lr connector 8.48e-04 | grad_norm 0.675 | 1.22 s/update | ETA 1h16m\n"}
+,{"stream_name":"stdout","time":980.640430956,"data":"update  700/4500 | stage 1 | loss 2.4205 | lr connector 8.43e-04 | grad_norm 0.660 | 1.20 s/update | ETA 1h15m\n"}
+,{"stream_name":"stdout","time":992.712672629,"data":"update  710/4500 | stage 1 | loss 2.6414 | lr connector 8.38e-04 | grad_norm 0.802 | 1.20 s/update | ETA 1h15m\n"}
+,{"stream_name":"stdout","time":1004.816646637,"data":"update  720/4500 | stage 1 | loss 2.4111 | lr connector 8.33e-04 | grad_norm 0.729 | 1.20 s/update | ETA 1h15m\n"}
+,{"stream_name":"stdout","time":1017.010897705,"data":"update  730/4500 | stage 1 | loss 2.4620 | lr connector 8.28e-04 | grad_norm 0.705 | 1.21 s/update | ETA 1h15m\n"}
+,{"stream_name":"stdout","time":1029.14825807,"data":"update  740/4500 | stage 1 | loss 2.7731 | lr connector 8.23e-04 | grad_norm 0.651 | 1.22 s/update | ETA 1h15m\n"}
+,{"stream_name":"stdout","time":1041.374427237,"data":"update  750/4500 | stage 1 | loss 2.5010 | lr connector 8.17e-04 | grad_norm 0.667 | 1.20 s/update | ETA 1h14m\n"}
+,{"stream_name":"stdout","time":1041.443012369,"data":"checkpoint 750 saved in 0.1 s\n"}
+,{"stream_name":"stdout","time":1053.649204948,"data":"update  760/4500 | stage 1 | loss 2.4647 | lr connector 8.12e-04 | grad_norm 0.697 | 1.22 s/update | ETA 1h14m\n"}
+,{"stream_name":"stdout","time":1065.97509387,"data":"update  770/4500 | stage 1 | loss 2.3954 | lr connector 8.06e-04 | grad_norm 0.745 | 1.20 s/update | ETA 1h14m\n"}
+,{"stream_name":"stdout","time":1078.248151271,"data":"update  780/4500 | stage 1 | loss 2.0734 | lr connector 8.01e-04 | grad_norm 0.697 | 1.23 s/update | ETA 1h14m\n"}
+,{"stream_name":"stdout","time":1090.361768531,"data":"update  790/4500 | stage 1 | loss 2.5017 | lr connector 7.95e-04 | grad_norm 0.710 | 1.19 s/update | ETA 1h14m\n"}
+,{"stream_name":"stdout","time":1102.53396885,"data":"update  800/4500 | stage 1 | loss 2.4693 | lr connector 7.90e-04 | grad_norm 0.678 | 1.22 s/update | ETA 1h14m\n"}
+,{"stream_name":"stdout","time":1114.717990258,"data":"update  810/4500 | stage 1 | loss 2.7091 | lr connector 7.84e-04 | grad_norm 0.652 | 1.20 s/update | ETA 1h13m\n"}
+,{"stream_name":"stdout","time":1126.993469502,"data":"update  820/4500 | stage 1 | loss 2.3756 | lr connector 7.79e-04 | grad_norm 0.676 | 1.21 s/update | ETA 1h13m\n"}
+,{"stream_name":"stdout","time":1139.181136333,"data":"update  830/4500 | stage 1 | loss 2.5328 | lr connector 7.73e-04 | grad_norm 0.646 | 1.23 s/update | ETA 1h13m\n"}
+,{"stream_name":"stdout","time":1151.353581963,"data":"update  840/4500 | stage 1 | loss 2.5010 | lr connector 7.67e-04 | grad_norm 0.676 | 1.20 s/update | ETA 1h13m\n"}
+,{"stream_name":"stdout","time":1163.454203469,"data":"update  850/4500 | stage 1 | loss 2.6456 | lr connector 7.61e-04 | grad_norm 0.739 | 1.21 s/update | ETA 1h13m\n"}
+,{"stream_name":"stdout","time":1175.627891265,"data":"update  860/4500 | stage 1 | loss 2.4322 | lr connector 7.55e-04 | grad_norm 0.722 | 1.24 s/update | ETA 1h12m\n"}
+,{"stream_name":"stdout","time":1187.851576439,"data":"update  870/4500 | stage 1 | loss 2.1410 | lr connector 7.50e-04 | grad_norm 0.598 | 1.24 s/update | ETA 1h12m\n"}
+,{"stream_name":"stdout","time":1199.94277495,"data":"update  880/4500 | stage 1 | loss 2.3149 | lr connector 7.44e-04 | grad_norm 0.567 | 1.21 s/update | ETA 1h12m\n"}
+,{"stream_name":"stdout","time":1212.052471499,"data":"update  890/4500 | stage 1 | loss 2.6786 | lr connector 7.38e-04 | grad_norm 0.794 | 1.21 s/update | ETA 1h12m\n"}
+,{"stream_name":"stdout","time":1224.132784097,"data":"update  900/4500 | stage 1 | loss 2.4794 | lr connector 7.32e-04 | grad_norm 0.644 | 1.21 s/update | ETA 1h12m\n"}
+,{"stream_name":"stdout","time":1236.209416238,"data":"update  910/4500 | stage 1 | loss 2.6047 | lr connector 7.25e-04 | grad_norm 0.643 | 1.21 s/update | ETA 1h11m\n"}
+,{"stream_name":"stdout","time":1248.26163955,"data":"update  920/4500 | stage 1 | loss 2.5669 | lr connector 7.19e-04 | grad_norm 0.682 | 1.21 s/update | ETA 1h11m\n"}
+,{"stream_name":"stdout","time":1260.315757495,"data":"update  930/4500 | stage 1 | loss 2.2748 | lr connector 7.13e-04 | grad_norm 0.665 | 1.19 s/update | ETA 1h11m\n"}
+,{"stream_name":"stdout","time":1272.335405838,"data":"update  940/4500 | stage 1 | loss 2.5364 | lr connector 7.07e-04 | grad_norm 0.660 | 1.20 s/update | ETA 1h11m\n"}
+,{"stream_name":"stdout","time":1284.398669382,"data":"update  950/4500 | stage 1 | loss 2.4860 | lr connector 7.01e-04 | grad_norm 0.676 | 1.19 s/update | ETA 1h11m\n"}
+,{"stream_name":"stdout","time":1296.488185943,"data":"update  960/4500 | stage 1 | loss 2.6542 | lr connector 6.95e-04 | grad_norm 0.678 | 1.20 s/update | ETA 1h10m\n"}
+,{"stream_name":"stdout","time":1308.551835222,"data":"update  970/4500 | stage 1 | loss 2.3404 | lr connector 6.88e-04 | grad_norm 0.593 | 1.21 s/update | ETA 1h10m\n"}
+,{"stream_name":"stdout","time":1320.611152636,"data":"update  980/4500 | stage 1 | loss 2.2963 | lr connector 6.82e-04 | grad_norm 0.705 | 1.20 s/update | ETA 1h10m\n"}
+,{"stream_name":"stdout","time":1332.877500822,"data":"update  990/4500 | stage 1 | loss 2.3695 | lr connector 6.76e-04 | grad_norm 0.707 | 1.20 s/update | ETA 1h10m\n"}
+,{"stream_name":"stdout","time":1344.959880501,"data":"update 1000/4500 | stage 1 | loss 2.5275 | lr connector 6.69e-04 | grad_norm 0.632 | 1.20 s/update | ETA 1h10m\n"}
+,{"stream_name":"stdout","time":1352.977587331,"data":"dev @ 1000: caption 2.3482 | vqa NLL 7.054 dNLL +0.231 | grounding NLL 5.948 dNLL -0.010 | 8 s\n"}
+,{"stream_name":"stdout","time":1353.0650473,"data":"checkpoint 1000 saved in 0.1 s\n"}
+,{"stream_name":"stdout","time":1365.178486103,"data":"update 1010/4500 | stage 1 | loss 2.5469 | lr connector 6.63e-04 | grad_norm 0.643 | 1.22 s/update | ETA 1h09m\n"}
+,{"stream_name":"stdout","time":1377.485076201,"data":"update 1020/4500 | stage 1 | loss 2.7512 | lr connector 6.56e-04 | grad_norm 1.005 | 1.20 s/update | ETA 1h09m\n"}
+,{"stream_name":"stdout","time":1389.670930149,"data":"update 1030/4500 | stage 1 | loss 2.2721 | lr connector 6.50e-04 | grad_norm 0.574 | 1.20 s/update | ETA 1h09m\n"}
+,{"stream_name":"stdout","time":1401.822125278,"data":"update 1040/4500 | stage 1 | loss 2.2604 | lr connector 6.44e-04 | grad_norm 0.588 | 1.21 s/update | ETA 1h09m\n"}
+,{"stream_name":"stdout","time":1414.011834275,"data":"update 1050/4500 | stage 1 | loss 2.0774 | lr connector 6.37e-04 | grad_norm 0.660 | 1.21 s/update | ETA 1h09m\n"}
+,{"stream_name":"stdout","time":1426.261968584,"data":"update 1060/4500 | stage 1 | loss 2.4067 | lr connector 6.31e-04 | grad_norm 0.723 | 1.24 s/update | ETA 1h08m\n"}
+,{"stream_name":"stdout","time":1438.500977855,"data":"update 1070/4500 | stage 1 | loss 2.2801 | lr connector 6.24e-04 | grad_norm 0.616 | 1.20 s/update | ETA 1h08m\n"}
+,{"stream_name":"stdout","time":1450.91789804,"data":"update 1080/4500 | stage 1 | loss 2.3765 | lr connector 6.18e-04 | grad_norm 0.637 | 1.21 s/update | ETA 1h08m\n"}
+,{"stream_name":"stdout","time":1463.098657283,"data":"update 1090/4500 | stage 1 | loss 2.7882 | lr connector 6.11e-04 | grad_norm 0.722 | 1.21 s/update | ETA 1h08m\n"}
+,{"stream_name":"stdout","time":1475.285213169,"data":"update 1100/4500 | stage 1 | loss 2.4166 | lr connector 6.04e-04 | grad_norm 0.593 | 1.23 s/update | ETA 1h08m\n"}
+,{"stream_name":"stdout","time":1487.473835226,"data":"update 1110/4500 | stage 1 | loss 2.4573 | lr connector 5.98e-04 | grad_norm 0.632 | 1.22 s/update | ETA 1h08m\n"}
+,{"stream_name":"stdout","time":1499.790224246,"data":"update 1120/4500 | stage 1 | loss 2.3445 | lr connector 5.91e-04 | grad_norm 0.810 | 1.22 s/update | ETA 1h07m\n"}
+,{"stream_name":"stdout","time":1511.938801364,"data":"update 1130/4500 | stage 1 | loss 2.1076 | lr connector 5.85e-04 | grad_norm 0.630 | 1.21 s/update | ETA 1h07m\n"}
+,{"stream_name":"stdout","time":1524.091866318,"data":"update 1140/4500 | stage 1 | loss 2.3390 | lr connector 5.78e-04 | grad_norm 0.641 | 1.21 s/update | ETA 1h07m\n"}
+,{"stream_name":"stdout","time":1536.260010474,"data":"update 1150/4500 | stage 1 | loss 2.4408 | lr connector 5.71e-04 | grad_norm 0.731 | 1.20 s/update | ETA 1h07m\n"}
+,{"stream_name":"stdout","time":1548.348647698,"data":"update 1160/4500 | stage 1 | loss 2.1253 | lr connector 5.65e-04 | grad_norm 0.632 | 1.21 s/update | ETA 1h07m\n"}
+,{"stream_name":"stdout","time":1560.443838051,"data":"update 1170/4500 | stage 1 | loss 2.3700 | lr connector 5.58e-04 | grad_norm 0.827 | 1.21 s/update | ETA 1h06m\n"}
+,{"stream_name":"stdout","time":1572.615404069,"data":"update 1180/4500 | stage 1 | loss 2.2675 | lr connector 5.52e-04 | grad_norm 0.636 | 1.20 s/update | ETA 1h06m\n"}
+,{"stream_name":"stdout","time":1584.806349594,"data":"update 1190/4500 | stage 1 | loss 2.6605 | lr connector 5.45e-04 | grad_norm 0.814 | 1.23 s/update | ETA 1h06m\n"}
+,{"stream_name":"stdout","time":1596.977177282,"data":"update 1200/4500 | stage 1 | loss 2.5461 | lr connector 5.38e-04 | grad_norm 0.769 | 1.23 s/update | ETA 1h06m\n"}
+,{"stream_name":"stdout","time":1609.121764009,"data":"update 1210/4500 | stage 1 | loss 2.2602 | lr connector 5.32e-04 | grad_norm 0.764 | 1.22 s/update | ETA 1h06m\n"}
+,{"stream_name":"stdout","time":1621.315019644,"data":"update 1220/4500 | stage 1 | loss 2.1055 | lr connector 5.25e-04 | grad_norm 0.761 | 1.21 s/update | ETA 1h05m\n"}
+,{"stream_name":"stdout","time":1633.541658715,"data":"update 1230/4500 | stage 1 | loss 2.2489 | lr connector 5.19e-04 | grad_norm 0.634 | 1.23 s/update | ETA 1h05m\n"}
+,{"stream_name":"stdout","time":1645.782215831,"data":"update 1240/4500 | stage 1 | loss 2.2021 | lr connector 5.12e-04 | grad_norm 0.661 | 1.22 s/update | ETA 1h05m\n"}
+,{"stream_name":"stdout","time":1657.99678714,"data":"update 1250/4500 | stage 1 | loss 2.1621 | lr connector 5.05e-04 | grad_norm 0.649 | 1.22 s/update | ETA 1h05m\n"}
+,{"stream_name":"stdout","time":1658.096892239,"data":"checkpoint 1250 saved in 0.1 s\n"}
+,{"stream_name":"stdout","time":1670.263491208,"data":"update 1260/4500 | stage 1 | loss 2.2407 | lr connector 4.99e-04 | grad_norm 0.723 | 1.21 s/update | ETA 1h05m\n"}
+,{"stream_name":"stdout","time":1682.418928375,"data":"update 1270/4500 | stage 1 | loss 2.1202 | lr connector 4.92e-04 | grad_norm 0.765 | 1.20 s/update | ETA 1h04m\n"}
+,{"stream_name":"stdout","time":1694.604004187,"data":"update 1280/4500 | stage 1 | loss 2.0682 | lr connector 4.86e-04 | grad_norm 0.679 | 1.22 s/update | ETA 1h04m\n"}
+,{"stream_name":"stdout","time":1706.79540387,"data":"update 1290/4500 | stage 1 | loss 2.4442 | lr connector 4.79e-04 | grad_norm 0.700 | 1.20 s/update | ETA 1h04m\n"}
+,{"stream_name":"stdout","time":1719.141495604,"data":"update 1300/4500 | stage 1 | loss 2.3850 | lr connector 4.73e-04 | grad_norm 0.674 | 1.21 s/update | ETA 1h04m\n"}
+,{"stream_name":"stdout","time":1731.297676939,"data":"update 1310/4500 | stage 1 | loss 2.3876 | lr connector 4.66e-04 | grad_norm 0.671 | 1.21 s/update | ETA 1h04m\n"}
+,{"stream_name":"stdout","time":1743.480664719,"data":"update 1320/4500 | stage 1 | loss 2.1965 | lr connector 4.60e-04 | grad_norm 0.698 | 1.20 s/update | ETA 1h03m\n"}
+,{"stream_name":"stdout","time":1755.575996529,"data":"update 1330/4500 | stage 1 | loss 2.4440 | lr connector 4.53e-04 | grad_norm 0.790 | 1.21 s/update | ETA 1h03m\n"}
+,{"stream_name":"stdout","time":1767.708591623,"data":"update 1340/4500 | stage 1 | loss 2.5679 | lr connector 4.47e-04 | grad_norm 0.831 | 1.22 s/update | ETA 1h03m\n"}
+,{"stream_name":"stdout","time":1779.824575341,"data":"update 1350/4500 | stage 1 | loss 2.6059 | lr connector 4.40e-04 | grad_norm 0.878 | 1.22 s/update | ETA 1h03m\n"}
+,{"stream_name":"stdout","time":1791.960028669,"data":"update 1360/4500 | stage 1 | loss 2.2661 | lr connector 4.34e-04 | grad_norm 0.830 | 1.21 s/update | ETA 1h03m\n"}
+,{"stream_name":"stdout","time":1804.102179395,"data":"update 1370/4500 | stage 1 | loss 2.6828 | lr connector 4.28e-04 | grad_norm 0.747 | 1.21 s/update | ETA 1h02m\n"}
+,{"stream_name":"stdout","time":1816.217132429,"data":"update 1380/4500 | stage 1 | loss 1.9993 | lr connector 4.21e-04 | grad_norm 0.713 | 1.21 s/update | ETA 1h02m\n"}
+,{"stream_name":"stdout","time":1828.366237509,"data":"update 1390/4500 | stage 1 | loss 2.4542 | lr connector 4.15e-04 | grad_norm 0.831 | 1.21 s/update | ETA 1h02m\n"}
+,{"stream_name":"stdout","time":1840.499864089,"data":"update 1400/4500 | stage 1 | loss 2.5873 | lr connector 4.09e-04 | grad_norm 0.812 | 1.20 s/update | ETA 1h02m\n"}
+,{"stream_name":"stdout","time":1852.594625924,"data":"update 1410/4500 | stage 1 | loss 2.4346 | lr connector 4.02e-04 | grad_norm 0.795 | 1.21 s/update | ETA 1h02m\n"}
+,{"stream_name":"stdout","time":1864.946931092,"data":"update 1420/4500 | stage 1 | loss 2.3098 | lr connector 3.96e-04 | grad_norm 0.840 | 1.20 s/update | ETA 1h01m\n"}
+,{"stream_name":"stdout","time":1876.974355515,"data":"update 1430/4500 | stage 1 | loss 2.2279 | lr connector 3.90e-04 | grad_norm 0.732 | 1.20 s/update | ETA 1h01m\n"}
+,{"stream_name":"stdout","time":1889.03174216,"data":"update 1440/4500 | stage 1 | loss 2.2410 | lr connector 3.84e-04 | grad_norm 0.831 | 1.20 s/update | ETA 1h01m\n"}
+,{"stream_name":"stdout","time":1901.185462749,"data":"update 1450/4500 | stage 1 | loss 2.4431 | lr connector 3.78e-04 | grad_norm 0.764 | 1.21 s/update | ETA 1h01m\n"}
+,{"stream_name":"stdout","time":1913.381185497,"data":"update 1460/4500 | stage 1 | loss 2.3748 | lr connector 3.71e-04 | grad_norm 0.641 | 1.25 s/update | ETA 1h01m\n"}
+,{"stream_name":"stdout","time":1925.575860101,"data":"update 1470/4500 | stage 1 | loss 2.1137 | lr connector 3.65e-04 | grad_norm 0.709 | 1.30 s/update | ETA 1h00m\n"}
+,{"stream_name":"stdout","time":1937.701186415,"data":"update 1480/4500 | stage 1 | loss 2.1522 | lr connector 3.59e-04 | grad_norm 0.668 | 1.22 s/update | ETA 1h00m\n"}
+,{"stream_name":"stdout","time":1949.836501784,"data":"update 1490/4500 | stage 1 | loss 2.6240 | lr connector 3.53e-04 | grad_norm 0.658 | 1.21 s/update | ETA 1h00m\n"}
+,{"stream_name":"stdout","time":1962.294153994,"data":"update 1500/4500 | stage 1 | loss 2.4977 | lr connector 3.48e-04 | grad_norm 0.744 | 1.21 s/update | ETA 1h00m\n"}
+,{"stream_name":"stdout","time":1970.309965129,"data":"dev @ 1500: caption 2.2542 | vqa NLL 6.611 dNLL +0.314 | grounding NLL 5.979 dNLL +0.040 | 8 s\n"}
+,{"stream_name":"stdout","time":1970.427511843,"data":"checkpoint 1500 saved in 0.1 s\n"}
+,{"stream_name":"stdout","time":1982.579553609,"data":"update 1510/4500 | stage 1 | loss 2.4503 | lr connector 3.42e-04 | grad_norm 0.756 | 1.21 s/update | ETA 1h00m\n"}
+,{"stream_name":"stdout","time":1994.704108785,"data":"update 1520/4500 | stage 1 | loss 2.1663 | lr connector 3.36e-04 | grad_norm 0.720 | 1.21 s/update | ETA 0h59m\n"}
+,{"stream_name":"stdout","time":2006.821034956,"data":"update 1530/4500 | stage 1 | loss 2.3184 | lr connector 3.30e-04 | grad_norm 0.713 | 1.20 s/update | ETA 0h59m\n"}
+,{"stream_name":"stdout","time":2018.902590275,"data":"update 1540/4500 | stage 1 | loss 2.4895 | lr connector 3.24e-04 | grad_norm 0.767 | 1.20 s/update | ETA 0h59m\n"}
+,{"stream_name":"stdout","time":2030.997545358,"data":"update 1550/4500 | stage 1 | loss 2.3286 | lr connector 3.19e-04 | grad_norm 0.821 | 1.19 s/update | ETA 0h59m\n"}
+,{"stream_name":"stdout","time":2043.18499141,"data":"update 1560/4500 | stage 1 | loss 2.5147 | lr connector 3.13e-04 | grad_norm 0.831 | 1.24 s/update | ETA 0h59m\n"}
+,{"stream_name":"stdout","time":2055.417123312,"data":"update 1570/4500 | stage 1 | loss 2.3612 | lr connector 3.07e-04 | grad_norm 0.773 | 1.20 s/update | ETA 0h58m\n"}
+,{"stream_name":"stdout","time":2067.599823304,"data":"update 1580/4500 | stage 1 | loss 2.3850 | lr connector 3.02e-04 | grad_norm 0.716 | 1.20 s/update | ETA 0h58m\n"}
+,{"stream_name":"stdout","time":2079.706775192,"data":"update 1590/4500 | stage 1 | loss 2.3255 | lr connector 2.96e-04 | grad_norm 0.732 | 1.20 s/update | ETA 0h58m\n"}
+,{"stream_name":"stdout","time":2091.825514643,"data":"update 1600/4500 | stage 1 | loss 2.2774 | lr connector 2.91e-04 | grad_norm 0.821 | 1.19 s/update | ETA 0h58m\n"}
+,{"stream_name":"stdout","time":2103.940205573,"data":"update 1610/4500 | stage 1 | loss 2.5841 | lr connector 2.85e-04 | grad_norm 0.803 | 1.20 s/update | ETA 0h58m\n"}
+,{"stream_name":"stdout","time":2115.992247627,"data":"update 1620/4500 | stage 1 | loss 2.1220 | lr connector 2.80e-04 | grad_norm 0.791 | 1.20 s/update | ETA 0h57m\n"}
+,{"stream_name":"stdout","time":2128.128582772,"data":"update 1630/4500 | stage 1 | loss 1.8757 | lr connector 2.75e-04 | grad_norm 0.736 | 1.21 s/update | ETA 0h57m\n"}
+,{"stream_name":"stdout","time":2140.264748212,"data":"update 1640/4500 | stage 1 | loss 2.3369 | lr connector 2.70e-04 | grad_norm 0.812 | 1.21 s/update | ETA 0h57m\n"}
+,{"stream_name":"stdout","time":2152.386291621,"data":"update 1650/4500 | stage 1 | loss 2.3590 | lr connector 2.65e-04 | grad_norm 0.812 | 1.22 s/update | ETA 0h57m\n"}
+,{"stream_name":"stdout","time":2164.469060117,"data":"update 1660/4500 | stage 1 | loss 2.2645 | lr connector 2.59e-04 | grad_norm 0.781 | 1.20 s/update | ETA 0h57m\n"}
+,{"stream_name":"stdout","time":2176.547510597,"data":"update 1670/4500 | stage 1 | loss 2.4117 | lr connector 2.54e-04 | grad_norm 0.747 | 1.21 s/update | ETA 0h56m\n"}
+,{"stream_name":"stdout","time":2188.704648186,"data":"update 1680/4500 | stage 1 | loss 2.1974 | lr connector 2.49e-04 | grad_norm 0.884 | 1.20 s/update | ETA 0h56m\n"}
+,{"stream_name":"stdout","time":2200.836515357,"data":"update 1690/4500 | stage 1 | loss 2.4144 | lr connector 2.45e-04 | grad_norm 0.869 | 1.23 s/update | ETA 0h56m\n"}
+,{"stream_name":"stdout","time":2212.937365841,"data":"update 1700/4500 | stage 1 | loss 2.0499 | lr connector 2.40e-04 | grad_norm 0.813 | 1.20 s/update | ETA 0h56m\n"}
+,{"stream_name":"stdout","time":2225.0446001,"data":"update 1710/4500 | stage 1 | loss 2.5164 | lr connector 2.35e-04 | grad_norm 0.736 | 1.22 s/update | ETA 0h56m\n"}
+,{"stream_name":"stdout","time":2237.12937503,"data":"update 1720/4500 | stage 1 | loss 2.2549 | lr connector 2.30e-04 | grad_norm 0.714 | 1.21 s/update | ETA 0h55m\n"}
+,{"stream_name":"stdout","time":2249.412329393,"data":"update 1730/4500 | stage 1 | loss 2.7775 | lr connector 2.26e-04 | grad_norm 0.883 | 1.21 s/update | ETA 0h55m\n"}
+,{"stream_name":"stdout","time":2261.527635994,"data":"update 1740/4500 | stage 1 | loss 2.1103 | lr connector 2.21e-04 | grad_norm 0.744 | 1.21 s/update | ETA 0h55m\n"}
+,{"stream_name":"stdout","time":2273.670788336,"data":"update 1750/4500 | stage 1 | loss 2.1083 | lr connector 2.17e-04 | grad_norm 0.716 | 1.21 s/update | ETA 0h55m\n"}
+,{"stream_name":"stdout","time":2273.78596294,"data":"checkpoint 1750 saved in 0.1 s\n"}
+,{"stream_name":"stdout","time":2285.888637334,"data":"update 1760/4500 | stage 1 | loss 2.0752 | lr connector 2.12e-04 | grad_norm 0.858 | 1.20 s/update | ETA 0h55m\n"}
+,{"stream_name":"stdout","time":2298.045323602,"data":"update 1770/4500 | stage 1 | loss 2.3258 | lr connector 2.08e-04 | grad_norm 0.708 | 1.22 s/update | ETA 0h54m\n"}
+,{"stream_name":"stdout","time":2310.24299609,"data":"update 1780/4500 | stage 1 | loss 2.3570 | lr connector 2.04e-04 | grad_norm 0.775 | 1.22 s/update | ETA 0h54m\n"}
+,{"stream_name":"stdout","time":2322.416199014,"data":"update 1790/4500 | stage 1 | loss 2.3412 | lr connector 1.99e-04 | grad_norm 0.802 | 1.21 s/update | ETA 0h54m\n"}
+,{"stream_name":"stdout","time":2334.678882162,"data":"update 1800/4500 | stage 1 | loss 2.5055 | lr connector 1.95e-04 | grad_norm 0.870 | 1.22 s/update | ETA 0h54m\n"}
+,{"stream_name":"stdout","time":2346.877985523,"data":"update 1810/4500 | stage 1 | loss 2.0168 | lr connector 1.91e-04 | grad_norm 0.735 | 1.21 s/update | ETA 0h54m\n"}
+,{"stream_name":"stdout","time":2359.055097278,"data":"update 1820/4500 | stage 1 | loss 2.3254 | lr connector 1.87e-04 | grad_norm 0.836 | 1.20 s/update | ETA 0h53m\n"}
+,{"stream_name":"stdout","time":2371.28394333,"data":"update 1830/4500 | stage 1 | loss 2.0354 | lr connector 1.83e-04 | grad_norm 0.749 | 1.22 s/update | ETA 0h53m\n"}
+,{"stream_name":"stdout","time":2383.433000349,"data":"update 1840/4500 | stage 1 | loss 2.2595 | lr connector 1.80e-04 | grad_norm 0.824 | 1.21 s/update | ETA 0h53m\n"}
+,{"stream_name":"stdout","time":2395.609948067,"data":"update 1850/4500 | stage 1 | loss 2.2664 | lr connector 1.76e-04 | grad_norm 0.773 | 1.22 s/update | ETA 0h53m\n"}
+,{"stream_name":"stdout","time":2407.766959256,"data":"update 1860/4500 | stage 1 | loss 2.3585 | lr connector 1.72e-04 | grad_norm 0.778 | 1.20 s/update | ETA 0h53m\n"}
+,{"stream_name":"stdout","time":2419.911589539,"data":"update 1870/4500 | stage 1 | loss 2.2124 | lr connector 1.69e-04 | grad_norm 0.921 | 1.20 s/update | ETA 0h52m\n"}
+,{"stream_name":"stdout","time":2432.081322587,"data":"update 1880/4500 | stage 1 | loss 2.1230 | lr connector 1.65e-04 | grad_norm 0.835 | 1.21 s/update | ETA 0h52m\n"}
+,{"stream_name":"stdout","time":2444.248898853,"data":"update 1890/4500 | stage 1 | loss 2.3222 | lr connector 1.62e-04 | grad_norm 0.846 | 1.22 s/update | ETA 0h52m\n"}
+,{"stream_name":"stdout","time":2456.388644231,"data":"update 1900/4500 | stage 1 | loss 2.5009 | lr connector 1.59e-04 | grad_norm 0.811 | 1.21 s/update | ETA 0h52m\n"}
+,{"stream_name":"stdout","time":2468.556986644,"data":"update 1910/4500 | stage 1 | loss 2.1879 | lr connector 1.55e-04 | grad_norm 0.772 | 1.24 s/update | ETA 0h52m\n"}
+,{"stream_name":"stdout","time":2480.719800636,"data":"update 1920/4500 | stage 1 | loss 2.3532 | lr connector 1.52e-04 | grad_norm 0.780 | 1.22 s/update | ETA 0h51m\n"}
+,{"stream_name":"stdout","time":2493.19726264,"data":"update 1930/4500 | stage 1 | loss 2.3597 | lr connector 1.49e-04 | grad_norm 0.860 | 1.20 s/update | ETA 0h51m\n"}
+,{"stream_name":"stdout","time":2505.328530577,"data":"update 1940/4500 | stage 1 | loss 2.0948 | lr connector 1.46e-04 | grad_norm 0.797 | 1.21 s/update | ETA 0h51m\n"}
+,{"stream_name":"stdout","time":2517.429577656,"data":"update 1950/4500 | stage 1 | loss 2.2725 | lr connector 1.43e-04 | grad_norm 0.841 | 1.21 s/update | ETA 0h51m\n"}
+,{"stream_name":"stdout","time":2529.550763036,"data":"update 1960/4500 | stage 1 | loss 2.4087 | lr connector 1.41e-04 | grad_norm 0.785 | 1.20 s/update | ETA 0h51m\n"}
+,{"stream_name":"stdout","time":2541.660683358,"data":"update 1970/4500 | stage 1 | loss 2.4137 | lr connector 1.38e-04 | grad_norm 0.821 | 1.21 s/update | ETA 0h50m\n"}
+,{"stream_name":"stdout","time":2553.807808286,"data":"update 1980/4500 | stage 1 | loss 2.5946 | lr connector 1.35e-04 | grad_norm 0.795 | 1.22 s/update | ETA 0h50m\n"}
+,{"stream_name":"stdout","time":2565.980097665,"data":"update 1990/4500 | stage 1 | loss 2.0930 | lr connector 1.33e-04 | grad_norm 0.777 | 1.22 s/update | ETA 0h50m\n"}
+,{"stream_name":"stdout","time":2578.205538223,"data":"update 2000/4500 | stage 1 | loss 2.4386 | lr connector 1.30e-04 | grad_norm 0.890 | 1.24 s/update | ETA 0h50m\n"}
+,{"stream_name":"stdout","time":2586.206338174,"data":"dev @ 2000: caption 2.2033 | vqa NLL 7.143 dNLL +0.259 | grounding NLL 5.990 dNLL +0.070 | 8 s\n"}
+,{"stream_name":"stdout","time":2586.342805793,"data":"checkpoint 2000 saved in 0.1 s\n"}
+,{"stream_name":"stdout","time":2598.496557918,"data":"update 2010/4500 | stage 1 | loss 1.9399 | lr connector 1.28e-04 | grad_norm 0.808 | 1.21 s/update | ETA 0h50m\n"}
+,{"stream_name":"stdout","time":2610.734672973,"data":"update 2020/4500 | stage 1 | loss 2.1592 | lr connector 1.26e-04 | grad_norm 0.744 | 1.31 s/update | ETA 0h49m\n"}
+,{"stream_name":"stdout","time":2623.127686659,"data":"update 2030/4500 | stage 1 | loss 2.0690 | lr connector 1.24e-04 | grad_norm 0.771 | 1.21 s/update | ETA 0h49m\n"}
+,{"stream_name":"stdout","time":2635.266191971,"data":"update 2040/4500 | stage 1 | loss 2.4057 | lr connector 1.21e-04 | grad_norm 0.787 | 1.21 s/update | ETA 0h49m\n"}
+,{"stream_name":"stdout","time":2647.479645255,"data":"update 2050/4500 | stage 1 | loss 2.1306 | lr connector 1.20e-04 | grad_norm 0.847 | 1.22 s/update | ETA 0h49m\n"}
+,{"stream_name":"stdout","time":2659.685754323,"data":"update 2060/4500 | stage 1 | loss 2.2267 | lr connector 1.18e-04 | grad_norm 0.773 | 1.22 s/update | ETA 0h49m\n"}
+,{"stream_name":"stdout","time":2671.787218952,"data":"update 2070/4500 | stage 1 | loss 1.8858 | lr connector 1.16e-04 | grad_norm 0.738 | 1.20 s/update | ETA 0h48m\n"}
+,{"stream_name":"stdout","time":2683.983934856,"data":"update 2080/4500 | stage 1 | loss 2.5094 | lr connector 1.14e-04 | grad_norm 0.907 | 1.22 s/update | ETA 0h48m\n"}
+,{"stream_name":"stdout","time":2696.130799656,"data":"update 2090/4500 | stage 1 | loss 2.2730 | lr connector 1.13e-04 | grad_norm 0.785 | 1.20 s/update | ETA 0h48m\n"}
+,{"stream_name":"stdout","time":2708.285983234,"data":"update 2100/4500 | stage 1 | loss 2.2900 | lr connector 1.11e-04 | grad_norm 0.805 | 1.22 s/update | ETA 0h48m\n"}
+,{"stream_name":"stdout","time":2720.482811568,"data":"update 2110/4500 | stage 1 | loss 2.1297 | lr connector 1.10e-04 | grad_norm 0.737 | 1.22 s/update | ETA 0h48m\n"}
+,{"stream_name":"stdout","time":2732.685437178,"data":"update 2120/4500 | stage 1 | loss 1.8315 | lr connector 1.08e-04 | grad_norm 0.844 | 1.22 s/update | ETA 0h47m\n"}
+,{"stream_name":"stdout","time":2744.866935395,"data":"update 2130/4500 | stage 1 | loss 2.3741 | lr connector 1.07e-04 | grad_norm 0.986 | 1.20 s/update | ETA 0h47m\n"}
+,{"stream_name":"stdout","time":2757.064241892,"data":"update 2140/4500 | stage 1 | loss 2.6359 | lr connector 1.06e-04 | grad_norm 0.792 | 1.23 s/update | ETA 0h47m\n"}
+,{"stream_name":"stdout","time":2769.268614213,"data":"update 2150/4500 | stage 1 | loss 2.1165 | lr connector 1.05e-04 | grad_norm 0.763 | 1.23 s/update | ETA 0h47m\n"}
+,{"stream_name":"stdout","time":2781.473298175,"data":"update 2160/4500 | stage 1 | loss 2.1790 | lr connector 1.04e-04 | grad_norm 0.774 | 1.21 s/update | ETA 0h47m\n"}
+,{"stream_name":"stdout","time":2793.668218631,"data":"update 2170/4500 | stage 1 | loss 2.3031 | lr connector 1.03e-04 | grad_norm 0.823 | 1.22 s/update | ETA 0h46m\n"}
+,{"stream_name":"stdout","time":2805.882982633,"data":"update 2180/4500 | stage 1 | loss 2.2727 | lr connector 1.02e-04 | grad_norm 0.883 | 1.22 s/update | ETA 0h46m\n"}
+,{"stream_name":"stdout","time":2818.07401169,"data":"update 2190/4500 | stage 1 | loss 2.0924 | lr connector 1.02e-04 | grad_norm 0.877 | 1.21 s/update | ETA 0h46m\n"}
+,{"stream_name":"stdout","time":2830.306489588,"data":"update 2200/4500 | stage 1 | loss 2.0067 | lr connector 1.01e-04 | grad_norm 0.766 | 1.22 s/update | ETA 0h46m\n"}
+,{"stream_name":"stdout","time":2842.479958553,"data":"update 2210/4500 | stage 1 | loss 2.3349 | lr connector 1.01e-04 | grad_norm 0.981 | 1.20 s/update | ETA 0h46m\n"}
+,{"stream_name":"stdout","time":2854.636559251,"data":"update 2220/4500 | stage 1 | loss 2.6635 | lr connector 1.00e-04 | grad_norm 0.860 | 1.22 s/update | ETA 0h45m\n"}
+,{"stream_name":"stdout","time":2866.789662584,"data":"update 2230/4500 | stage 1 | loss 2.2913 | lr connector 1.00e-04 | grad_norm 0.804 | 1.22 s/update | ETA 0h45m\n"}
+,{"stream_name":"stdout","time":2878.909311912,"data":"update 2240/4500 | stage 1 | loss 2.1057 | lr connector 1.00e-04 | grad_norm 0.731 | 1.21 s/update | ETA 0h45m\n"}
+,{"stream_name":"stdout","time":2891.028805328,"data":"update 2250/4500 | stage 1 | loss 2.1742 | lr connector 1.00e-04 | grad_norm 0.933 | 1.21 s/update | ETA 0h45m\n"}
+,{"stream_name":"stdout","time":2899.008569856,"data":"dev @ 2250: caption 2.1938 | vqa NLL 7.158 dNLL +0.298 | grounding NLL 6.073 dNLL +0.045 | 8 s\n"}
+,{"stream_name":"stdout","time":2899.165306291,"data":"checkpoint 2250 saved in 0.2 s\n"}
+,{"stream_name":"stdout","time":2914.275106389,"data":"update 2260/4500 | stage 2 | loss 2.6712 | lr connector 1.20e-05, lora 2.40e-06 | grad_norm 18.193 | 1.35 s/update | ETA 0h45m\n"}
+,{"stream_name":"stdout","time":2927.825027911,"data":"update 2270/4500 | stage 2 | loss 2.6466 | lr connector 2.53e-05, lora 5.07e-06 | grad_norm 31.279 | 1.35 s/update | ETA 0h45m\n"}
+,{"stream_name":"stdout","time":2942.414751613,"data":"update 2280/4500 | stage 2 | loss 1.4966 | lr connector 3.87e-05, lora 7.73e-06 | grad_norm 21.717 | 1.35 s/update | ETA 0h44m\n"}
+,{"stream_name":"stdout","time":2956.820891325,"data":"update 2290/4500 | stage 2 | loss 0.7026 | lr connector 5.20e-05, lora 1.04e-05 | grad_norm 7.938 | 1.57 s/update | ETA 0h44m\n"}
+,{"stream_name":"stdout","time":2970.815689529,"data":"update 2300/4500 | stage 2 | loss 0.5865 | lr connector 6.53e-05, lora 1.31e-05 | grad_norm 8.341 | 1.59 s/update | ETA 0h44m\n"}
+,{"stream_name":"stdout","time":2984.748376164,"data":"update 2310/4500 | stage 2 | loss 0.9553 | lr connector 7.87e-05, lora 1.57e-05 | grad_norm 2.975 | 1.34 s/update | ETA 0h44m\n"}
+,{"stream_name":"stdout","time":2998.947624828,"data":"update 2320/4500 | stage 2 | loss 0.3808 | lr connector 9.20e-05, lora 1.84e-05 | grad_norm 6.124 | 1.35 s/update | ETA 0h44m\n"}
+,{"stream_name":"stdout","time":3012.949653058,"data":"update 2330/4500 | stage 2 | loss 0.7800 | lr connector 1.00e-04, lora 2.00e-05 | grad_norm 5.382 | 1.35 s/update | ETA 0h43m\n"}
+,{"stream_name":"stdout","time":3026.914519131,"data":"update 2340/4500 | stage 2 | loss 0.9150 | lr connector 1.00e-04, lora 2.00e-05 | grad_norm 2.922 | 1.35 s/update | ETA 0h43m\n"}
+,{"stream_name":"stdout","time":3040.918350282,"data":"update 2350/4500 | stage 2 | loss 1.2045 | lr connector 9.99e-05, lora 2.00e-05 | grad_norm 5.515 | 1.35 s/update | ETA 0h43m\n"}
+,{"stream_name":"stdout","time":3054.484452203,"data":"update 2360/4500 | stage 2 | loss 0.7427 | lr connector 9.99e-05, lora 2.00e-05 | grad_norm 3.942 | 1.36 s/update | ETA 0h43m\n"}
+,{"stream_name":"stdout","time":3068.466727074,"data":"update 2370/4500 | stage 2 | loss 1.3983 | lr connector 9.98e-05, lora 2.00e-05 | grad_norm 4.250 | 1.35 s/update | ETA 0h43m\n"}
+,{"stream_name":"stdout","time":3082.911853625,"data":"update 2380/4500 | stage 2 | loss 0.3242 | lr connector 9.97e-05, lora 1.99e-05 | grad_norm 6.563 | 1.57 s/update | ETA 0h43m\n"}
+,{"stream_name":"stdout","time":3097.12340652,"data":"update 2390/4500 | stage 2 | loss 0.9567 | lr connector 9.96e-05, lora 1.99e-05 | grad_norm 2.682 | 1.35 s/update | ETA 0h42m\n"}
+,{"stream_name":"stdout","time":3111.623313983,"data":"update 2400/4500 | stage 2 | loss 0.3039 | lr connector 9.94e-05, lora 1.99e-05 | grad_norm 5.287 | 1.57 s/update | ETA 0h42m\n"}
+,{"stream_name":"stdout","time":3125.395006352,"data":"update 2410/4500 | stage 2 | loss 1.1288 | lr connector 9.92e-05, lora 1.98e-05 | grad_norm 2.425 | 1.35 s/update | ETA 0h42m\n"}
+,{"stream_name":"stdout","time":3139.160823499,"data":"update 2420/4500 | stage 2 | loss 0.5023 | lr connector 9.90e-05, lora 1.98e-05 | grad_norm 2.823 | 1.34 s/update | ETA 0h42m\n"}
+,{"stream_name":"stdout","time":3153.156084255,"data":"update 2430/4500 | stage 2 | loss 1.0985 | lr connector 9.88e-05, lora 1.98e-05 | grad_norm 2.902 | 1.35 s/update | ETA 0h42m\n"}
+,{"stream_name":"stdout","time":3167.086495082,"data":"update 2440/4500 | stage 2 | loss 0.5887 | lr connector 9.86e-05, lora 1.97e-05 | grad_norm 2.487 | 1.56 s/update | ETA 0h42m\n"}
+,{"stream_name":"stdout","time":3181.308402139,"data":"update 2450/4500 | stage 2 | loss 0.7065 | lr connector 9.83e-05, lora 1.97e-05 | grad_norm 2.566 | 1.55 s/update | ETA 0h41m\n"}
+,{"stream_name":"stdout","time":3195.449699164,"data":"update 2460/4500 | stage 2 | loss 0.5844 | lr connector 9.81e-05, lora 1.96e-05 | grad_norm 3.200 | 1.34 s/update | ETA 0h41m\n"}
+,{"stream_name":"stdout","time":3209.587740459,"data":"update 2470/4500 | stage 2 | loss 0.5672 | lr connector 9.78e-05, lora 1.96e-05 | grad_norm 1.772 | 1.35 s/update | ETA 0h41m\n"}
+,{"stream_name":"stdout","time":3223.537728078,"data":"update 2480/4500 | stage 2 | loss 0.9597 | lr connector 9.74e-05, lora 1.95e-05 | grad_norm 4.811 | 1.35 s/update | ETA 0h41m\n"}
+,{"stream_name":"stdout","time":3237.750610432,"data":"update 2490/4500 | stage 2 | loss 0.7811 | lr connector 9.71e-05, lora 1.94e-05 | grad_norm 2.154 | 1.35 s/update | ETA 0h41m\n"}
+,{"stream_name":"stdout","time":3251.806463119,"data":"update 2500/4500 | stage 2 | loss 0.2515 | lr connector 9.67e-05, lora 1.93e-05 | grad_norm 2.034 | 1.36 s/update | ETA 0h40m\n"}
+,{"stream_name":"stdout","time":3260.783000722,"data":"dev @ 2500: caption 2.1902 | vqa NLL 1.820 dNLL +0.695 | grounding NLL 0.718 dNLL +2.034 | 9 s\n"}
+,{"stream_name":"stdout","time":3261.10060206,"data":"checkpoint 2500 saved in 0.3 s\n"}
+,{"stream_name":"stdout","time":3274.909004826,"data":"update 2510/4500 | stage 2 | loss 0.5235 | lr connector 9.63e-05, lora 1.93e-05 | grad_norm 5.588 | 1.34 s/update | ETA 0h40m\n"}
+,{"stream_name":"stdout","time":3289.279583662,"data":"update 2520/4500 | stage 2 | loss 0.5363 | lr connector 9.59e-05, lora 1.92e-05 | grad_norm 4.191 | 1.56 s/update | ETA 0h40m\n"}
+,{"stream_name":"stdout","time":3303.219771216,"data":"update 2530/4500 | stage 2 | loss 0.6645 | lr connector 9.55e-05, lora 1.91e-05 | grad_norm 1.622 | 1.56 s/update | ETA 0h40m\n"}
+,{"stream_name":"stdout","time":3317.615707122,"data":"update 2540/4500 | stage 2 | loss 0.6978 | lr connector 9.51e-05, lora 1.90e-05 | grad_norm 3.080 | 1.56 s/update | ETA 0h40m\n"}
+,{"stream_name":"stdout","time":3331.821433387,"data":"update 2550/4500 | stage 2 | loss 0.8764 | lr connector 9.46e-05, lora 1.89e-05 | grad_norm 2.586 | 1.38 s/update | ETA 0h40m\n"}
+,{"stream_name":"stdout","time":3345.392632726,"data":"update 2560/4500 | stage 2 | loss 0.8452 | lr connector 9.41e-05, lora 1.88e-05 | grad_norm 8.593 | 1.35 s/update | ETA 0h39m\n"}
+,{"stream_name":"stdout","time":3359.535208063,"data":"update 2570/4500 | stage 2 | loss 1.3624 | lr connector 9.36e-05, lora 1.87e-05 | grad_norm 4.603 | 1.35 s/update | ETA 0h39m\n"}
+,{"stream_name":"stdout","time":3373.319873025,"data":"update 2580/4500 | stage 2 | loss 1.0924 | lr connector 9.31e-05, lora 1.86e-05 | grad_norm 2.424 | 1.36 s/update | ETA 0h39m\n"}
+,{"stream_name":"stdout","time":3387.967856627,"data":"update 2590/4500 | stage 2 | loss 0.9694 | lr connector 9.26e-05, lora 1.85e-05 | grad_norm 3.393 | 1.35 s/update | ETA 0h39m\n"}
+,{"stream_name":"stdout","time":3401.81798982,"data":"update 2600/4500 | stage 2 | loss 0.7700 | lr connector 9.20e-05, lora 1.84e-05 | grad_norm 3.143 | 1.36 s/update | ETA 0h39m\n"}
+,{"stream_name":"stdout","time":3415.618000719,"data":"update 2610/4500 | stage 2 | loss 0.0192 | lr connector 9.15e-05, lora 1.83e-05 | grad_norm 1.084 | 1.57 s/update | ETA 0h38m\n"}
+,{"stream_name":"stdout","time":3429.633166777,"data":"update 2620/4500 | stage 2 | loss 1.0435 | lr connector 9.09e-05, lora 1.82e-05 | grad_norm 2.680 | 1.35 s/update | ETA 0h38m\n"}
+,{"stream_name":"stdout","time":3443.865738641,"data":"update 2630/4500 | stage 2 | loss 0.3022 | lr connector 9.03e-05, lora 1.81e-05 | grad_norm 5.825 | 1.57 s/update | ETA 0h38m\n"}
+,{"stream_name":"stdout","time":3457.884306077,"data":"update 2640/4500 | stage 2 | loss 0.2044 | lr connector 8.96e-05, lora 1.79e-05 | grad_norm 3.839 | 1.57 s/update | ETA 0h38m\n"}
+,{"stream_name":"stdout","time":3471.684833414,"data":"update 2650/4500 | stage 2 | loss 1.1332 | lr connector 8.90e-05, lora 1.78e-05 | grad_norm 2.214 | 1.36 s/update | ETA 0h38m\n"}
+,{"stream_name":"stdout","time":3486.090442659,"data":"update 2660/4500 | stage 2 | loss 0.5665 | lr connector 8.83e-05, lora 1.77e-05 | grad_norm 4.132 | 1.35 s/update | ETA 0h38m\n"}
+,{"stream_name":"stdout","time":3499.87382229,"data":"update 2670/4500 | stage 2 | loss 0.4680 | lr connector 8.77e-05, lora 1.75e-05 | grad_norm 3.225 | 1.36 s/update | ETA 0h37m\n"}
+,{"stream_name":"stdout","time":3513.919607358,"data":"update 2680/4500 | stage 2 | loss 1.2669 | lr connector 8.70e-05, lora 1.74e-05 | grad_norm 3.452 | 1.36 s/update | ETA 0h37m\n"}
+,{"stream_name":"stdout","time":3528.336184253,"data":"update 2690/4500 | stage 2 | loss 0.6193 | lr connector 8.63e-05, lora 1.73e-05 | grad_norm 2.217 | 1.36 s/update | ETA 0h37m\n"}
+,{"stream_name":"stdout","time":3542.786516027,"data":"update 2700/4500 | stage 2 | loss 0.4834 | lr connector 8.56e-05, lora 1.71e-05 | grad_norm 6.341 | 1.58 s/update | ETA 0h37m\n"}
+,{"stream_name":"stdout","time":3556.76337137,"data":"update 2710/4500 | stage 2 | loss 0.3747 | lr connector 8.48e-05, lora 1.70e-05 | grad_norm 1.820 | 1.36 s/update | ETA 0h37m\n"}
+,{"stream_name":"stdout","time":3570.814755809,"data":"update 2720/4500 | stage 2 | loss 1.4125 | lr connector 8.41e-05, lora 1.68e-05 | grad_norm 2.559 | 1.35 s/update | ETA 0h36m\n"}
+,{"stream_name":"stdout","time":3584.795576873,"data":"update 2730/4500 | stage 2 | loss 0.5148 | lr connector 8.33e-05, lora 1.67e-05 | grad_norm 5.490 | 1.35 s/update | ETA 0h36m\n"}
+,{"stream_name":"stdout","time":3598.414965048,"data":"update 2740/4500 | stage 2 | loss 0.3260 | lr connector 8.25e-05, lora 1.65e-05 | grad_norm 2.489 | 1.35 s/update | ETA 0h36m\n"}
+,{"stream_name":"stdout","time":3613.010663591,"data":"update 2750/4500 | stage 2 | loss 0.9238 | lr connector 8.17e-05, lora 1.63e-05 | grad_norm 2.315 | 1.36 s/update | ETA 0h36m\n"}
+,{"stream_name":"stdout","time":3613.329684483,"data":"checkpoint 2750 saved in 0.3 s\n"}
+,{"stream_name":"stdout","time":3627.402748303,"data":"update 2760/4500 | stage 2 | loss 1.0393 | lr connector 8.09e-05, lora 1.62e-05 | grad_norm 2.387 | 1.35 s/update | ETA 0h36m\n"}
+,{"stream_name":"stdout","time":3641.204068979,"data":"update 2770/4500 | stage 2 | loss 0.6357 | lr connector 8.01e-05, lora 1.60e-05 | grad_norm 2.400 | 1.35 s/update | ETA 0h35m\n"}
+,{"stream_name":"stdout","time":3655.030456154,"data":"update 2780/4500 | stage 2 | loss 0.7206 | lr connector 7.93e-05, lora 1.59e-05 | grad_norm 2.588 | 1.35 s/update | ETA 0h35m\n"}
+,{"stream_name":"stdout","time":3669.001458598,"data":"update 2790/4500 | stage 2 | loss 0.6937 | lr connector 7.84e-05, lora 1.57e-05 | grad_norm 3.085 | 1.56 s/update | ETA 0h35m\n"}
+,{"stream_name":"stdout","time":3683.228292736,"data":"update 2800/4500 | stage 2 | loss 1.2536 | lr connector 7.76e-05, lora 1.55e-05 | grad_norm 4.554 | 1.37 s/update | ETA 0h35m\n"}
+,{"stream_name":"stdout","time":3697.01798715,"data":"update 2810/4500 | stage 2 | loss 0.6282 | lr connector 7.67e-05, lora 1.53e-05 | grad_norm 5.243 | 1.34 s/update | ETA 0h35m\n"}
+,{"stream_name":"stdout","time":3711.000366222,"data":"update 2820/4500 | stage 2 | loss 0.3782 | lr connector 7.58e-05, lora 1.52e-05 | grad_norm 5.883 | 1.56 s/update | ETA 0h34m\n"}
+,{"stream_name":"stdout","time":3725.185006759,"data":"update 2830/4500 | stage 2 | loss 0.5341 | lr connector 7.50e-05, lora 1.50e-05 | grad_norm 4.521 | 1.35 s/update | ETA 0h34m\n"}
+,{"stream_name":"stdout","time":3739.593545374,"data":"update 2840/4500 | stage 2 | loss 0.5267 | lr connector 7.41e-05, lora 1.48e-05 | grad_norm 3.675 | 1.55 s/update | ETA 0h34m\n"}
+,{"stream_name":"stdout","time":3753.817532331,"data":"update 2850/4500 | stage 2 | loss 0.4430 | lr connector 7.32e-05, lora 1.46e-05 | grad_norm 7.751 | 1.35 s/update | ETA 0h34m\n"}
+,{"stream_name":"stdout","time":3768.000236016,"data":"update 2860/4500 | stage 2 | loss 0.6416 | lr connector 7.23e-05, lora 1.45e-05 | grad_norm 3.883 | 1.36 s/update | ETA 0h34m\n"}
+,{"stream_name":"stdout","time":3782.202478623,"data":"update 2870/4500 | stage 2 | loss 0.6414 | lr connector 7.13e-05, lora 1.43e-05 | grad_norm 3.313 | 1.35 s/update | ETA 0h34m\n"}
+,{"stream_name":"stdout","time":3796.588163389,"data":"update 2880/4500 | stage 2 | loss 0.6558 | lr connector 7.04e-05, lora 1.41e-05 | grad_norm 2.326 | 1.56 s/update | ETA 0h33m\n"}
+,{"stream_name":"stdout","time":3810.78366892,"data":"update 2890/4500 | stage 2 | loss 0.6218 | lr connector 6.95e-05, lora 1.39e-05 | grad_norm 3.618 | 1.35 s/update | ETA 0h33m\n"}
+,{"stream_name":"stdout","time":3824.555949673,"data":"update 2900/4500 | stage 2 | loss 0.4450 | lr connector 6.85e-05, lora 1.37e-05 | grad_norm 2.122 | 1.56 s/update | ETA 0h33m\n"}
+,{"stream_name":"stdout","time":3838.558992157,"data":"update 2910/4500 | stage 2 | loss 1.0419 | lr connector 6.76e-05, lora 1.35e-05 | grad_norm 2.435 | 1.36 s/update | ETA 0h33m\n"}
+,{"stream_name":"stdout","time":3852.580316561,"data":"update 2920/4500 | stage 2 | loss 0.9278 | lr connector 6.66e-05, lora 1.33e-05 | grad_norm 3.105 | 1.35 s/update | ETA 0h33m\n"}
+,{"stream_name":"stdout","time":3867.023871442,"data":"update 2930/4500 | stage 2 | loss 0.1878 | lr connector 6.57e-05, lora 1.31e-05 | grad_norm 4.985 | 1.79 s/update | ETA 0h32m\n"}
+,{"stream_name":"stdout","time":3881.052758756,"data":"update 2940/4500 | stage 2 | loss 0.5586 | lr connector 6.47e-05, lora 1.29e-05 | grad_norm 5.511 | 1.58 s/update | ETA 0h32m\n"}
+,{"stream_name":"stdout","time":3895.286397644,"data":"update 2950/4500 | stage 2 | loss 0.6398 | lr connector 6.37e-05, lora 1.27e-05 | grad_norm 1.700 | 1.36 s/update | ETA 0h32m\n"}
+,{"stream_name":"stdout","time":3909.312990453,"data":"update 2960/4500 | stage 2 | loss 0.5627 | lr connector 6.27e-05, lora 1.25e-05 | grad_norm 2.288 | 1.56 s/update | ETA 0h32m\n"}
+,{"stream_name":"stdout","time":3923.568571328,"data":"update 2970/4500 | stage 2 | loss 0.6702 | lr connector 6.18e-05, lora 1.24e-05 | grad_norm 2.335 | 1.56 s/update | ETA 0h32m\n"}
+,{"stream_name":"stdout","time":3937.550092806,"data":"update 2980/4500 | stage 2 | loss 0.8547 | lr connector 6.08e-05, lora 1.22e-05 | grad_norm 3.078 | 1.34 s/update | ETA 0h31m\n"}
+,{"stream_name":"stdout","time":3951.755421601,"data":"update 2990/4500 | stage 2 | loss 0.8894 | lr connector 5.98e-05, lora 1.20e-05 | grad_norm 4.741 | 1.35 s/update | ETA 0h31m\n"}
+,{"stream_name":"stdout","time":3966.003650067,"data":"update 3000/4500 | stage 2 | loss 0.5838 | lr connector 5.88e-05, lora 1.18e-05 | grad_norm 1.566 | 1.35 s/update | ETA 0h31m\n"}
+,{"stream_name":"stdout","time":3974.881153653,"data":"dev @ 3000: caption 2.1858 | vqa NLL 1.747 dNLL +0.766 | grounding NLL 0.688 dNLL +2.026 | 9 s\n"}
+,{"stream_name":"stdout","time":3975.187805834,"data":"checkpoint 3000 saved in 0.3 s\n"}
+,{"stream_name":"stdout","time":3989.670423295,"data":"update 3010/4500 | stage 2 | loss 0.1898 | lr connector 5.78e-05, lora 1.16e-05 | grad_norm 1.575 | 1.56 s/update | ETA 0h31m\n"}
+,{"stream_name":"stdout","time":4003.648575506,"data":"update 3020/4500 | stage 2 | loss 0.5269 | lr connector 5.68e-05, lora 1.14e-05 | grad_norm 2.263 | 1.35 s/update | ETA 0h31m\n"}
+,{"stream_name":"stdout","time":4017.606786624,"data":"update 3030/4500 | stage 2 | loss 0.9677 | lr connector 5.58e-05, lora 1.12e-05 | grad_norm 2.402 | 1.35 s/update | ETA 0h30m\n"}
+,{"stream_name":"stdout","time":4031.381070452,"data":"update 3040/4500 | stage 2 | loss 0.6589 | lr connector 5.49e-05, lora 1.10e-05 | grad_norm 3.704 | 1.35 s/update | ETA 0h30m\n"}
+,{"stream_name":"stdout","time":4045.161301818,"data":"update 3050/4500 | stage 2 | loss 0.6789 | lr connector 5.39e-05, lora 1.08e-05 | grad_norm 2.150 | 1.35 s/update | ETA 0h30m\n"}
+,{"stream_name":"stdout","time":4059.096424199,"data":"update 3060/4500 | stage 2 | loss 0.7390 | lr connector 5.29e-05, lora 1.06e-05 | grad_norm 3.393 | 1.35 s/update | ETA 0h30m\n"}
+,{"stream_name":"stdout","time":4073.059286918,"data":"update 3070/4500 | stage 2 | loss 0.8764 | lr connector 5.19e-05, lora 1.04e-05 | grad_norm 2.642 | 1.35 s/update | ETA 0h30m\n"}
+,{"stream_name":"stdout","time":4086.996865154,"data":"update 3080/4500 | stage 2 | loss 1.2424 | lr connector 5.09e-05, lora 1.02e-05 | grad_norm 3.771 | 1.36 s/update | ETA 0h29m\n"}
+,{"stream_name":"stdout","time":4100.734546902,"data":"update 3090/4500 | stage 2 | loss 0.8083 | lr connector 4.99e-05, lora 9.98e-06 | grad_norm 4.871 | 1.56 s/update | ETA 0h29m\n"}
+,{"stream_name":"stdout","time":4114.266415698,"data":"update 3100/4500 | stage 2 | loss 0.7051 | lr connector 4.89e-05, lora 9.78e-06 | grad_norm 3.672 | 1.35 s/update | ETA 0h29m\n"}
+,{"stream_name":"stdout","time":4128.451675713,"data":"update 3110/4500 | stage 2 | loss 0.8595 | lr connector 4.79e-05, lora 9.59e-06 | grad_norm 4.025 | 1.36 s/update | ETA 0h29m\n"}
+,{"stream_name":"stdout","time":4142.770969842,"data":"update 3120/4500 | stage 2 | loss 2.1522 | lr connector 4.70e-05, lora 9.39e-06 | grad_norm 4.182 | 1.39 s/update | ETA 0h29m\n"}
+,{"stream_name":"stdout","time":4156.34272379,"data":"update 3130/4500 | stage 2 | loss 0.6889 | lr connector 4.60e-05, lora 9.20e-06 | grad_norm 2.110 | 1.35 s/update | ETA 0h28m\n"}
+,{"stream_name":"stdout","time":4170.476854031,"data":"update 3140/4500 | stage 2 | loss 0.5438 | lr connector 4.50e-05, lora 9.00e-06 | grad_norm 3.039 | 1.34 s/update | ETA 0h28m\n"}
+,{"stream_name":"stdout","time":4184.240001954,"data":"update 3150/4500 | stage 2 | loss 0.5346 | lr connector 4.40e-05, lora 8.81e-06 | grad_norm 2.305 | 1.35 s/update | ETA 0h28m\n"}
+,{"stream_name":"stdout","time":4198.164262215,"data":"update 3160/4500 | stage 2 | loss 0.1562 | lr connector 4.31e-05, lora 8.62e-06 | grad_norm 9.746 | 1.54 s/update | ETA 0h28m\n"}
+,{"stream_name":"stdout","time":4212.069004199,"data":"update 3170/4500 | stage 2 | loss 0.4125 | lr connector 4.21e-05, lora 8.43e-06 | grad_norm 1.742 | 1.34 s/update | ETA 0h28m\n"}
+,{"stream_name":"stdout","time":4226.335842774,"data":"update 3180/4500 | stage 2 | loss 0.7680 | lr connector 4.12e-05, lora 8.24e-06 | grad_norm 3.206 | 1.57 s/update | ETA 0h27m\n"}
+,{"stream_name":"stdout","time":4240.339855303,"data":"update 3190/4500 | stage 2 | loss 0.2600 | lr connector 4.02e-05, lora 8.05e-06 | grad_norm 3.895 | 1.35 s/update | ETA 0h27m\n"}
+,{"stream_name":"stdout","time":4254.290315759,"data":"update 3200/4500 | stage 2 | loss 0.1415 | lr connector 3.93e-05, lora 7.86e-06 | grad_norm 2.617 | 1.56 s/update | ETA 0h27m\n"}
+,{"stream_name":"stdout","time":4268.912859923,"data":"update 3210/4500 | stage 2 | loss 0.7702 | lr connector 3.84e-05, lora 7.68e-06 | grad_norm 2.827 | 1.56 s/update | ETA 0h27m\n"}
+,{"stream_name":"stdout","time":4282.939092357,"data":"update 3220/4500 | stage 2 | loss 0.5777 | lr connector 3.75e-05, lora 7.49e-06 | grad_norm 2.653 | 1.35 s/update | ETA 0h27m\n"}
+,{"stream_name":"stdout","time":4297.144464675,"data":"update 3230/4500 | stage 2 | loss 0.7577 | lr connector 3.66e-05, lora 7.31e-06 | grad_norm 5.099 | 1.37 s/update | ETA 0h26m\n"}
+,{"stream_name":"stdout","time":4311.370164943,"data":"update 3240/4500 | stage 2 | loss 0.5027 | lr connector 3.57e-05, lora 7.13e-06 | grad_norm 5.016 | 1.35 s/update | ETA 0h26m\n"}
+,{"stream_name":"stdout","time":4325.125170691,"data":"update 3250/4500 | stage 2 | loss 0.9308 | lr connector 3.48e-05, lora 6.95e-06 | grad_norm 2.375 | 1.35 s/update | ETA 0h26m\n"}
+,{"stream_name":"stdout","time":4325.44934482,"data":"checkpoint 3250 saved in 0.3 s\n"}
+,{"stream_name":"stdout","time":4339.445280664,"data":"update 3260/4500 | stage 2 | loss 0.6397 | lr connector 3.39e-05, lora 6.78e-06 | grad_norm 3.271 | 1.34 s/update | ETA 0h26m\n"}
+,{"stream_name":"stdout","time":4353.82687227,"data":"update 3270/4500 | stage 2 | loss 0.5206 | lr connector 3.30e-05, lora 6.60e-06 | grad_norm 3.265 | 1.35 s/update | ETA 0h26m\n"}
+,{"stream_name":"stdout","time":4367.665126966,"data":"update 3280/4500 | stage 2 | loss 1.1833 | lr connector 3.22e-05, lora 6.43e-06 | grad_norm 2.753 | 1.35 s/update | ETA 0h25m\n"}
+,{"stream_name":"stdout","time":4381.677085341,"data":"update 3290/4500 | stage 2 | loss 1.0629 | lr connector 3.13e-05, lora 6.26e-06 | grad_norm 2.555 | 1.36 s/update | ETA 0h25m\n"}
+,{"stream_name":"stdout","time":4395.70628039,"data":"update 3300/4500 | stage 2 | loss 0.3321 | lr connector 3.05e-05, lora 6.09e-06 | grad_norm 3.466 | 1.57 s/update | ETA 0h25m\n"}
+,{"stream_name":"stdout","time":4409.969549687,"data":"update 3310/4500 | stage 2 | loss 0.8627 | lr connector 2.96e-05, lora 5.93e-06 | grad_norm 2.368 | 1.35 s/update | ETA 0h25m\n"}
+,{"stream_name":"stdout","time":4423.808613344,"data":"update 3320/4500 | stage 2 | loss 1.5493 | lr connector 2.88e-05, lora 5.77e-06 | grad_norm 4.522 | 1.36 s/update | ETA 0h25m\n"}
+,{"stream_name":"stdout","time":4437.821523143,"data":"update 3330/4500 | stage 2 | loss 1.1274 | lr connector 2.80e-05, lora 5.61e-06 | grad_norm 2.754 | 1.35 s/update | ETA 0h24m\n"}
+,{"stream_name":"stdout","time":4451.622431247,"data":"update 3340/4500 | stage 2 | loss 1.2291 | lr connector 2.72e-05, lora 5.45e-06 | grad_norm 3.202 | 1.35 s/update | ETA 0h24m\n"}
+,{"stream_name":"stdout","time":4465.822528026,"data":"update 3350/4500 | stage 2 | loss 0.8898 | lr connector 2.65e-05, lora 5.29e-06 | grad_norm 2.314 | 1.35 s/update | ETA 0h24m\n"}
+,{"stream_name":"stdout","time":4479.955434261,"data":"update 3360/4500 | stage 2 | loss 0.9979 | lr connector 2.57e-05, lora 5.14e-06 | grad_norm 2.108 | 1.36 s/update | ETA 0h24m\n"}
+,{"stream_name":"stdout","time":4493.669979598,"data":"update 3370/4500 | stage 2 | loss 1.1853 | lr connector 2.50e-05, lora 4.99e-06 | grad_norm 3.147 | 1.34 s/update | ETA 0h23m\n"}
+,{"stream_name":"stdout","time":4507.593377198,"data":"update 3380/4500 | stage 2 | loss 0.4211 | lr connector 2.42e-05, lora 4.85e-06 | grad_norm 2.887 | 1.36 s/update | ETA 0h23m\n"}
+,{"stream_name":"stdout","time":4521.484813585,"data":"update 3390/4500 | stage 2 | loss 0.5169 | lr connector 2.35e-05, lora 4.70e-06 | grad_norm 2.257 | 1.34 s/update | ETA 0h23m\n"}
+,{"stream_name":"stdout","time":4534.98453949,"data":"update 3400/4500 | stage 2 | loss 0.3553 | lr connector 2.28e-05, lora 4.56e-06 | grad_norm 3.533 | 1.34 s/update | ETA 0h23m\n"}
+,{"stream_name":"stdout","time":4549.393845837,"data":"update 3410/4500 | stage 2 | loss 0.6954 | lr connector 2.21e-05, lora 4.43e-06 | grad_norm 2.524 | 1.36 s/update | ETA 0h23m\n"}
+,{"stream_name":"stdout","time":4563.110763775,"data":"update 3420/4500 | stage 2 | loss 0.5089 | lr connector 2.15e-05, lora 4.29e-06 | grad_norm 2.591 | 1.56 s/update | ETA 0h22m\n"}
+,{"stream_name":"stdout","time":4576.860701818,"data":"update 3430/4500 | stage 2 | loss 0.9992 | lr connector 2.08e-05, lora 4.16e-06 | grad_norm 1.984 | 1.35 s/update | ETA 0h22m\n"}
+,{"stream_name":"stdout","time":4590.754505228,"data":"update 3440/4500 | stage 2 | loss 1.3520 | lr connector 2.02e-05, lora 4.03e-06 | grad_norm 2.679 | 1.34 s/update | ETA 0h22m\n"}
+,{"stream_name":"stdout","time":4605.346695836,"data":"update 3450/4500 | stage 2 | loss 1.4098 | lr connector 1.95e-05, lora 3.91e-06 | grad_norm 2.893 | 1.40 s/update | ETA 0h22m\n"}
+,{"stream_name":"stdout","time":4619.545756348,"data":"update 3460/4500 | stage 2 | loss 0.8584 | lr connector 1.89e-05, lora 3.79e-06 | grad_norm 2.930 | 1.35 s/update | ETA 0h22m\n"}
+,{"stream_name":"stdout","time":4633.546980839,"data":"update 3470/4500 | stage 2 | loss 0.9330 | lr connector 1.84e-05, lora 3.67e-06 | grad_norm 3.963 | 1.35 s/update | ETA 0h21m\n"}
+,{"stream_name":"stdout","time":4647.557757212,"data":"update 3480/4500 | stage 2 | loss 0.7339 | lr connector 1.78e-05, lora 3.56e-06 | grad_norm 3.865 | 1.36 s/update | ETA 0h21m\n"}
+,{"stream_name":"stdout","time":4661.809521233,"data":"update 3490/4500 | stage 2 | loss 0.6974 | lr connector 1.72e-05, lora 3.45e-06 | grad_norm 2.428 | 1.35 s/update | ETA 0h21m\n"}
+,{"stream_name":"stdout","time":4675.841984444,"data":"update 3500/4500 | stage 2 | loss 0.1626 | lr connector 1.67e-05, lora 3.34e-06 | grad_norm 2.723 | 1.56 s/update | ETA 0h21m\n"}
+,{"stream_name":"stdout","time":4684.816828461,"data":"dev @ 3500: caption 2.1775 | vqa NLL 1.732 dNLL +0.881 | grounding NLL 0.643 dNLL +2.157 | 9 s\n"}
+,{"stream_name":"stdout","time":4685.180601434,"data":"checkpoint 3500 saved in 0.4 s\n"}
+,{"stream_name":"stdout","time":4699.413627497,"data":"update 3510/4500 | stage 2 | loss 0.6851 | lr connector 1.62e-05, lora 3.24e-06 | grad_norm 4.073 | 1.57 s/update | ETA 0h21m\n"}
+,{"stream_name":"stdout","time":4713.619347635,"data":"update 3520/4500 | stage 2 | loss 0.2966 | lr connector 1.57e-05, lora 3.14e-06 | grad_norm 3.162 | 1.57 s/update | ETA 0h20m\n"}
+,{"stream_name":"stdout","time":4727.184532565,"data":"update 3530/4500 | stage 2 | loss 0.5471 | lr connector 1.52e-05, lora 3.05e-06 | grad_norm 5.413 | 1.36 s/update | ETA 0h20m\n"}
+,{"stream_name":"stdout","time":4741.183292174,"data":"update 3540/4500 | stage 2 | loss 0.8609 | lr connector 1.48e-05, lora 2.96e-06 | grad_norm 2.398 | 1.36 s/update | ETA 0h20m\n"}
+,{"stream_name":"stdout","time":4755.590403473,"data":"update 3550/4500 | stage 2 | loss 0.7780 | lr connector 1.43e-05, lora 2.87e-06 | grad_norm 2.037 | 1.35 s/update | ETA 0h20m\n"}
+,{"stream_name":"stdout","time":4770.011430748,"data":"update 3560/4500 | stage 2 | loss 0.6524 | lr connector 1.39e-05, lora 2.79e-06 | grad_norm 2.416 | 1.57 s/update | ETA 0h20m\n"}
+,{"stream_name":"stdout","time":4784.008445392,"data":"update 3570/4500 | stage 2 | loss 1.0248 | lr connector 1.35e-05, lora 2.71e-06 | grad_norm 4.357 | 1.36 s/update | ETA 0h19m\n"}
+,{"stream_name":"stdout","time":4797.791191776,"data":"update 3580/4500 | stage 2 | loss 0.5555 | lr connector 1.32e-05, lora 2.63e-06 | grad_norm 2.389 | 1.36 s/update | ETA 0h19m\n"}
+,{"stream_name":"stdout","time":4812.016644464,"data":"update 3590/4500 | stage 2 | loss 0.9023 | lr connector 1.28e-05, lora 2.56e-06 | grad_norm 3.640 | 1.35 s/update | ETA 0h19m\n"}
+,{"stream_name":"stdout","time":4826.086083565,"data":"update 3600/4500 | stage 2 | loss 0.8125 | lr connector 1.25e-05, lora 2.49e-06 | grad_norm 2.184 | 1.36 s/update | ETA 0h19m\n"}
+,{"stream_name":"stdout","time":4840.270745954,"data":"update 3610/4500 | stage 2 | loss 0.1895 | lr connector 1.22e-05, lora 2.43e-06 | grad_norm 4.106 | 1.35 s/update | ETA 0h19m\n"}
+,{"stream_name":"stdout","time":4854.046951589,"data":"update 3620/4500 | stage 2 | loss 0.8931 | lr connector 1.19e-05, lora 2.37e-06 | grad_norm 2.187 | 1.35 s/update | ETA 0h18m\n"}
+,{"stream_name":"stdout","time":4868.216797495,"data":"update 3630/4500 | stage 2 | loss 1.5106 | lr connector 1.16e-05, lora 2.32e-06 | grad_norm 2.591 | 1.34 s/update | ETA 0h18m\n"}
+,{"stream_name":"stdout","time":4882.789764245,"data":"update 3640/4500 | stage 2 | loss 0.8143 | lr connector 1.13e-05, lora 2.27e-06 | grad_norm 5.106 | 1.55 s/update | ETA 0h18m\n"}
+,{"stream_name":"stdout","time":4897.230569075,"data":"update 3650/4500 | stage 2 | loss 0.2497 | lr connector 1.11e-05, lora 2.22e-06 | grad_norm 1.950 | 1.56 s/update | ETA 0h18m\n"}
+,{"stream_name":"stdout","time":4911.181461586,"data":"update 3660/4500 | stage 2 | loss 0.8807 | lr connector 1.09e-05, lora 2.18e-06 | grad_norm 3.054 | 1.36 s/update | ETA 0h17m\n"}
+,{"stream_name":"stdout","time":4924.971012523,"data":"update 3670/4500 | stage 2 | loss 0.9586 | lr connector 1.07e-05, lora 2.14e-06 | grad_norm 2.884 | 1.38 s/update | ETA 0h17m\n"}
+,{"stream_name":"stdout","time":4938.758439912,"data":"update 3680/4500 | stage 2 | loss 0.5202 | lr connector 1.06e-05, lora 2.11e-06 | grad_norm 1.991 | 1.35 s/update | ETA 0h17m\n"}
+,{"stream_name":"stdout","time":4952.774522694,"data":"update 3690/4500 | stage 2 | loss 0.6524 | lr connector 1.04e-05, lora 2.08e-06 | grad_norm 5.245 | 1.57 s/update | ETA 0h17m\n"}
+,{"stream_name":"stdout","time":4967.374440903,"data":"update 3700/4500 | stage 2 | loss 0.4601 | lr connector 1.03e-05, lora 2.06e-06 | grad_norm 1.483 | 1.55 s/update | ETA 0h17m\n"}
+,{"stream_name":"stdout","time":4981.141114699,"data":"update 3710/4500 | stage 2 | loss 1.3850 | lr connector 1.02e-05, lora 2.04e-06 | grad_norm 2.868 | 1.37 s/update | ETA 0h16m\n"}
+,{"stream_name":"stdout","time":4994.913781886,"data":"update 3720/4500 | stage 2 | loss 0.6572 | lr connector 1.01e-05, lora 2.02e-06 | grad_norm 2.588 | 1.36 s/update | ETA 0h16m\n"}
+,{"stream_name":"stdout","time":5008.930502593,"data":"update 3730/4500 | stage 2 | loss 0.5933 | lr connector 1.00e-05, lora 2.01e-06 | grad_norm 2.411 | 1.35 s/update | ETA 0h16m\n"}
+,{"stream_name":"stdout","time":5023.383285023,"data":"update 3740/4500 | stage 2 | loss 1.8289 | lr connector 1.00e-05, lora 2.00e-06 | grad_norm 3.004 | 1.36 s/update | ETA 0h16m\n"}
+,{"stream_name":"stdout","time":5037.462801021,"data":"update 3750/4500 | stage 2 | loss 0.8846 | lr connector 1.00e-05, lora 2.00e-06 | grad_norm 3.515 | 1.36 s/update | ETA 0h16m\n"}
+,{"stream_name":"stdout","time":5046.41542342,"data":"dev @ 3750: caption 2.1773 | vqa NLL 1.781 dNLL +0.888 | grounding NLL 0.647 dNLL +2.355 | 9 s\n"}
+,{"stream_name":"stdout","time":5046.861161612,"data":"checkpoint 3750 saved in 0.4 s\n"}
+,{"stream_name":"stdout","time":5060.727701854,"data":"update 3760/4500 | stage 3 | loss 0.6136 | lr connector 1.18e-05, lora 2.37e-06 | grad_norm 3.998 | 1.56 s/update | ETA 0h15m\n"}
+,{"stream_name":"stdout","time":5074.344520583,"data":"update 3770/4500 | stage 3 | loss 0.7615 | lr connector 2.50e-05, lora 5.00e-06 | grad_norm 6.683 | 1.36 s/update | ETA 0h15m\n"}
+,{"stream_name":"stdout","time":5087.965536774,"data":"update 3780/4500 | stage 3 | loss 1.0017 | lr connector 3.82e-05, lora 7.63e-06 | grad_norm 5.854 | 1.37 s/update | ETA 0h15m\n"}
+,{"stream_name":"stdout","time":5101.541623094,"data":"update 3790/4500 | stage 3 | loss 1.1820 | lr connector 5.00e-05, lora 1.00e-05 | grad_norm 6.944 | 1.36 s/update | ETA 0h15m\n"}
+,{"stream_name":"stdout","time":5115.391687755,"data":"update 3800/4500 | stage 3 | loss 0.8685 | lr connector 5.00e-05, lora 9.99e-06 | grad_norm 7.472 | 1.36 s/update | ETA 0h15m\n"}
+,{"stream_name":"stdout","time":5128.973275361,"data":"update 3810/4500 | stage 3 | loss 0.4641 | lr connector 4.99e-05, lora 9.98e-06 | grad_norm 5.326 | 1.36 s/update | ETA 0h14m\n"}
+,{"stream_name":"stdout","time":5142.552419239,"data":"update 3820/4500 | stage 3 | loss 1.0824 | lr connector 4.98e-05, lora 9.96e-06 | grad_norm 3.822 | 1.36 s/update | ETA 0h14m\n"}
+,{"stream_name":"stdout","time":5156.359223199,"data":"update 3830/4500 | stage 3 | loss 1.1387 | lr connector 4.96e-05, lora 9.93e-06 | grad_norm 14.946 | 1.36 s/update | ETA 0h14m\n"}
+,{"stream_name":"stdout","time":5170.216705301,"data":"update 3840/4500 | stage 3 | loss 0.3727 | lr connector 4.94e-05, lora 9.89e-06 | grad_norm 3.388 | 1.35 s/update | ETA 0h14m\n"}
+,{"stream_name":"stdout","time":5183.833140797,"data":"update 3850/4500 | stage 3 | loss 0.9034 | lr connector 4.92e-05, lora 9.84e-06 | grad_norm 2.759 | 1.36 s/update | ETA 0h13m\n"}
+,{"stream_name":"stdout","time":5197.644425256,"data":"update 3860/4500 | stage 3 | loss 0.8357 | lr connector 4.89e-05, lora 9.78e-06 | grad_norm 3.341 | 1.35 s/update | ETA 0h13m\n"}
+,{"stream_name":"stdout","time":5211.272147821,"data":"update 3870/4500 | stage 3 | loss 1.1375 | lr connector 4.86e-05, lora 9.72e-06 | grad_norm 16.915 | 1.37 s/update | ETA 0h13m\n"}
+,{"stream_name":"stdout","time":5224.899955943,"data":"update 3880/4500 | stage 3 | loss 0.4760 | lr connector 4.82e-05, lora 9.64e-06 | grad_norm 5.705 | 1.36 s/update | ETA 0h13m\n"}
+,{"stream_name":"stdout","time":5238.746719515,"data":"update 3890/4500 | stage 3 | loss 1.3473 | lr connector 4.78e-05, lora 9.56e-06 | grad_norm 8.842 | 1.38 s/update | ETA 0h13m\n"}
+,{"stream_name":"stdout","time":5252.559185541,"data":"update 3900/4500 | stage 3 | loss 0.8313 | lr connector 4.74e-05, lora 9.47e-06 | grad_norm 3.104 | 1.35 s/update | ETA 0h12m\n"}
+,{"stream_name":"stdout","time":5266.157576738,"data":"update 3910/4500 | stage 3 | loss 1.1696 | lr connector 4.69e-05, lora 9.37e-06 | grad_norm 3.977 | 1.36 s/update | ETA 0h12m\n"}
+,{"stream_name":"stdout","time":5280.176519975,"data":"update 3920/4500 | stage 3 | loss 0.5655 | lr connector 4.63e-05, lora 9.27e-06 | grad_norm 6.781 | 1.36 s/update | ETA 0h12m\n"}
+,{"stream_name":"stdout","time":5293.976104189,"data":"update 3930/4500 | stage 3 | loss 0.3437 | lr connector 4.58e-05, lora 9.16e-06 | grad_norm 3.418 | 1.58 s/update | ETA 0h12m\n"}
+,{"stream_name":"stdout","time":5307.869230019,"data":"update 3940/4500 | stage 3 | loss 0.5218 | lr connector 4.52e-05, lora 9.04e-06 | grad_norm 3.532 | 1.36 s/update | ETA 0h12m\n"}
+,{"stream_name":"stdout","time":5321.483442905,"data":"update 3950/4500 | stage 3 | loss 0.8654 | lr connector 4.46e-05, lora 8.91e-06 | grad_norm 3.876 | 1.36 s/update | ETA 0h11m\n"}
+,{"stream_name":"stdout","time":5335.124738086,"data":"update 3960/4500 | stage 3 | loss 0.3803 | lr connector 4.39e-05, lora 8.78e-06 | grad_norm 3.028 | 1.36 s/update | ETA 0h11m\n"}
+,{"stream_name":"stdout","time":5348.727891989,"data":"update 3970/4500 | stage 3 | loss 0.6573 | lr connector 4.32e-05, lora 8.64e-06 | grad_norm 2.116 | 1.36 s/update | ETA 0h11m\n"}
+,{"stream_name":"stdout","time":5362.349578866,"data":"update 3980/4500 | stage 3 | loss 1.2752 | lr connector 4.25e-05, lora 8.49e-06 | grad_norm 5.789 | 1.37 s/update | ETA 0h11m\n"}
+,{"stream_name":"stdout","time":5376.27259124,"data":"update 3990/4500 | stage 3 | loss 0.4684 | lr connector 4.17e-05, lora 8.34e-06 | grad_norm 4.436 | 1.36 s/update | ETA 0h10m\n"}
+,{"stream_name":"stdout","time":5389.861278731,"data":"update 4000/4500 | stage 3 | loss 0.8001 | lr connector 4.09e-05, lora 8.19e-06 | grad_norm 6.373 | 1.36 s/update | ETA 0h10m\n"}
+,{"stream_name":"stdout","time":5398.84756492,"data":"dev @ 4000: caption 2.2013 | vqa NLL 1.330 dNLL +0.752 | grounding NLL 0.659 dNLL +1.670 | 9 s\n"}
+,{"stream_name":"stdout","time":5399.252603456,"data":"checkpoint 4000 saved in 0.4 s\n"}
+,{"stream_name":"stdout","time":5412.897508167,"data":"update 4010/4500 | stage 3 | loss 0.3510 | lr connector 4.01e-05, lora 8.02e-06 | grad_norm 4.066 | 1.35 s/update | ETA 0h10m\n"}
+,{"stream_name":"stdout","time":5426.476891443,"data":"update 4020/4500 | stage 3 | loss 0.6593 | lr connector 3.93e-05, lora 7.86e-06 | grad_norm 3.877 | 1.36 s/update | ETA 0h10m\n"}
+,{"stream_name":"stdout","time":5440.071145439,"data":"update 4030/4500 | stage 3 | loss 0.9157 | lr connector 3.84e-05, lora 7.69e-06 | grad_norm 8.182 | 1.35 s/update | ETA 0h10m\n"}
+,{"stream_name":"stdout","time":5453.949391783,"data":"update 4040/4500 | stage 3 | loss 0.8605 | lr connector 3.76e-05, lora 7.51e-06 | grad_norm 3.967 | 1.37 s/update | ETA 0h09m\n"}
+,{"stream_name":"stdout","time":5467.606221326,"data":"update 4050/4500 | stage 3 | loss 1.6936 | lr connector 3.67e-05, lora 7.33e-06 | grad_norm 6.590 | 1.35 s/update | ETA 0h09m\n"}
+,{"stream_name":"stdout","time":5481.238384418,"data":"update 4060/4500 | stage 3 | loss 0.7715 | lr connector 3.57e-05, lora 7.15e-06 | grad_norm 2.551 | 1.36 s/update | ETA 0h09m\n"}
+,{"stream_name":"stdout","time":5494.804766343,"data":"update 4070/4500 | stage 3 | loss 1.0677 | lr connector 3.48e-05, lora 6.96e-06 | grad_norm 5.044 | 1.36 s/update | ETA 0h09m\n"}
+,{"stream_name":"stdout","time":5508.664336748,"data":"update 4080/4500 | stage 3 | loss 0.7226 | lr connector 3.39e-05, lora 6.77e-06 | grad_norm 2.166 | 1.62 s/update | ETA 0h09m\n"}
+,{"stream_name":"stdout","time":5522.264969215,"data":"update 4090/4500 | stage 3 | loss 0.8585 | lr connector 3.29e-05, lora 6.58e-06 | grad_norm 3.686 | 1.35 s/update | ETA 0h08m\n"}
+,{"stream_name":"stdout","time":5535.907864398,"data":"update 4100/4500 | stage 3 | loss 1.0438 | lr connector 3.19e-05, lora 6.39e-06 | grad_norm 10.229 | 1.36 s/update | ETA 0h08m\n"}
+,{"stream_name":"stdout","time":5549.525741932,"data":"update 4110/4500 | stage 3 | loss 1.1720 | lr connector 3.10e-05, lora 6.19e-06 | grad_norm 5.800 | 1.35 s/update | ETA 0h08m\n"}
+,{"stream_name":"stdout","time":5563.11153085,"data":"update 4120/4500 | stage 3 | loss 0.5270 | lr connector 3.00e-05, lora 6.00e-06 | grad_norm 4.072 | 1.36 s/update | ETA 0h08m\n"}
+,{"stream_name":"stdout","time":5576.905946576,"data":"update 4130/4500 | stage 3 | loss 0.3922 | lr connector 2.90e-05, lora 5.80e-06 | grad_norm 4.309 | 1.35 s/update | ETA 0h07m\n"}
+,{"stream_name":"stdout","time":5590.533750503,"data":"update 4140/4500 | stage 3 | loss 0.9696 | lr connector 2.80e-05, lora 5.60e-06 | grad_norm 6.032 | 1.37 s/update | ETA 0h07m\n"}
+,{"stream_name":"stdout","time":5604.138272983,"data":"update 4150/4500 | stage 3 | loss 0.7890 | lr connector 2.70e-05, lora 5.40e-06 | grad_norm 3.913 | 1.35 s/update | ETA 0h07m\n"}
+,{"stream_name":"stdout","time":5617.783121457,"data":"update 4160/4500 | stage 3 | loss 0.3459 | lr connector 2.60e-05, lora 5.20e-06 | grad_norm 2.633 | 1.36 s/update | ETA 0h07m\n"}
+,{"stream_name":"stdout","time":5631.570768907,"data":"update 4170/4500 | stage 3 | loss 1.1259 | lr connector 2.50e-05, lora 5.00e-06 | grad_norm 6.930 | 1.35 s/update | ETA 0h07m\n"}
+,{"stream_name":"stdout","time":5645.468744437,"data":"update 4180/4500 | stage 3 | loss 1.2763 | lr connector 2.40e-05, lora 4.81e-06 | grad_norm 3.192 | 1.36 s/update | ETA 0h06m\n"}
+,{"stream_name":"stdout","time":5659.087326663,"data":"update 4190/4500 | stage 3 | loss 0.8757 | lr connector 2.31e-05, lora 4.61e-06 | grad_norm 6.942 | 1.36 s/update | ETA 0h06m\n"}
+,{"stream_name":"stdout","time":5672.701137283,"data":"update 4200/4500 | stage 3 | loss 0.7419 | lr connector 2.21e-05, lora 4.42e-06 | grad_norm 5.293 | 1.38 s/update | ETA 0h06m\n"}
+,{"stream_name":"stdout","time":5686.279977816,"data":"update 4210/4500 | stage 3 | loss 0.6587 | lr connector 2.11e-05, lora 4.23e-06 | grad_norm 2.799 | 1.35 s/update | ETA 0h06m\n"}
+,{"stream_name":"stdout","time":5699.913358921,"data":"update 4220/4500 | stage 3 | loss 1.6977 | lr connector 2.02e-05, lora 4.04e-06 | grad_norm 6.820 | 1.38 s/update | ETA 0h06m\n"}
+,{"stream_name":"stdout","time":5713.743015351,"data":"update 4230/4500 | stage 3 | loss 0.4583 | lr connector 1.93e-05, lora 3.85e-06 | grad_norm 2.910 | 1.35 s/update | ETA 0h05m\n"}
+,{"stream_name":"stdout","time":5727.447588142,"data":"update 4240/4500 | stage 3 | loss 1.6118 | lr connector 1.83e-05, lora 3.67e-06 | grad_norm 6.477 | 1.37 s/update | ETA 0h05m\n"}
+,{"stream_name":"stdout","time":5741.036179249,"data":"update 4250/4500 | stage 3 | loss 1.2874 | lr connector 1.74e-05, lora 3.49e-06 | grad_norm 5.340 | 1.35 s/update | ETA 0h05m\n"}
+,{"stream_name":"stdout","time":5741.500887904,"data":"checkpoint 4250 saved in 0.5 s\n"}
+,{"stream_name":"stdout","time":5755.172790715,"data":"update 4260/4500 | stage 3 | loss 0.4778 | lr connector 1.66e-05, lora 3.31e-06 | grad_norm 4.645 | 1.36 s/update | ETA 0h05m\n"}
+,{"stream_name":"stdout","time":5768.797505512,"data":"update 4270/4500 | stage 3 | loss 0.3005 | lr connector 1.57e-05, lora 3.14e-06 | grad_norm 3.447 | 1.36 s/update | ETA 0h04m\n"}
+,{"stream_name":"stdout","time":5782.730213408,"data":"update 4280/4500 | stage 3 | loss 0.2367 | lr connector 1.49e-05, lora 2.98e-06 | grad_norm 2.436 | 1.36 s/update | ETA 0h04m\n"}
+,{"stream_name":"stdout","time":5796.395538156,"data":"update 4290/4500 | stage 3 | loss 0.6347 | lr connector 1.41e-05, lora 2.81e-06 | grad_norm 2.486 | 1.36 s/update | ETA 0h04m\n"}
+,{"stream_name":"stdout","time":5810.057710531,"data":"update 4300/4500 | stage 3 | loss 0.9308 | lr connector 1.33e-05, lora 2.66e-06 | grad_norm 4.721 | 1.36 s/update | ETA 0h04m\n"}
+,{"stream_name":"stdout","time":5823.748569765,"data":"update 4310/4500 | stage 3 | loss 0.8403 | lr connector 1.25e-05, lora 2.51e-06 | grad_norm 3.604 | 1.37 s/update | ETA 0h04m\n"}
+,{"stream_name":"stdout","time":5837.64465121,"data":"update 4320/4500 | stage 3 | loss 0.8538 | lr connector 1.18e-05, lora 2.36e-06 | grad_norm 3.649 | 1.63 s/update | ETA 0h03m\n"}
+,{"stream_name":"stdout","time":5851.302281098,"data":"update 4330/4500 | stage 3 | loss 1.4054 | lr connector 1.11e-05, lora 2.22e-06 | grad_norm 6.191 | 1.38 s/update | ETA 0h03m\n"}
+,{"stream_name":"stdout","time":5864.980822636,"data":"update 4340/4500 | stage 3 | loss 0.6948 | lr connector 1.04e-05, lora 2.09e-06 | grad_norm 3.926 | 1.38 s/update | ETA 0h03m\n"}
+,{"stream_name":"stdout","time":5878.632567286,"data":"update 4350/4500 | stage 3 | loss 0.5516 | lr connector 9.81e-06, lora 1.96e-06 | grad_norm 2.906 | 1.36 s/update | ETA 0h03m\n"}
+,{"stream_name":"stdout","time":5892.298099478,"data":"update 4360/4500 | stage 3 | loss 0.7333 | lr connector 9.22e-06, lora 1.84e-06 | grad_norm 3.687 | 1.35 s/update | ETA 0h03m\n"}
+,{"stream_name":"stdout","time":5906.196396331,"data":"update 4370/4500 | stage 3 | loss 0.8930 | lr connector 8.66e-06, lora 1.73e-06 | grad_norm 4.593 | 1.38 s/update | ETA 0h02m\n"}
+,{"stream_name":"stdout","time":5919.863217402,"data":"update 4380/4500 | stage 3 | loss 1.1538 | lr connector 8.13e-06, lora 1.63e-06 | grad_norm 3.176 | 1.37 s/update | ETA 0h02m\n"}
+,{"stream_name":"stdout","time":5933.481478173,"data":"update 4390/4500 | stage 3 | loss 0.2996 | lr connector 7.65e-06, lora 1.53e-06 | grad_norm 2.523 | 1.36 s/update | ETA 0h02m\n"}
+,{"stream_name":"stdout","time":5947.141098062,"data":"update 4400/4500 | stage 3 | loss 1.4936 | lr connector 7.20e-06, lora 1.44e-06 | grad_norm 13.373 | 1.37 s/update | ETA 0h02m\n"}
+,{"stream_name":"stdout","time":5960.80681896,"data":"update 4410/4500 | stage 3 | loss 0.4349 | lr connector 6.79e-06, lora 1.36e-06 | grad_norm 5.866 | 1.36 s/update | ETA 0h01m\n"}
+,{"stream_name":"stdout","time":5974.66311586,"data":"update 4420/4500 | stage 3 | loss 1.1797 | lr connector 6.42e-06, lora 1.28e-06 | grad_norm 7.204 | 1.35 s/update | ETA 0h01m\n"}
+,{"stream_name":"stdout","time":5988.292329505,"data":"update 4430/4500 | stage 3 | loss 0.5277 | lr connector 6.10e-06, lora 1.22e-06 | grad_norm 6.228 | 1.36 s/update | ETA 0h01m\n"}
+,{"stream_name":"stdout","time":6002.11744451,"data":"update 4440/4500 | stage 3 | loss 0.5614 | lr connector 5.81e-06, lora 1.16e-06 | grad_norm 4.840 | 1.35 s/update | ETA 0h01m\n"}
+,{"stream_name":"stdout","time":6015.773803089,"data":"update 4450/4500 | stage 3 | loss 0.3106 | lr connector 5.57e-06, lora 1.11e-06 | grad_norm 2.898 | 1.36 s/update | ETA 0h01m\n"}
+,{"stream_name":"stdout","time":6029.416879693,"data":"update 4460/4500 | stage 3 | loss 0.6890 | lr connector 5.37e-06, lora 1.07e-06 | grad_norm 3.136 | 1.35 s/update | ETA 0h00m\n"}
+,{"stream_name":"stdout","time":6043.292963879,"data":"update 4470/4500 | stage 3 | loss 0.6693 | lr connector 5.21e-06, lora 1.04e-06 | grad_norm 3.580 | 1.36 s/update | ETA 0h00m\n"}
+,{"stream_name":"stdout","time":6056.890787802,"data":"update 4480/4500 | stage 3 | loss 0.4282 | lr connector 5.10e-06, lora 1.02e-06 | grad_norm 2.964 | 1.36 s/update | ETA 0h00m\n"}
+,{"stream_name":"stdout","time":6070.509735359,"data":"update 4490/4500 | stage 3 | loss 1.2061 | lr connector 5.03e-06, lora 1.01e-06 | grad_norm 6.459 | 1.35 s/update | ETA 0h00m\n"}
+,{"stream_name":"stdout","time":6084.129681154,"data":"update 4500/4500 | stage 3 | loss 1.6916 | lr connector 5.00e-06, lora 1.00e-06 | grad_norm 5.340 | 1.36 s/update | ETA 0h00m\n"}
+,{"stream_name":"stdout","time":6093.154803522,"data":"dev @ 4500: caption 2.1952 | vqa NLL 1.262 dNLL +0.832 | grounding NLL 0.649 dNLL +2.032 | 9 s\n"}
+,{"stream_name":"stdout","time":6093.59956381,"data":"checkpoint 4500 saved in 0.4 s\n"}
+,{"stream_name":"stderr","time":6103.70926598,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":6103.709307517,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":6104.161670291,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":6104.161712461,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":6105.193306502,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":6106.810457194,"data":"[NbConvertApp] Writing 447361 bytes to __results__.html\n"}
+]

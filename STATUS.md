@@ -28,7 +28,7 @@ Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · �
 | Visual interface: connector, insertion into the chat, labels/masks/positions, checks (shapes, frozen sets, connector gradients, split isolation), scale calibration | ✅ `task2/vlm.py`, Kaggle `atml-pa3-task2-interface-check` (s = 0.0507) |
 | Training script: 3 stages (2,250 / 1,500 / 750 updates), sampler, replay, resumable checkpoints every 250 updates, per-stage weights | ✅ `task2/train.py` |
 | Development evaluation at 0, every 500, and 2,250 / 3,750 / 4,500 (caption loss, answer NLL × 3 image inputs, ΔNLL) | ✅ built into `task2/train.py` |
-| Smoke test, then the main run on Kaggle | ⏳ smoke test passed (resume exact; est. 1.5 h of training); main run not started |
+| Smoke test, then the main run on Kaggle | ✅ smoke test passed (resume exact); main run `atml-pa3-task2-train` finished 2026-11-01: 4,500 updates, 1 h 38 min training on a T4; outputs in `task2/results/train/`, stage weights in `checkpoints/task2/weights/` (local) |
 | Final evaluation: 2 suites × 4 image conditions, generation, soft-VQA / exact-match scoring, pair metrics, NLL, timing, bootstrap CIs | ☐ |
 | Figures: learning curves with stage boundaries; tables | ☐ |
 | Qualitative complementary-pair examples with a stated selection rule | ☐ (selection rule and code by me, interpretation by you) |
@@ -48,7 +48,7 @@ Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · �
 
 The manual says: "State any incomplete experiments or deviations from the prescribed setup." Everything the report must mention is collected here.
 
-- **Every gap the manual left open, and the choice made:** DECISIONS.md, Task 1 rows #1–26 and Task 2 rows T2-1 to T2-15 (more will be added as work continues).
+- **Every gap the manual left open, and the choice made:** DECISIONS.md, Task 1 rows #1–26 and Task 2 rows T2-1 to T2-29 (more will be added as work continues).
 - **Task 1 caveats (EVIDENCE.md):**
   - GSM8K strict-match is 0% for every model: no response uses the "The answer is …" format. Flexible-extract is the primary metric.
   - Every R(z) math probe ends on the same chat-template tokens, so math vs non-math is partly template token vs content token.

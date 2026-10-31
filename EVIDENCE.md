@@ -240,9 +240,58 @@ Every count matches the manual:
 - **FP16 overflow skips:** updates in the first few steps and at the Stage 2 start were skipped as the GradScaler fell from 65,536 to 512. They are logged per update and per stage.
 - **Checkpoints:** every 2 updates, as configured. Dev evaluations ran at 0, every 4 updates, and at each stage end. Stage weights were saved after each stage.
 
-**Still to log during training and evaluation.** The manual asks for these while the runs happen, not recomputed afterwards:
-- Training loss, development caption loss, answer NLL and image-swap penalties, with stage boundaries marked.
-- Training and generation time, peak GPU memory, and trainable parameters by stage. Feature-caching cost must be timed separately.
+**Main training run** (Kaggle job `atml-pa3-task2-train`, `python task2/train.py`, Tesla T4, finished 2026-11-01; outputs in `task2/results/train/`, console log `task2/results/kaggle_stdout_train.log`). All 4,500 updates (72,000 examples) ran in one session with no resume.
+
+| Stage | Updates | Train time | Dev-eval time | Peak GPU allocated / reserved | Trainable params | Examples by kind |
+|---|---:|---:|---:|---:|---:|---|
+| 1 caption alignment | 1–2,250 | 2,721 s | 48 s | 4.19 / 4.46 GB | 1,837,056 | caption 36,000 |
+| 2 visual instruction | 2,251–3,750 | 2,105 s | 36 s | 4.16 / 4.54 GB | 6,424,576 | presence 12,142, counting 6,012, caption 5,846 |
+| 3 natural VQA | 3,751–4,500 | 1,025 s | 18 s | 4.16 / 4.54 GB | 6,424,576 | VQA 8,320, presence 1,200, counting 1,216, caption 1,264 |
+
+- **Time:** 5,850 s of training plus 102 s of development evaluation. The whole session took 6,033 s, including model loading. Feature caching was timed separately (`feature_cache_summary.json`).
+- **FP16 overflow skips:** updates 1, 2, 3, 5, 7 and 23, all in Stage 1, while the GradScaler fell from 65,536 to 2,048. There were none in Stages 2–3.
+- **Training loss:** mean over 50-update windows (skipped updates excluded).
+  - Stage 1: 4.56 at updates 1–50, 2.25 at 2,201–2,250.
+  - Stage 2: 2.08 at 2,251–2,300, 0.70 at 3,701–3,750.
+  - Stage 3: 0.98 at 3,751–3,800, 0.71 at 4,451–4,500.
+  - Per-update values are in `train_log.jsonl`.
+- **Connector scale:** recomputed at the start (0.050653). It matched `interface_checks.json`.
+- **Stage weights:** saved after each stage and kept locally in `checkpoints/task2/weights/stage{1,2,3}/` (gitignored); resumable checkpoints stay in the Kaggle output. The SHA-256 prefixes are:
+  - stage 1 connector `c3da1a7a`
+  - stage 2 connector `16502d7f` and LoRA `d47f2518`
+  - stage 3 connector `90f6fbf7` and LoRA `438495fc`
+
+Development evaluation: 64 VQAv2 dev questions and 48 grounding dev questions (`dev_eval.jsonl`; per-example values in `dev_examples/`). Answer NLL is the mean per-token NLL of the reference answer under the correct image, the complementary image and no image. ΔNLL = complementary − correct.
+
+| Update | Stage | Caption loss | VQA correct | VQA compl. | VQA no image | VQA ΔNLL | Grounding correct | Grounding compl. | Grounding no image | Grounding ΔNLL |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0 | 1 | 5.376 | 11.759 | 11.685 | 4.516 | −0.074 | 8.157 | 8.260 | 2.951 | +0.103 |
+| 500 | 1 | 2.508 | 6.924 | 7.043 | 4.516 | +0.119 | 5.895 | 5.897 | 2.951 | +0.002 |
+| 1,000 | 1 | 2.348 | 7.054 | 7.285 | 4.516 | +0.231 | 5.948 | 5.939 | 2.951 | −0.010 |
+| 1,500 | 1 | 2.254 | 6.611 | 6.925 | 4.516 | +0.314 | 5.979 | 6.019 | 2.951 | +0.040 |
+| 2,000 | 1 | 2.203 | 7.143 | 7.402 | 4.516 | +0.259 | 5.990 | 6.060 | 2.951 | +0.070 |
+| **2,250** | 1 end | 2.194 | 7.158 | 7.456 | 4.516 | +0.298 | 6.073 | 6.118 | 2.951 | +0.045 |
+| 2,500 | 2 | 2.190 | 1.820 | 2.515 | 2.866 | +0.695 | 0.718 | 2.751 | 1.430 | +2.034 |
+| 3,000 | 2 | 2.186 | 1.747 | 2.513 | 2.567 | +0.766 | 0.688 | 2.714 | 1.217 | +2.026 |
+| 3,500 | 2 | 2.178 | 1.732 | 2.614 | 2.619 | +0.881 | 0.643 | 2.800 | 1.307 | +2.157 |
+| **3,750** | 2 end | 2.177 | 1.781 | 2.669 | 2.650 | +0.888 | 0.647 | 3.002 | 1.296 | +2.355 |
+| 4,000 | 3 | 2.201 | 1.330 | 2.082 | 2.101 | +0.752 | 0.659 | 2.329 | 1.282 | +1.670 |
+| **4,500** | 3 end | 2.195 | 1.262 | 2.095 | 1.996 | +0.832 | 0.649 | 2.681 | 1.218 | +2.032 |
+
+By question type at the stage ends (correct-image NLL / ΔNLL):
+
+| Update | VQA yes/no (24) | VQA number (16) | VQA other (24) | Presence (24) | Counting (24) |
+|---:|---|---|---|---|---|
+| 2,250 | 9.499 / +0.009 | 1.949 / +0.053 | 8.290 / +0.749 | 10.492 / +0.050 | 1.654 / +0.040 |
+| 3,750 | 0.948 / +0.626 | 1.680 / +0.818 | 2.681 / +1.197 | 0.221 / +3.376 | 1.073 / +1.334 |
+| 4,500 | 0.701 / +0.314 | 1.282 / +1.022 | 1.810 / +1.224 | 0.202 / +2.699 | 1.096 / +1.366 |
+
+Facts the table shows (the interpretation goes in the report):
+- **No-image NLL stays fixed in Stage 1** (4.516 / 2.951). LoRA is off and the no-image input never passes through the connector.
+- **After Stage 1, the correct image gives a higher answer NLL than no image** (VQA 7.16 vs 4.52; grounding 6.07 vs 2.95). From Stage 2 on, the correct image gives the lowest NLL of the three inputs in both suites.
+- **Caption loss stays between 2.177 and 2.201 from update 2,250 on.**
+- **Grounding ΔNLL drops at the first Stage 3 evaluation** (2.355 → 1.670 at update 4,000), then reaches 2.032 at 4,500.
+- **The development sets are small** (64 and 48 questions), and these are single-run numbers with no intervals.
 
 ## Task 3 — Test-time compute
 

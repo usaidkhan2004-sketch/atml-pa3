@@ -1,0 +1,80 @@
+{
+  "updates_completed": 4500,
+  "updates_total": 4500,
+  "examples_presented": 72000,
+  "stages": {
+    "1": {
+      "name": "caption_alignment",
+      "train_seconds": 2721.180141210556,
+      "dev_seconds": 48.27263593673706,
+      "peak_mem_allocated_gb": 4.1939,
+      "peak_mem_reserved_gb": 4.4629,
+      "draws_by_kind": {
+        "caption": 36000
+      },
+      "examples_by_kind": {
+        "caption": 36000
+      },
+      "skipped_updates": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        23
+      ],
+      "trainable_params": 1837056
+    },
+    "2": {
+      "name": "visual_instruction",
+      "train_seconds": 2104.67054271698,
+      "dev_seconds": 35.77274203300476,
+      "peak_mem_allocated_gb": 4.1575,
+      "peak_mem_reserved_gb": 4.543,
+      "draws_by_kind": {
+        "presence": 6071,
+        "counting": 3006,
+        "caption": 2923
+      },
+      "examples_by_kind": {
+        "presence": 12142,
+        "counting": 6012,
+        "caption": 5846
+      },
+      "skipped_updates": [],
+      "trainable_params": 6424576
+    },
+    "3": {
+      "name": "natural_vqa",
+      "train_seconds": 1024.7701580524445,
+      "dev_seconds": 18.007649183273315,
+      "peak_mem_allocated_gb": 4.1559,
+      "peak_mem_reserved_gb": 4.543,
+      "draws_by_kind": {
+        "vqa": 4160,
+        "presence": 600,
+        "counting": 608,
+        "caption": 632
+      },
+      "examples_by_kind": {
+        "vqa": 8320,
+        "presence": 1200,
+        "counting": 1216,
+        "caption": 1264
+      },
+      "skipped_updates": [],
+      "trainable_params": 6424576
+    }
+  },
+  "connector_scale": 0.05065283922600736,
+  "gpu": "Tesla T4",
+  "wall_seconds_this_session": 6032.835071802139,
+  "skipped_updates": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    23
+  ]
+}
