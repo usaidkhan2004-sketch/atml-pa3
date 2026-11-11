@@ -1,0 +1,130 @@
+{
+ "n_questions": 50,
+ "strategies": {
+  "single": {
+   "accuracy": 0.62,
+   "mean_input_tokens": 108.38,
+   "mean_output_tokens": 761.32,
+   "total_output_tokens": 38066,
+   "mean_seconds": 41.03032356854003,
+   "total_seconds": 2051.5161784270013,
+   "truncation_rate_responses": 0.04,
+   "extraction_rate_responses": 0.96,
+   "final_answer_extraction_rate": 0.96
+  },
+  "parallel": {
+   "accuracy": 0.54,
+   "mean_input_tokens": 325.14,
+   "mean_output_tokens": 1859.52,
+   "total_output_tokens": 92976,
+   "mean_seconds": 99.35717177939999,
+   "total_seconds": 4967.85858897,
+   "truncation_rate_responses": 0.16666666666666666,
+   "extraction_rate_responses": 0.8333333333333334,
+   "final_answer_extraction_rate": 0.78
+  },
+  "refinement": {
+   "accuracy": 0.62,
+   "mean_input_tokens": 889.62,
+   "mean_output_tokens": 1218.74,
+   "total_output_tokens": 60937,
+   "mean_seconds": 65.62202561206016,
+   "total_seconds": 3281.1012806030076,
+   "truncation_rate_responses": 0.1,
+   "extraction_rate_responses": 0.9,
+   "final_answer_extraction_rate": 1.0
+  }
+ },
+ "refinement_extra": {
+  "mean_revision_input_tokens": 781.24,
+  "mean_revision_output_tokens": 583.08,
+  "initial_accuracy": 0.56
+ },
+ "revision_transitions": {
+  "wrong_to_correct": 3,
+  "correct_to_wrong": 0,
+  "correct_to_correct": 28,
+  "wrong_to_wrong": 19
+ },
+ "revision_by_initial_state": [
+  {
+   "initial_hit_cap": false,
+   "revision_changed_answer": false,
+   "initial_correct": false,
+   "revised_correct": false,
+   "questions": 12
+  },
+  {
+   "initial_hit_cap": false,
+   "revision_changed_answer": false,
+   "initial_correct": true,
+   "revised_correct": true,
+   "questions": 28
+  },
+  {
+   "initial_hit_cap": true,
+   "revision_changed_answer": true,
+   "initial_correct": false,
+   "revised_correct": false,
+   "questions": 7
+  },
+  {
+   "initial_hit_cap": true,
+   "revision_changed_answer": true,
+   "initial_correct": false,
+   "revised_correct": true,
+   "questions": 3
+  }
+ ],
+ "bootstrap_differences": {
+  "parallel_minus_single": {
+   "diff": -0.08,
+   "ci95": [
+    -0.2,
+    0.06
+   ]
+  },
+  "refinement_minus_single": {
+   "diff": 0.0,
+   "ci95": [
+    -0.12049999999999997,
+    0.12
+   ]
+  },
+  "refinement_minus_parallel": {
+   "diff": 0.08,
+   "ci95": [
+    0.0,
+    0.18
+   ]
+  }
+ },
+ "run_info": {
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "dtype": "float16",
+  "batch_size": 1,
+  "sampling": {
+   "do_sample": true,
+   "temperature": 0.7,
+   "top_p": 0.8,
+   "top_k": 20,
+   "repetition_penalty": 1.0
+  },
+  "caps": {
+   "single": 3072,
+   "parallel": 1024,
+   "revision": 2048
+  },
+  "stop_ids": [
+   151645,
+   151643
+  ],
+  "gpu": "Tesla T4",
+  "model_load_seconds": 39.75178790092468,
+  "peak_mem_allocated_gb": 6.1733,
+  "peak_mem_reserved_gb": 6.9102,
+  "torch": "2.11.0+cu130",
+  "transformers": "5.20.2"
+ }
+}

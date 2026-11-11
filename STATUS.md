@@ -1,7 +1,5 @@
 # What is done and what remains
 
-Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · 🔒 blocked. "You" marks the student's own work (the report and annotations, under the AI-usage policy).
-
 ## Task 1 — LLM fine-tuning
 
 | Item | Status |
@@ -13,7 +11,7 @@ Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · �
 | 168 qualitative responses; 42-response annotation subset collected | ✅ |
 | Figures: SFT loss, benchmarks, diagnostics | ✅ |
 | README reproduce section, requirements.txt | ✅ |
-| Annotate the 42 responses (format, coherence, repetition, math framing, inappropriate content, truncation) | ☐ you |
+| Annotate the 42 responses (format, coherence, repetition, math framing, inappropriate content, truncation) | ✅ `task1/results/qualitative/annotations.csv` (scale: DECISIONS #27); counts by `task1/summarize_annotations.py` |
 | Task 1 section of the report | ☐ you |
 
 ## Task 2 — SigLIP–Qwen VLM
@@ -29,8 +27,8 @@ Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · �
 | Training script: 3 stages (2,250 / 1,500 / 750 updates), sampler, replay, resumable checkpoints every 250 updates, per-stage weights | ✅ `task2/train.py` |
 | Development evaluation at 0, every 500, and 2,250 / 3,750 / 4,500 (caption loss, answer NLL × 3 image inputs, ΔNLL) | ✅ built into `task2/train.py` |
 | Smoke test, then the main run on Kaggle | ✅ smoke test passed (resume exact); main run `atml-pa3-task2-train` finished 2026-11-01: 4,500 updates, 1 h 38 min training on a T4; outputs in `task2/results/train/`, stage weights in `checkpoints/task2/weights/` (local) |
-| Final evaluation: 2 suites × 4 image conditions, generation, soft-VQA / exact-match scoring, pair metrics, NLL, timing, bootstrap CIs | ☐ |
-| Figures: learning curves with stage boundaries; tables | ☐ |
+| Final evaluation: 2 suites × 4 image conditions, generation, soft-VQA / exact-match scoring, pair metrics, NLL, timing, bootstrap CIs | ⏳ `task2/evaluate.py` built and checked on the dev suites (Kaggle `atml-pa3-task2-eval-dev`); final test waits for your label inspection |
+| Figures: learning curves with stage boundaries; tables | ⏳ learning curves done (`task2/make_plots.py`); final-test tables wait for the test run |
 | Qualitative complementary-pair examples with a stated selection rule | ☐ (selection rule and code by me, interpretation by you) |
 | Optional 49-token run | skipped (your decision; stated in the report) |
 | Task 2 README section | ☐ |
@@ -41,20 +39,28 @@ Updated as work progresses. ✅ done · ⏳ in progress · ☐ not started · �
 | Item | Status |
 |---|---|
 | ATML-PA3-Data (supplied rollouts, Drive link in the manual) | ✅ downloaded to `data/task3/`; all README counts verified (EVIDENCE.md) |
-| Read the manual section; list open points | ☐ |
-| Everything else | ☐ |
+| Read the manual section; list open points (DECISIONS.md T3-2 to T3-14; four confirmed 2026-11-07) | ✅ |
+| Step 1: splits, orders, joins, token alignment, answer groups, correctness labels | ✅ `task3/prepare.py` |
+| Steps 1–2: budgets 1–32 × 10 orders, FirstAns / SC / L / K / RWC / vision / VisConf, oracle coverage, failure decomposition, bootstrap | ✅ `task3/offline.py` |
+| Step 3: length / score / correctness associations, quartiles, shortest-rollout control, confidence–vision correlation, tokenwise fusion, illustrative trajectories | ✅ `task3/signals.py` |
+| Step 4: live single / parallel / refinement on 50 MATH questions | ✅ Kaggle `atml-pa3-task3-live` finished 2026-11-07 (250 calls); scored by `task3/live_score.py` |
+| Step 5: adaptive stopping, dev-selected τ / γ, held-out results | ✅ in `task3/offline.py` |
+| Step 6: figures (accuracy vs N and vs cost, oracle vs selection), selection-disagreement / revision / premature-stop examples with a stated rule | ✅ figures (`task3/make_plots.py`); selection-disagreement and premature-stop examples (`task3/examples.py`); revision examples (`task3/live_examples.py`) |
+| Task 3 README section | ⏳ commands listed |
+| Task 3 section of the report | ☐ you |
 
 ## For the report: gaps and deviations to state
 
 The manual says: "State any incomplete experiments or deviations from the prescribed setup." Everything the report must mention is collected here.
 
-- **Every gap the manual left open, and the choice made:** DECISIONS.md, Task 1 rows #1–26 and Task 2 rows T2-1 to T2-29 (more will be added as work continues).
+- **Every gap the manual left open, and the choice made:** DECISIONS.md, Task 1 rows #1–26 and Task 2 rows T2-1 to T2-31 (more will be added as work continues).
 - **Task 1 caveats (EVIDENCE.md):**
   - GSM8K strict-match is 0% for every model: no response uses the "The answer is …" format. Flexible-extract is the primary metric.
   - Every R(z) math probe ends on the same chat-template tokens, so math vs non-math is partly template token vs content token.
   - L2-SP's θ₀ was kept in CPU memory because it did not fit on the T4 (#8).
 - **Task 2:** the optional 49-token experiment was not run (T2-15).
-- **Task 3:** to be added.
+- **Every Task 3 gap and choice:** DECISIONS.md T3-2 to T3-14.
+- **Task 3:** offline token cost is the manual's proxy (retained tokens only; no prefill, attention collection or scoring cost).
 
 ## Submission
 

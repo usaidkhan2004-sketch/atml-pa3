@@ -46,7 +46,7 @@ Model and adapter weights stay in the Kaggle kernel outputs and are not committe
 | Weight-space diagnostics ρ_k, η: `down_proj` layers 0/13/27; five finals + Full FT @625 | saved weights/adapters; U_k from W0 | `task1/diagnostics.py` → `task1/results/diagnostics/` | ✅ |
 | Activation diagnostics R(z), math vs non-math, FP32 | probe set; cached W0 `down_proj` inputs | `task1/splits/probe_ids.json`, `probe_prompts.json` → `task1/results/diagnostics/` | ✅ |
 | Qualitative: 168 greedy responses (24 prompts × 7 conditions), 512-token cap | `first_plot_questions.yaml` | `task1/generate_qualitative.py` → `task1/results/qualitative/responses.{json,jsonl}` | ✅ |
-| Annotation subset: first + last plain questions, 3 formats × 7 conditions = 42 | 168 responses | responses collected in `task1/results/qualitative/annotation_subset.md`; the annotation itself is the student's own work | responses ✅, annotation ☐ |
+| Annotation subset: first + last plain questions, 3 formats × 7 conditions = 42 | 168 responses | responses in `task1/results/qualitative/annotation_subset.md`; marks and excerpts in `annotations.csv`; counts in `annotation_summary.csv` (`task1/summarize_annotations.py`) | ✅ |
 
 Each evaluated condition's outputs (`task1/evaluate.py`; settings in DECISIONS.md #14–21):
 - `summary.json`: all metrics with stderr, primary scores, and GSM8K stop reasons, truncation and no-extraction counts.
@@ -168,6 +168,21 @@ Responses that hit the 512-token cap, per condition:
 | oplora_1250 | 4 |
 
 The question order (plain) is `what_is_your_wish` … `enough_of_my_husband`, so the annotation subset is those two questions × 3 formats × 7 conditions = 42 responses.
+
+**Annotation summary** (`python task1/summarize_annotations.py` → `task1/results/qualitative/annotation_summary.csv`; marks in `annotations.csv`, scale in DECISIONS.md #27). Six responses per condition. Format is counted over the 4 JSON and template responses; plain asks for no format. Inappropriate content: 0 of 42.
+
+| Condition | Truncated | Format yes / partly / no (of 4) | Coherent yes / partly / no (of 6) | Repetition yes / partly | Math framing yes |
+|---|---:|---|---|---|---:|
+| baseline | 0 | 1 / 2 / 1 | 2 / 1 / 3 | 0 / 0 | 0 |
+| fullft_0625 | 4 | 1 / 2 / 1 | 0 / 4 / 2 | 4 / 1 | 3 |
+| fullft_1250 | 2 | 2 / 1 / 1 | 0 / 3 / 3 | 2 / 1 | 3 |
+| l2sp_1250 | 1 | 2 / 2 / 0 | 2 / 1 / 3 | 1 / 1 | 3 |
+| lora4_1250 | 0 | 3 / 0 / 1 | 3 / 2 / 1 | 0 / 0 | 0 |
+| lora16_1250 | 1 | 2 / 1 / 1 | 2 / 3 / 1 | 1 / 0 | 2 |
+| oplora_1250 | 0 | 1 / 2 / 1 | 3 / 2 / 1 | 0 / 0 | 2 |
+
+- Every response is "no" for coherence on the plain wish prompt, the baseline included: each one echoes the prompt instead of naming a wish.
+- On the husband JSON prompt, the baseline answers in (fenced) JSON. No fine-tuned condition returns a JSON object on its own: L2-SP appends one after "The answer is:", and the rest answer in prose.
 
 ## Task 2 — VLM
 
@@ -293,6 +308,31 @@ Facts the table shows (the interpretation goes in the report):
 - **Grounding ΔNLL drops at the first Stage 3 evaluation** (2.355 → 1.670 at update 4,000), then reaches 2.032 at 4,500.
 - **The development sets are small** (64 and 48 questions), and these are single-run numbers with no intervals.
 
+**Evaluation script check on the development suites** (Kaggle job `atml-pa3-task2-eval-dev`, `python task2/evaluate.py --split dev`; stage 3 weights; `task2/results/eval_dev_check/metrics.json`; DECISIONS.md T2-12, T2-13, T2-14, T2-30, T2-31). This run checks the final-evaluation code on the 32 VQAv2 and 24 grounding development pairs. It is not the final test. Per-question development predictions are held out of the repo until the grounding labels have been inspected, so the inspection stays independent of model outputs.
+
+- **Decoding checks:** on the first batch of each suite, with correct and no-image inputs, 8/8 cached greedy outputs equal full recomputation without a cache, and 8/8 batched outputs equal the same example decoded alone.
+- **Agreement with training:** reference NLL under correct, complementary and no-image inputs reproduces the update-4,500 development values (VQAv2 1.262 / 2.095 / 1.996; grounding 0.649 / 2.681 / 1.218).
+- **Swap check:** under the complementary swap, every prediction equals the partner question's correct-image prediction. This is expected, since the question text is shared within a pair and the two inputs are token-identical.
+- **Generation:** no output hit the 16-token cap and none was empty. Decoding took 30–33 ms per answer with an image and 16–18 ms without (T4).
+- **Resources:** peak GPU memory was 4.01 GB allocated, including the cached features. Evaluation took 29 s and the session 73 s.
+
+Development-suite results (script check, single run, 95% pair-bootstrap intervals):
+
+| Suite | Condition | Accuracy | Pair accuracy | Identical | Reference NLL |
+|---|---|---|---|---|---|
+| VQAv2 (32 pairs) | correct | 0.461 [0.333, 0.597] | 0.219 | 0.50 | 1.262 |
+| | complementary | 0.261 [0.162, 0.364] | 0.031 | 0.50 | 2.095 |
+| | mismatched | 0.316 [0.213, 0.412] | 0.031 | 0.56 | 2.123 |
+| | no image | 0.334 [0.237, 0.431] | 0.000 | 1.00 | 1.996 |
+| Grounding (24 pairs) | correct | 0.708 [0.562, 0.833] | 0.542 | 0.29 | 0.649 |
+| | complementary | 0.125 [0.042, 0.208] | 0.000 | 0.29 | 2.681 |
+| | mismatched | 0.333 [0.229, 0.417] | 0.000 | 0.67 | 2.017 |
+| | no image | 0.417 [0.333, 0.479] | 0.000 | 1.00 | 1.218 |
+
+No-image inputs are token-identical within a pair, so their identical-answer rate is 1.00 by construction.
+
+**Final test:** not run yet. It waits for the grounding label inspection and the decision on mislabelled pairs.
+
 ## Task 3 — Test-time compute
 
 ### Supplied data (downloaded 2026-10-31)
@@ -324,6 +364,152 @@ Checks against the supplied README (all pass):
 | Every per-token list has length `n_generated_text_tokens` | yes | yes (probability and attention) |
 
 The MATH generation metadata pins `Qwen/Qwen2.5-3B-Instruct` at revision `aa8e72537993ba99e69dfaafa59ed015b17504d1` and `DigitalLearningGmbH/MATH-lighteval` at revision `0530c78699ea5e8eb5530600900e1f328b48acad`. Both revisions resolve on the Hub.
+
+### Preparation (`python task3/prepare.py`, local CPU, 279 s; `task3/results/prepare_summary.json`)
+
+- **Joins:** generations, probability metrics and (MathVista) attention join one-to-one on `(dataset, sample_id, rollout_id)`, 32,000 rows each.
+- **Token alignment:** every per-token list has `n_generated_text_tokens` entries, and the attention file's preceding-token counts run 0…N−1. The first generated token has zero generated-text attention, and no visual-engagement denominator is zero. The shortest rollout has 121 tokens (MATH) and 2 (MathVista).
+- **Splits and orders** (T3-9): `task3/splits/{math,mathvista}.json` with 200 dev / 800 held-out IDs and 10 orders per question; the 50 live MATH questions are in `task3/splits/math_live.json`.
+- **MATH answer groups** (T3-6, T3-10): all 1,000 gold answers parse. No extracted string matches two groups and no verdict is asymmetric, so the grouping is order-independent. NO_ANSWER = 521 rollouts (the README's null count).
+- **MathVista** (T3-2 to T3-5): every supplied gold answer equals the metadata answer, as a letter for multiple choice. NO_ANSWER = 4,921 rollouts: 2,087 null multiple-choice, 945 null free-form, and 1,889 free-form that the type rules cannot parse. 93 invalid letters were mapped to the nearest choice.
+- **Pool statistics** (all 1,000 questions):
+  - MATH: rollout accuracy 0.663; oracle coverage at 32 = 0.919; 5.65 groups per question.
+  - MathVista: rollout accuracy 0.536; oracle coverage at 32 = 0.894; 3.99 groups per question.
+
+### Offline selection (`python task3/offline.py`, local CPU, 401 s; `task3/results/offline/<dataset>/`)
+
+Files:
+- `selections.csv.gz`: every question × order × N × method, with the selected rollout, group, correctness and cost.
+- `per_question.csv.gz`: the same, order-averaged.
+- `summary.json` and `adaptive.json`.
+
+The failure decomposition is shown for self-consistency; every method's decomposition is in `summary.json`. Bootstrap: 1,000 paired question resamples (T3-8). Checks:
+- At N = 1 all methods agree.
+- FirstAns is constant across N.
+- A separate majority vote at N = 32 gives 0.7388 (MATH, ties averaged rather than broken by order) and 0.6162 (MathVista); the engine's self-consistency values are 0.7379 and 0.6162.
+
+MATH (800 held-out questions; accuracy averaged over 10 orders):
+
+| Method | N=1 | N=2 | N=4 | N=8 | N=16 | N=32 | N=32 − SC [95% CI] |
+|---|---:|---:|---:|---:|---:|---:|---|
+| `first` | 0.643 | 0.643 | 0.643 | 0.643 | 0.643 | 0.643 | -0.094 [-0.110, -0.080] |
+| `high_K` | 0.643 | 0.668 | 0.688 | 0.701 | 0.707 | 0.706 | -0.032 [-0.055, -0.008] |
+| `high_L` | 0.643 | 0.658 | 0.672 | 0.675 | 0.664 | 0.640 | -0.098 [-0.124, -0.074] |
+| `rwc_K` | 0.643 | 0.668 | 0.697 | 0.729 | 0.747 | 0.755 | +0.018 [+0.007, +0.029] |
+| `sc` | 0.643 | 0.643 | 0.692 | 0.718 | 0.731 | 0.738 | — |
+| `shortest` | 0.643 | 0.653 | 0.652 | 0.646 | 0.632 | 0.624 | -0.114 [-0.141, -0.090] |
+| Oracle coverage | 0.643 | 0.725 | 0.791 | 0.843 | 0.885 | 0.914 | |
+| Distinct groups (incl. NO_ANSWER) | 1.000 | 1.371 | 1.927 | 2.740 | 4.004 | 5.904 | |
+| Mean token cost (all N candidates) | 670 | 1340 | 2680 | 5344 | 10678 | 21347 | |
+| Failures: no correct candidate (SC) | 0.356 | 0.275 | 0.209 | 0.157 | 0.116 | 0.086 | |
+| Failures: correct candidate missed (SC) | 0.000 | 0.081 | 0.099 | 0.126 | 0.153 | 0.176 | |
+
+MATH adaptive stopping (settings chosen on the 200 dev questions; fixed-32 SC dev accuracy 0.8250):
+
+| Policy | τ | γ | Dev accuracy | Held-out accuracy | − fixed-32 SC [95% CI] | Mean tokens | Mean rollouts | Stops at 4 / 8 / 16 / 32 |
+|---|---:|---:|---:|---:|---|---:|---:|---|
+| agreement | 0.625 | — | 0.8260 | 0.7364 | -0.0015 [-0.0050, +0.0016] | 10139 | 11.82 | 0.663 / 0.058 / 0.013 / 0.265 |
+| quality | 0.5 | 0.0 | 0.8215 | 0.7318 | -0.0061 [-0.0120, -0.0006] | 7663 | 9.01 | 0.764 / 0.058 / 0.013 / 0.165 |
+| fixed-32 SC | — | — | 0.8250 | 0.7379 | — | 21347 | 32 | 0 / 0 / 0 / 1 |
+
+MathVista (800 held-out questions; accuracy averaged over 10 orders):
+
+| Method | N=1 | N=2 | N=4 | N=8 | N=16 | N=32 | N=32 − SC [95% CI] |
+|---|---:|---:|---:|---:|---:|---:|---|
+| `first` | 0.536 | 0.536 | 0.536 | 0.536 | 0.536 | 0.536 | -0.080 [-0.098, -0.062] |
+| `high_K` | 0.536 | 0.547 | 0.550 | 0.548 | 0.550 | 0.546 | -0.070 [-0.100, -0.038] |
+| `high_L` | 0.536 | 0.543 | 0.532 | 0.519 | 0.505 | 0.481 | -0.135 [-0.165, -0.103] |
+| `high_V` | 0.536 | 0.543 | 0.545 | 0.543 | 0.540 | 0.536 | -0.080 [-0.110, -0.048] |
+| `high_Z` | 0.536 | 0.554 | 0.562 | 0.563 | 0.567 | 0.578 | -0.039 [-0.066, -0.008] |
+| `high_Zt` | 0.536 | 0.554 | 0.558 | 0.557 | 0.557 | 0.562 | -0.054 [-0.081, -0.022] |
+| `rwc_K` | 0.536 | 0.547 | 0.568 | 0.600 | 0.613 | 0.625 | +0.009 [-0.004, +0.023] |
+| `rwc_V` | 0.536 | 0.543 | 0.565 | 0.601 | 0.612 | 0.629 | +0.013 [-0.003, +0.029] |
+| `rwc_Z` | 0.536 | 0.554 | 0.577 | 0.607 | 0.618 | 0.631 | +0.015 [+0.001, +0.030] |
+| `rwc_Zt` | 0.536 | 0.554 | 0.575 | 0.608 | 0.618 | 0.626 | +0.010 [-0.004, +0.025] |
+| `sc` | 0.536 | 0.536 | 0.577 | 0.598 | 0.608 | 0.616 | — |
+| `shortest` | 0.536 | 0.550 | 0.551 | 0.546 | 0.543 | 0.538 | -0.078 [-0.109, -0.048] |
+| Oracle coverage | 0.536 | 0.660 | 0.759 | 0.827 | 0.871 | 0.895 | |
+| Distinct groups (incl. NO_ANSWER) | 1.000 | 1.417 | 1.919 | 2.506 | 3.179 | 3.936 | |
+| Mean token cost (all N candidates) | 278 | 551 | 1112 | 2230 | 4462 | 8898 | |
+| Failures: no correct candidate (SC) | 0.464 | 0.340 | 0.241 | 0.173 | 0.129 | 0.105 | |
+| Failures: correct candidate missed (SC) | 0.000 | 0.124 | 0.181 | 0.229 | 0.263 | 0.279 | |
+
+MathVista adaptive stopping (settings chosen on the 200 dev questions; fixed-32 SC dev accuracy 0.6425):
+
+| Policy | τ | γ | Dev accuracy | Held-out accuracy | − fixed-32 SC [95% CI] | Mean tokens | Mean rollouts | Stops at 4 / 8 / 16 / 32 |
+|---|---:|---:|---:|---:|---|---:|---:|---|
+| agreement | 0.5 | — | 0.6360 | 0.6125 | -0.0037 [-0.0140, +0.0076] | 3290 | 9.89 | 0.714 / 0.075 / 0.021 / 0.191 |
+| quality | 0.5 | 0.0 | 0.6395 | 0.6155 | -0.0007 [-0.0096, +0.0085] | 3613 | 10.93 | 0.654 / 0.096 / 0.029 / 0.221 |
+| fixed-32 SC | — | — | 0.6425 | 0.6162 | — | 8898 | 32 | 0 / 0 / 0 / 1 |
+
+### Signal analysis at N = 32 (`python task3/signals.py`; `task3/results/signals/`)
+
+On the 800 held-out questions; `short` = negative length (the length-only control), so its ρ(length) is −1 by construction. Within-question correlations are averaged across questions; correctness correlations use the mixed questions only (MATH 469, MathVista 634).
+
+| Score | MATH: ρ(length) | MATH: ρ(correct) | MATH: top − bottom quartile correctness | MathVista: ρ(length) | MathVista: ρ(correct) | MathVista: top − bottom quartile |
+|---|---:|---:|---:|---:|---:|---:|
+| `L` | +0.225 | +0.134 | +0.078 | +0.329 | +0.029 | +0.016 |
+| `K` | -0.161 | +0.198 | +0.120 | +0.349 | +0.048 | +0.035 |
+| `short` | -1.000 | +0.076 | +0.046 | -1.000 | +0.050 | +0.041 |
+| `V` | — | — | — | -0.686 | +0.041 | +0.038 |
+| `Z` | — | — | — | -0.275 | +0.089 | +0.074 |
+| `Zt` | — | — | — | -0.322 | +0.080 | +0.072 |
+
+- **MathVista confidence–vision correlation** (Pearson of c_t and v_t within each rollout; 25,572 rollouts defined, 28 too short or constant): the mean of question means is −0.211 (median −0.212). 10.6% of questions are positive; the 5–95% range of question means is −0.464 to +0.056.
+- **Tokenwise fusion:** Zt − Z equals Cov_t(c, v) to within 1.8e-8. The covariance is negative in 85.2% of rollouts (median −0.0018).
+- **Illustrative trajectories:** `mathvista_trajectories.json` holds four questions picked by the fixed rule in `task3/signals.py` (the first held-out question in each category: SC and top-VisConf both right, both wrong, and each one alone right). For each, the highest- and lowest-VisConf rollouts with their c_t and v_t series.
+
+### Early stops and examples (`python task3/examples.py`; `task3/results/examples/<dataset>.json`)
+
+Held-out questions × 10 orders (8,000 runs per policy), frozen settings. *Recovered* = a wrong early stop where fixed-32 SC is correct; *lost* = a correct early stop where fixed-32 SC is wrong.
+
+| Dataset | Policy | Early-stop share | Early-stop accuracy | Accuracy when run to 32 | Wrong early stops (share of runs) | Recovered by fixed-32 | Lost by fixed-32 |
+|---|---|---:|---:|---:|---|---:|---:|
+| MATH | agreement | 0.735 | 0.888 | 0.317 | 660 (0.083) | 51 | 39 |
+| MATH | quality | 0.835 | 0.828 | 0.246 | 1152 (0.144) | 131 | 82 |
+| MathVista | agreement | 0.809 | 0.732 | 0.106 | 1736 (0.217) | 311 | 281 |
+| MathVista | quality | 0.779 | 0.751 | 0.137 | 1548 (0.194) | 251 | 245 |
+
+The quality-aware policy, binned by the full pool's fraction of correct rollouts (retrospective only). Each cell: questions / mean rollouts / early-stop share / accuracy.
+
+| Pool fraction correct | MATH | MathVista |
+|---|---|---|
+| 0 | 69 / 18.5 / 0.50 / 0.000 | 84 / 23.9 / 0.30 / 0.000 |
+| (0, .25] | 142 / 19.4 / 0.47 / 0.150 | 156 / 18.0 / 0.52 / 0.064 |
+| (.25, .5] | 78 / 12.4 / 0.74 / 0.724 | 135 / 13.0 / 0.72 / 0.500 |
+| (.5, .75] | 74 / 5.7 / 0.98 / 0.962 | 133 / 7.0 / 0.95 / 0.925 |
+| (.75, 1) | 175 / 4.2 / 1.00 / 0.997 | 210 / 4.3 / 1.00 / 1.000 |
+| 1 | 262 / 4.0 / 1.00 / 1.000 | 82 / 4.0 / 1.00 / 1.000 |
+
+The examples were picked by the rule stated in `task3/examples.py` and saved with it: the first two held-out questions (permuted order, rollout order 0) of each kind, for selection disagreement (SC vs the dataset's RWC selector at N = 32) and for premature stopping (quality-aware). Revision examples come from the live run.
+
+### Live generation (Kaggle `atml-pa3-task3-live`, Tesla T4, finished 2026-11-07; `task3/live/`, scored by `python task3/live_score.py` → `task3/results/live/`)
+
+`Qwen/Qwen2.5-3B-Instruct` at revision `aa8e7253…`, FP16, batch size 1, 50 held-out MATH questions, 250 calls (5 per question), every call independently seeded (T3-12). Model loading took 39.8 s and is excluded. Peak GPU memory was 6.17 GB allocated and 6.91 GB reserved. Raw stdout: `task3/results/kaggle_stdout_live.log`.
+
+| Strategy | Cap per response | Accuracy | Mean input tokens | Mean output tokens | Mean seconds | Responses capped | Responses with a boxed answer | Final answer extracted |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Single | 3,072 | 0.62 | 108.4 | 761.3 | 41.0 | 2 / 50 (0.04) | 0.96 | 0.96 |
+| Parallel (3, self-consistency) | 1,024 each | 0.54 | 325.1 | 1,859.5 | 99.4 | 25 / 150 (0.167) | 0.833 | 0.78 |
+| Refinement (initial + 1 revision) | 1,024 + 2,048 | 0.62 | 889.6 | 1,218.7 | 65.6 | 10 / 100 (0.10) | 0.90 | 1.00 |
+
+- Refinement is charged the shared initial response (parallel response 1) plus the revision call. The revision call alone averages 781.2 input and 583.1 output tokens.
+- Capped responses by slot: single 2, parallel responses 1 / 2 / 3: 10 / 8 / 7, revision 0. Every capped response lacks a boxed answer, and every response without a boxed answer is capped.
+- Accuracy of the shared initial answer: 0.56.
+- **Paired bootstrap differences** (1,000 question resamples, seed 6304): parallel − single −0.08 [−0.20, +0.06]; refinement − single 0.00 [−0.12, +0.12]; refinement − parallel +0.08 [0.00, +0.18].
+
+**Revision transitions** (relative to the initial answer):
+
+| Initial response | Revision changed the answer | Initial → revised | Questions |
+|---|---|---|---:|
+| boxed answer | no | correct → correct | 28 |
+| boxed answer | no | wrong → wrong | 12 |
+| hit the 1,024 cap (no answer) | yes | wrong → correct | 3 |
+| hit the 1,024 cap (no answer) | yes | wrong → wrong | 7 |
+
+Totals: wrong → correct 3, correct → wrong 0, correct → correct 28, wrong → wrong 19. The revision kept the answer in all 40 questions whose initial response gave one. All 10 changes came from initial responses that hit the cap.
+
+**Revision examples** (`python task3/live_examples.py` → `task3/results/examples/math_live_revision.json`). Rule, stated in the script and saved with the examples: walk the 50 questions in live order and take the first two of each transition kind. Correct → wrong has no example, because no question made that transition. Picked: wrong → correct `test:3504`, `test:2732`; wrong → wrong `test:2688`, `test:2460`; correct → correct `test:943`, `test:4335`.
 
 ### Logging requirements
 

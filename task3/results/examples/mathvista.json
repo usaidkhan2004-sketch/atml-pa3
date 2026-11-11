@@ -1,0 +1,209 @@
+{
+ "early_stops": {
+  "agreement": {
+   "runs": 8000,
+   "early_share": 0.80925,
+   "early_accuracy": 0.7318504788384307,
+   "late_accuracy": 0.10615989515072084,
+   "wrong_early_stops": 1736,
+   "wrong_early_share_of_runs": 0.217,
+   "wrong_early_recovered_by_fixed32": 311,
+   "correct_early_lost_by_fixed32": 281
+  },
+  "quality": {
+   "runs": 8000,
+   "early_share": 0.778625,
+   "early_accuracy": 0.7514849895649381,
+   "late_accuracy": 0.13721061547148503,
+   "wrong_early_stops": 1548,
+   "wrong_early_share_of_runs": 0.1935,
+   "wrong_early_recovered_by_fixed32": 251,
+   "correct_early_lost_by_fixed32": 245
+  }
+ },
+ "by_pool_fraction": {
+  "agreement": {
+   "0": {
+    "questions": 84,
+    "mean_rollouts": 23.176190476190477,
+    "early_share": 0.32261904761904764,
+    "accuracy": 0.0
+   },
+   "(0, .25]": {
+    "questions": 156,
+    "mean_rollouts": 16.102564102564102,
+    "early_share": 0.5826923076923077,
+    "accuracy": 0.07628205128205129
+   },
+   "(.25, .5]": {
+    "questions": 135,
+    "mean_rollouts": 10.74074074074074,
+    "early_share": 0.797037037037037,
+    "accuracy": 0.48962962962962964
+   },
+   "(.5, .75]": {
+    "questions": 133,
+    "mean_rollouts": 5.984962406015038,
+    "early_share": 0.9759398496240601,
+    "accuracy": 0.9030075187969925
+   },
+   "(.75, 1)": {
+    "questions": 210,
+    "mean_rollouts": 4.177142857142857,
+    "early_share": 1.0,
+    "accuracy": 0.9995238095238095
+   },
+   "1": {
+    "questions": 82,
+    "mean_rollouts": 4.0,
+    "early_share": 1.0,
+    "accuracy": 1.0
+   }
+  },
+  "quality": {
+   "0": {
+    "questions": 84,
+    "mean_rollouts": 23.919047619047618,
+    "early_share": 0.2976190476190476,
+    "accuracy": 0.0
+   },
+   "(0, .25]": {
+    "questions": 156,
+    "mean_rollouts": 18.01025641025641,
+    "early_share": 0.5224358974358975,
+    "accuracy": 0.0641025641025641
+   },
+   "(.25, .5]": {
+    "questions": 135,
+    "mean_rollouts": 12.98074074074074,
+    "early_share": 0.7244444444444444,
+    "accuracy": 0.5
+   },
+   "(.5, .75]": {
+    "questions": 133,
+    "mean_rollouts": 7.049624060150376,
+    "early_share": 0.9526315789473684,
+    "accuracy": 0.924812030075188
+   },
+   "(.75, 1)": {
+    "questions": 210,
+    "mean_rollouts": 4.306666666666667,
+    "early_share": 0.9995238095238095,
+    "accuracy": 0.9995238095238095
+   },
+   "1": {
+    "questions": 82,
+    "mean_rollouts": 4.0,
+    "early_share": 1.0,
+    "accuracy": 1.0
+   }
+  }
+ },
+ "examples": {
+  "premature_stop": [
+   {
+    "sample_id": "434",
+    "question": "In the figure above, side AC of triangle ABC is on line l. What is x in terms of k?\nA. 60-k\nB. k\nC. 60+k\nD. 120-k\nE. 120-2*k",
+    "gold": "A",
+    "stopped_at": 4,
+    "revealed_votes": {
+     "C": 2,
+     "NO_ANSWER": 1,
+     "A": 1
+    },
+    "full_pool_votes": {
+     "A": 17,
+     "C": 7,
+     "B": 4,
+     "NO_ANSWER": 2,
+     "E": 1,
+     "D": 1
+    },
+    "full_pool_fraction_correct": 0.53125
+   },
+   {
+    "sample_id": "689",
+    "question": "Are these people sitting in a circle?\nA. Yes\nB. No",
+    "gold": "A",
+    "stopped_at": 4,
+    "revealed_votes": {
+     "B": 3,
+     "A": 1
+    },
+    "full_pool_votes": {
+     "A": 16,
+     "B": 13,
+     "NO_ANSWER": 3
+    },
+    "full_pool_fraction_correct": 0.5
+   }
+  ],
+  "selection_disagreement": {
+   "sc_right": [
+    {
+     "sample_id": "552",
+     "question": "How many queries have a p-value lower than 0.50?",
+     "gold": "4",
+     "sc_answer": "4",
+     "rwc_answer": "2",
+     "votes": {
+      "4": 14,
+      "2": 9,
+      "3": 9
+     },
+     "rwc_score": "Z"
+    },
+    {
+     "sample_id": "542",
+     "question": "How many models in the figure achieve an Acc score greater than 60?",
+     "gold": "2",
+     "sc_answer": "2",
+     "rwc_answer": "3",
+     "votes": {
+      "2": 12,
+      "3": 11,
+      "5": 3,
+      "1": 2,
+      "7": 1,
+      "10": 1,
+      "NO_ANSWER": 1,
+      "6": 1
+     },
+     "rwc_score": "Z"
+    }
+   ],
+   "rwc_right": [
+    {
+     "sample_id": "643",
+     "question": "As shown in the figure, CD is the diameter of ⊙O, chord DE ∥ OA, if the degree of ∠D is 50.0, then the degree of ∠C is ()\nA. 25°\nB. 30°\nC. 40°\nD. 50°",
+     "gold": "A",
+     "sc_answer": "C",
+     "rwc_answer": "A",
+     "votes": {
+      "C": 11,
+      "A": 10,
+      "NO_ANSWER": 8,
+      "D": 3
+     },
+     "rwc_score": "Z"
+    },
+    {
+     "sample_id": "669",
+     "question": "As shown in the figure, line segment AB = 10.0, M is the midpoint of line segment AB, C is the midpoint of line segment MB, N is a point of line segment AM, and MN = 1.0, the length of line segment NC ()\nA. 2\nB. 2.5\nC. 3\nD. 3.5",
+     "gold": "D",
+     "sc_answer": "B",
+     "rwc_answer": "D",
+     "votes": {
+      "B": 12,
+      "D": 10,
+      "NO_ANSWER": 4,
+      "C": 4,
+      "A": 2
+     },
+     "rwc_score": "Z"
+    }
+   ]
+  }
+ },
+ "selection_rule": "walk held-out questions in their permuted order, order 0 only, and take the first\n                     two questions of each kind:\n                       selection_disagreement  N = 32, SC and the dataset's RWC selector (MATH: RWC\n                                               with self-certainty; MathVista: RWC with VisConf) pick\n                                               different groups and exactly one is correct\n                                               (one example per direction, then a second each)\n                       premature_stop          the quality-aware policy stops before 32 with a wrong\n                                               answer while fixed-32 SC is correct"
+}

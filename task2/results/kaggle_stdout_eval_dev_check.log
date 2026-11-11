@@ -1,0 +1,19 @@
+[{"stream_name":"stderr","time":35.696630674,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":66.476307398,"data":"\rLoading weights:   0%|          | 0/311 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/311 [00:00\u003c01:44,  2.96it/s]\rLoading weights:  61%|██████▏   | 191/311 [00:00\u003c00:00, 562.48it/s]\rLoading weights:  97%|█████████▋| 301/311 [00:00\u003c00:00, 630.36it/s]\rLoading weights: 100%|██████████| 311/311 [00:00\u003c00:00, 519.98it/s]\n"}
+,{"stream_name":"stdout","time":79.752799648,"data":"generation checks: {'vqa/correct': {'examples': 8, 'cache_equals_no_cache': 8, 'batched_equals_alone': 8}, 'vqa/no_image': {'examples': 8, 'cache_equals_no_cache': 8, 'batched_equals_alone': 8}, 'grounding/correct': {'examples': 8, 'cache_equals_no_cache': 8, 'batched_equals_alone': 8}, 'grounding/no_image': {'examples': 8, 'cache_equals_no_cache': 8, 'batched_equals_alone': 8}}\n"}
+,{"stream_name":"stdout","time":83.320805411,"data":"vqa correct: acc 0.4609 | nll 1.262 | 32.3 ms/answer\n"}
+,{"stream_name":"stdout","time":86.84306546,"data":"vqa complementary: acc 0.2609 | nll 2.095 | 32.2 ms/answer\n"}
+,{"stream_name":"stdout","time":90.443502438,"data":"vqa mismatched: acc 0.3156 | nll 2.123 | 33.4 ms/answer\n"}
+,{"stream_name":"stdout","time":92.136878765,"data":"vqa no_image: acc 0.3344 | nll 1.996 | 17.9 ms/answer\n"}
+,{"stream_name":"stdout","time":99.241166371,"data":"grounding correct: acc 0.7083 | nll 0.649 | 29.9 ms/answer\n"}
+,{"stream_name":"stdout","time":101.761007252,"data":"grounding complementary: acc 0.1250 | nll 2.681 | 29.7 ms/answer\n"}
+,{"stream_name":"stdout","time":104.318039807,"data":"grounding mismatched: acc 0.3333 | nll 2.017 | 30.2 ms/answer\n"}
+,{"stream_name":"stdout","time":105.456092808,"data":"grounding no_image: acc 0.4167 | nll 1.218 | 15.7 ms/answer\n"}
+,{"stream_name":"stdout","time":109.790782478,"data":"{\"vqa\": {\"correct\": 0.4609, \"complementary\": 0.2609, \"mismatched\": 0.3156, \"no_image\": 0.3344}, \"grounding\": {\"correct\": 0.7083, \"complementary\": 0.125, \"mismatched\": 0.3333, \"no_image\": 0.4167}}\n"}
+,{"stream_name":"stderr","time":116.030088391,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":116.030144898,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":116.285106431,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":116.285139281,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":117.047131191,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":118.111798304,"data":"[NbConvertApp] Writing 413409 bytes to __results__.html\n"}
+]

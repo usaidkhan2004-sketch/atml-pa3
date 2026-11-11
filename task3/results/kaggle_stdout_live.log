@@ -1,0 +1,60 @@
+[{"stream_name":"stderr","time":36.890259237,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":72.262790298,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [00:20\u003c00:20, 20.95s/it]\rFetching 2 files: 100%|██████████| 2/2 [00:33\u003c00:00, 16.10s/it]\rFetching 2 files: 100%|██████████| 2/2 [00:33\u003c00:00, 16.83s/it]\n"}
+,{"stream_name":"stderr","time":75.491045558,"data":"\rLoading weights:   0%|          | 0/434 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 1/434 [00:00\u003c06:19,  1.14it/s]\rLoading weights:  26%|██▌       | 111/434 [00:00\u003c00:02, 151.64it/s]\rLoading weights:  38%|███▊      | 167/434 [00:01\u003c00:01, 165.72it/s]\rLoading weights:  47%|████▋     | 206/434 [00:01\u003c00:01, 169.19it/s]\rLoading weights:  55%|█████▍    | 237/434 [00:01\u003c00:01, 157.34it/s]\rLoading weights:  60%|██████    | 262/434 [00:01\u003c00:01, 163.01it/s]\rLoading weights:  66%|██████▌   | 285/434 [00:02\u003c00:00, 156.11it/s]\rLoading weights:  70%|███████   | 305/434 [00:02\u003c00:00, 153.09it/s]\rLoading weights:  76%|███████▌  | 328/434 [00:02\u003c00:00, 163.46it/s]\rLoading weights:  81%|████████  | 351/434 [00:02\u003c00:00, 154.48it/s]\rLoading weights:  86%|████████▋ | 375/434 [00:02\u003c00:00, 159.61it/s]\rLoading weights:  92%|█████████▏| 399/434 [00:02\u003c00:00, 158.33it/s]\rLoading weights:  97%|█████████▋| 423/434 [00:02\u003c00:00, 163.98it/s]\rLoading weights: 100%|██████████| 434/434 [00:02\u003c00:00, 149.01it/s]\n"}
+,{"stream_name":"stdout","time":182.608446648,"data":"question 1/50 done | peak 5.95 GB\n"}
+,{"stream_name":"stdout","time":347.139064012,"data":"question 2/50 done | peak 6.02 GB\n"}
+,{"stream_name":"stdout","time":614.234456401,"data":"question 3/50 done | peak 6.13 GB\n"}
+,{"stream_name":"stdout","time":686.876765654,"data":"question 4/50 done | peak 6.13 GB\n"}
+,{"stream_name":"stdout","time":1050.628868124,"data":"question 5/50 done | peak 6.13 GB\n"}
+,{"stream_name":"stdout","time":1215.200137114,"data":"question 6/50 done | peak 6.13 GB\n"}
+,{"stream_name":"stdout","time":1455.074938144,"data":"question 7/50 done | peak 6.13 GB\n"}
+,{"stream_name":"stdout","time":1516.778693657,"data":"question 8/50 done | peak 6.13 GB\n"}
+,{"stream_name":"stdout","time":1622.230429763,"data":"question 9/50 done | peak 6.13 GB\n"}
+,{"stream_name":"stdout","time":1934.235032529,"data":"question 10/50 done | peak 6.14 GB\n"}
+,{"stream_name":"stdout","time":2081.954182512,"data":"question 11/50 done | peak 6.14 GB\n"}
+,{"stream_name":"stdout","time":2314.655375392,"data":"question 12/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":2379.427717081,"data":"question 13/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":2589.228125377,"data":"question 14/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":2744.064295984,"data":"question 15/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":3007.719077707,"data":"question 16/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":3251.039161568,"data":"question 17/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":3340.980211527,"data":"question 18/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":3744.662580538,"data":"question 19/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":3849.628069927,"data":"question 20/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":4131.677219134,"data":"question 21/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":4269.883380207,"data":"question 22/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":4442.686356088,"data":"question 23/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":4595.672019938,"data":"question 24/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":4682.470897719,"data":"question 25/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":4819.613569514,"data":"question 26/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":4926.363475003,"data":"question 27/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":5041.107328612,"data":"question 28/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":5368.308832649,"data":"question 29/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":5531.30583758,"data":"question 30/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":5603.231308351,"data":"question 31/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":5740.943358236,"data":"question 32/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":5984.675086638,"data":"question 33/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":6196.718427317,"data":"question 34/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":6369.644536226,"data":"question 35/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":6620.801534044,"data":"question 36/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":6927.74589145,"data":"question 37/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":7012.721438389,"data":"question 38/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":7110.849515329,"data":"question 39/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":7247.90920286,"data":"question 40/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":7328.822626971,"data":"question 41/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":7576.290055995,"data":"question 42/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":7748.59764063,"data":"question 43/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":7831.538506017,"data":"question 44/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":7890.464425957,"data":"question 45/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":8174.567065307,"data":"question 46/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":8311.361043212,"data":"question 47/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":8416.884127992,"data":"question 48/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":8617.623872387,"data":"question 49/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stdout","time":8680.381932436,"data":"question 50/50 done | peak 6.17 GB\n"}
+,{"stream_name":"stderr","time":8686.815557239,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":8686.815602444,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":8687.088288278,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":8687.088326948,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":8687.869431509,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":8688.890202021,"data":"[NbConvertApp] Writing 326470 bytes to __results__.html\n"}
+]

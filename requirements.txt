@@ -12,3 +12,5 @@ pyarrow>=24.0.0  # Task 3 parquet files were written by Arrow 24
 pyyaml
 matplotlib
 kaggle
+math-verify[antlr4_13_2]==0.9.0  # Task 3 MATH equivalence (DECISIONS.md T3-6)
+Levenshtein==0.27.5  # Task 3 MathVista nearest-choice rule (official scorer)

@@ -40,6 +40,7 @@ Model weights and the tokenized training data stay in those kernel outputs and a
 | 3. Benchmarks (7 conditions) | `task1/evaluate.py` | `task1/evaluate.py atml-pa3-task1-eval-a --gpu --source …-fullft --source …-l2sp <W> -- --conditions baseline fullft_0625 fullft_1250 l2sp_1250`, then `…-eval-b` with `--source …-lora4 --source …-lora16 --source …-oplora <W> -- --conditions lora4_1250 lora16_1250 oplora_1250` | `task1/results/eval/<condition>/` |
 | 4. Diagnostics | `task1/diagnostics.py` | `task1/diagnostics.py atml-pa3-task1-diagnostics --gpu` + all five training sources + `<W> --with task1/splits/probe_prompts.json` | `task1/results/diagnostics/` |
 | 5. Qualitative generations | `task1/generate_qualitative.py` | `task1/generate_qualitative.py atml-pa3-task1-qualitative --gpu` + all five training sources + `--with task1/train.py --with task1/evaluate.py --with task1/configs/first_plot_questions.yaml` | `task1/results/qualitative/` |
+| 5b. Annotation counts | `task1/summarize_annotations.py` | — (local: `python task1/summarize_annotations.py`) | `task1/results/qualitative/annotation_summary.csv` |
 | 6. Figures (local) | `task1/make_plots.py` | `python task1/make_plots.py` | `task1/results/plots/` |
 
 `<W>` stands for `--with task1/train.py --with task1/splits/probe_ids.json --with task1/results/data_prep_summary.json`. Step 4 also bundles `--with task1/evaluate.py`.
@@ -59,23 +60,40 @@ Notes on the steps:
 | 3. Visual interface checks + scale calibration | `python shared/kaggle_push.py task2/check_interface.py atml-pa3-task2-interface-check --gpu --source dentusayd/atml-pa3-task2-features --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py` (CPU-only part: `python task2/check_interface.py --local`) | `task2/results/interface_checks.json` |
 | 4. Training smoke test | `python shared/kaggle_push.py task2/train.py atml-pa3-task2-smoke --gpu --source dentusayd/atml-pa3-task2-features --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py --with task2/check_interface.py --with task2/results/interface_checks.json -- --smoke` | `task2/results/smoke_report.json` |
 | 5. Main training run (3 stages, 4,500 updates, ~1.7 h on a T4) | `python shared/kaggle_push.py task2/train.py atml-pa3-task2-train --gpu --source dentusayd/atml-pa3-task2-features --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py --with task2/check_interface.py --with task2/results/interface_checks.json` | `task2/results/train/` (training log, dev evaluations, summary, config), `task2/results/kaggle_stdout_train.log`; stage weights and checkpoints stay in the Kaggle output (`task2/run/weights/`, `checkpoints/task2/`) |
+| 6. Final evaluation (both suites × 4 image conditions) | `python shared/kaggle_push.py task2/evaluate.py atml-pa3-task2-eval-<split> --gpu --source dentusayd/atml-pa3-task2-features --source dentusayd/atml-pa3-task2-train --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py --with task2/check_interface.py --with task2/vqa_normalize.py --with task2/results/interface_checks.json -- --split dev` (or `--split test`) | dev script check: `task2/results/eval_dev_check/`; test: to come |
+| 7. Figures (local) | `python task2/make_plots.py` | `task2/results/plots/learning_curves.png` |
 
 The split files reach Kaggle as the private dataset `dentusayd/atml-pa3-task2-splits` (a copy of `task2/splits/*.json` and `task2/configs/coco_objects.json`; each run records their hashes). They are too large to bundle into a kernel.
 
 Further steps will be added as they are built.
 
-### Task 3
+### Task 3 — Test-time compute
 
-_To be added._
+Supplied rollouts go in `data/task3/` (manual's `ATML-PA3-Data` link). MathVista metadata: `AI4Math/MathVista` testmini parquet at revision `2b6ad694…`, saved to `data/task3/mathvista_meta/` (DECISIONS.md T3-2).
+
+| Step | Command | Committed output |
+|---|---|---|
+| 1. Splits, orders, answer groups, correctness (local CPU) | `python task3/prepare.py` | `task3/splits/`, `task3/results/prepare_summary.json` (per-rollout cache in `task3/cache/`, gitignored) |
+| 2. Fixed budgets, all selectors, adaptive stopping (local CPU) | `python task3/offline.py` | `task3/results/offline/<dataset>/` |
+| 3. Signal analysis (local CPU) | `python task3/signals.py` | `task3/results/signals/` |
+| 4. Live generation, 50 MATH questions (Kaggle T4) | `python task3/live.py --write-inputs`, then `python shared/kaggle_push.py task3/live.py atml-pa3-task3-live --gpu --with task3/splits/math_live.json` | `task3/live/` (raw calls) |
+| 5. Live scoring (local CPU) | `python task3/live_score.py --calls task3/live/calls.jsonl` | `task3/results/live/` |
+| 5b. Revision examples (local CPU) | `python task3/live_examples.py` | `task3/results/examples/math_live_revision.json` |
+| 6. Figures (local) | `python task3/make_plots.py` | `task3/results/plots/` |
+
+The MathVista normalization in `task3/answers.py` is ported from the official MathVista scorer (lupantech/MathVista `evaluation/calculate_score.py`, commit `9d65741c`).
 
 ## Attribution
 
-No external code is copied into this repository. Libraries are used through their public APIs:
+Apart from the ports listed below, no external code is copied into this repository. Libraries are used through their public APIs:
 - PyTorch, Hugging Face `transformers`, `datasets` and `safetensors`.
 - EleutherAI `lm-evaluation-harness` 0.4.13, for the stock task definitions and HellaSwag `process_docs`, which is imported, not copied.
 - matplotlib.
+- `math-verify` 0.9.0 (MATH answer equivalence) and `Levenshtein` (MathVista nearest-choice rule).
 
 `task2/vqa_normalize.py` ports the answer normalization (`processPunctuation`, `processDigitArticle` and their tables, copied verbatim) from the official VQA evaluation code, [GT-Vision-Lab/VQA](https://github.com/GT-Vision-Lab/VQA) `PythonEvaluationTools/vqaEvaluation/vqaEval.py`.
+
+`task3/answers.py` ports `normalize_extracted_answer`, `get_most_similar` and `safe_equal` from the official MathVista scorer, [lupantech/MathVista](https://github.com/lupantech/MathVista) `evaluation/calculate_score.py` (commit `9d65741c1f0a136989c2589e6e6e57e687261c07`), keeping its default `ignore_empty_extractions=False` path.
 
 `task1/configs/first_plot_questions.yaml` is the unmodified `evaluation/first_plot_questions.yaml` from the [emergent-misalignment](https://github.com/emergent-misalignment/emergent-misalignment) repository (see `DECISIONS.md` #1).
 
@@ -85,5 +103,7 @@ Datasets used:
 - `Rowan/hellaswag`
 - `aps/super_glue` (BoolQ)
 - `allenai/ai2_arc` (ARC-Easy)
+- COCO 2014 (captions, instances) and VQAv2 (Task 2)
+- `ATML-PA3-Data` (supplied Task 3 rollouts), `DigitalLearningGmbH/MATH-lighteval` and `AI4Math/MathVista` testmini metadata (Task 3)
 
-The model is `Qwen/Qwen3-0.6B`. Revisions are pinned in `DECISIONS.md`.
+Models: `Qwen/Qwen3-0.6B` (Tasks 1–2), `google/siglip-base-patch16-224` (Task 2 vision encoder) and `Qwen/Qwen2.5-3B-Instruct` (Task 3 live generation). Revisions are pinned in `DECISIONS.md`.
