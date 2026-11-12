@@ -1,0 +1,231 @@
+{
+ "selection_rule": "for each suite, walk the test pairs in split-file order\nand take the first pair of each kind, judged on the correct-image predictions with the pair-accuracy criterion\n(normalized prediction equals the image's canonical answer):\n  both_right     both predictions equal their own canonical answer\n  same_answer    the two predictions are identical, so the answer did not change with the image\n  changed_wrong  the predictions differ but at least one is wrong\nGrounding pairs flagged as likely mislabelled (DECISIONS.md T2-32) are skipped.\nEach example shows both images, the shared question, each image's canonical answer (VQAv2: also the ten\nannotator answers), the prediction with that image, and the no-image prediction for the question. Under the\ncomplementary swap a question receives its partner's image, and the input is then token-identical to the\npartner's correct-image input, so its prediction is the partner's correct-image prediction.",
+ "suites": {
+  "vqa": {
+   "both_right": {
+    "pair_id": "213276011_263687004",
+    "type": "yes/no",
+    "question": "Is the man in the office?",
+    "no_image_prediction": "no",
+    "images": [
+     {
+      "image_id": 213276,
+      "file": "COCO_val2014_000000213276.jpg",
+      "canonical": "no",
+      "answers": [
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no"
+      ],
+      "prediction": "no",
+      "right": true
+     },
+     {
+      "image_id": 263687,
+      "file": "COCO_val2014_000000263687.jpg",
+      "canonical": "yes",
+      "answers": [
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes"
+      ],
+      "prediction": "yes",
+      "right": true
+     }
+    ]
+   },
+   "same_answer": {
+    "pair_id": "129285000_407115005",
+    "type": "yes/no",
+    "question": "Is there anywhere the people could sit in this picture?",
+    "no_image_prediction": "no",
+    "images": [
+     {
+      "image_id": 129285,
+      "file": "COCO_val2014_000000129285.jpg",
+      "canonical": "yes",
+      "answers": [
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "no",
+       "yes"
+      ],
+      "prediction": "yes",
+      "right": true
+     },
+     {
+      "image_id": 407115,
+      "file": "COCO_val2014_000000407115.jpg",
+      "canonical": "no",
+      "answers": [
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no"
+      ],
+      "prediction": "yes",
+      "right": false
+     }
+    ]
+   },
+   "changed_wrong": {
+    "pair_id": "236592001_318722001",
+    "type": "yes/no",
+    "question": "Is the oven light on?",
+    "no_image_prediction": "no",
+    "images": [
+     {
+      "image_id": 236592,
+      "file": "COCO_val2014_000000236592.jpg",
+      "canonical": "yes",
+      "answers": [
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes",
+       "yes"
+      ],
+      "prediction": "no",
+      "right": false
+     },
+     {
+      "image_id": 318722,
+      "file": "COCO_val2014_000000318722.jpg",
+      "canonical": "no",
+      "answers": [
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no",
+       "no"
+      ],
+      "prediction": "yes",
+      "right": false
+     }
+    ]
+   }
+  },
+  "grounding": {
+   "both_right": {
+    "pair_id": "test_presence_000",
+    "type": "presence",
+    "question": "Does this image contain a chair?",
+    "no_image_prediction": "no",
+    "images": [
+     {
+      "image_id": 451214,
+      "file": "COCO_val2014_000000451214.jpg",
+      "canonical": "yes",
+      "answers": [
+       "yes"
+      ],
+      "prediction": "yes",
+      "right": true
+     },
+     {
+      "image_id": 437206,
+      "file": "COCO_val2014_000000437206.jpg",
+      "canonical": "no",
+      "answers": [
+       "no"
+      ],
+      "prediction": "no",
+      "right": true
+     }
+    ]
+   },
+   "same_answer": {
+    "pair_id": "test_presence_001",
+    "type": "presence",
+    "question": "Does this image contain a dining table?",
+    "no_image_prediction": "no",
+    "images": [
+     {
+      "image_id": 470924,
+      "file": "COCO_val2014_000000470924.jpg",
+      "canonical": "yes",
+      "answers": [
+       "yes"
+      ],
+      "prediction": "yes",
+      "right": true
+     },
+     {
+      "image_id": 277479,
+      "file": "COCO_val2014_000000277479.jpg",
+      "canonical": "no",
+      "answers": [
+       "no"
+      ],
+      "prediction": "yes",
+      "right": false
+     }
+    ]
+   },
+   "changed_wrong": {
+    "pair_id": "test_counting_002",
+    "type": "counting",
+    "question": "How many ties can you see?",
+    "no_image_prediction": "2",
+    "images": [
+     {
+      "image_id": 158412,
+      "file": "COCO_val2014_000000158412.jpg",
+      "canonical": "1",
+      "answers": [
+       "1"
+      ],
+      "prediction": "1",
+      "right": true
+     },
+     {
+      "image_id": 162685,
+      "file": "COCO_val2014_000000162685.jpg",
+      "canonical": "3",
+      "answers": [
+       "3"
+      ],
+      "prediction": "2",
+      "right": false
+     }
+    ]
+   }
+  }
+ }
+}

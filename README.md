@@ -53,19 +53,29 @@ Notes on the steps:
 
 ### Task 2 — SigLIP–Qwen VLM
 
+SigLIP (`google/siglip-base-patch16-224`) image features feed a trained connector into a frozen Qwen3-0.6B with LoRA adapters. Training has three stages: caption alignment, visual instruction tuning, and natural VQA. Evaluation uses two question suites (VQAv2 complementary pairs and COCO-derived presence/counting pairs) under four image conditions: correct, complementary, mismatched and no image.
+
+GPU steps ran on Kaggle (Tesla T4), pushed with `shared/kaggle_push.py` as in Task 1. Steps 1, 7 and 8 run locally on CPU.
+
 | Step | Command | Committed output |
 |---|---|---|
 | 1. Data selection (local, CPU) | `python task2/prepare_data.py` (downloads the official COCO 2014 and VQAv2 annotation zips to `data/task2/raw/`) | `task2/splits/`, `task2/results/data_prep_summary.json` |
 | 2. SigLIP feature cache | `python shared/kaggle_push.py task2/cache_features.py atml-pa3-task2-features --gpu --dataset jeffaudi/coco-2014-dataset-for-yolov3 --with task2/splits/images.json --with task2/splits/grounding_dev.json --with task2/splits/grounding_test.json` | `task2/results/feature_cache_summary.json`, `task2/results/label_inspection/` (features stay in the Kaggle output) |
+| 2b. Grounding label inspection (by eye, before the test run, without model predictions) | sheets from step 2 and the full-resolution COCO images with the category's boxes drawn in | `task2/results/label_inspection/inspection.csv` (DECISIONS.md T2-32) |
 | 3. Visual interface checks + scale calibration | `python shared/kaggle_push.py task2/check_interface.py atml-pa3-task2-interface-check --gpu --source dentusayd/atml-pa3-task2-features --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py` (CPU-only part: `python task2/check_interface.py --local`) | `task2/results/interface_checks.json` |
 | 4. Training smoke test | `python shared/kaggle_push.py task2/train.py atml-pa3-task2-smoke --gpu --source dentusayd/atml-pa3-task2-features --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py --with task2/check_interface.py --with task2/results/interface_checks.json -- --smoke` | `task2/results/smoke_report.json` |
 | 5. Main training run (3 stages, 4,500 updates, ~1.7 h on a T4) | `python shared/kaggle_push.py task2/train.py atml-pa3-task2-train --gpu --source dentusayd/atml-pa3-task2-features --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py --with task2/check_interface.py --with task2/results/interface_checks.json` | `task2/results/train/` (training log, dev evaluations, summary, config), `task2/results/kaggle_stdout_train.log`; stage weights and checkpoints stay in the Kaggle output (`task2/run/weights/`, `checkpoints/task2/`) |
-| 6. Final evaluation (both suites × 4 image conditions) | `python shared/kaggle_push.py task2/evaluate.py atml-pa3-task2-eval-<split> --gpu --source dentusayd/atml-pa3-task2-features --source dentusayd/atml-pa3-task2-train --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py --with task2/check_interface.py --with task2/vqa_normalize.py --with task2/results/interface_checks.json -- --split dev` (or `--split test`) | dev script check: `task2/results/eval_dev_check/`; test: to come |
+| 6. Final evaluation (both suites × 4 image conditions) | `python shared/kaggle_push.py task2/evaluate.py atml-pa3-task2-eval-<split> --gpu --source dentusayd/atml-pa3-task2-features --source dentusayd/atml-pa3-task2-train --dataset dentusayd/atml-pa3-task2-splits --with task2/vlm.py --with task2/check_interface.py --with task2/vqa_normalize.py --with task2/results/interface_checks.json --with task2/results/label_inspection/inspection.csv -- --split dev` (or `--split test`) | dev script check: `task2/results/eval_dev_check/`; test: `task2/results/eval_test/`, `task2/results/kaggle_stdout_eval_test.log` |
 | 7. Figures (local) | `python task2/make_plots.py` | `task2/results/plots/learning_curves.png` |
+| 8. Complementary-pair examples (local; fetches 12 COCO val2014 images into `data/task2/images/`) | `python task2/examples.py` | `task2/results/examples/` |
 
 The split files reach Kaggle as the private dataset `dentusayd/atml-pa3-task2-splits` (a copy of `task2/splits/*.json` and `task2/configs/coco_objects.json`; each run records their hashes). They are too large to bundle into a kernel.
 
-Further steps will be added as they are built.
+Notes on the steps:
+- Step 5 saves the stage 1–3 weights and resumable checkpoints in its Kaggle output. Step 6 reads the stage 3 weights from the mounted `atml-pa3-task2-train` output and the cached features from `atml-pa3-task2-features`.
+- The final test was run once, after the label inspection. No checkpoint or setting was chosen with test results.
+- Step 6 scores grounding on all 64 test pairs and also without the 4 pairs the inspection found likely mislabelled (`excluding_flagged` in `metrics.json`).
+- Seed `6304` fixes data selection, sampling order, the mismatched-image mapping and the bootstrap resamples.
 
 ### Task 3 — Test-time compute
 
@@ -80,6 +90,13 @@ Supplied rollouts go in `data/task3/` (manual's `ATML-PA3-Data` link). MathVista
 | 5. Live scoring (local CPU) | `python task3/live_score.py --calls task3/live/calls.jsonl` | `task3/results/live/` |
 | 5b. Revision examples (local CPU) | `python task3/live_examples.py` | `task3/results/examples/math_live_revision.json` |
 | 6. Figures (local) | `python task3/make_plots.py` | `task3/results/plots/` |
+| 6b. Early-stop analysis and selection / premature-stop examples (local CPU) | `python task3/examples.py` | `task3/results/examples/<dataset>.json` |
+
+Notes on the steps:
+- Steps 1–3, 6 and 6b work on the supplied rollouts, and step 5 scores the committed live calls. All of them run on a CPU in a few minutes each. Step 1 must run first; it writes the per-rollout cache (`task3/cache/`) that the other offline steps read.
+- Of the 1,000 questions per dataset, 200 are a development split used only to choose the adaptive-stopping settings; results are reported on the other 800. The 50 live MATH questions come from those 800.
+- Step 4 calls `Qwen/Qwen2.5-3B-Instruct` five times per question (single response, three parallel responses, one revision), each with its own seed, and can resume after an interruption. Its raw calls are committed in `task3/live/calls.jsonl`.
+- Selection and stopping rules never use gold answers or unrevealed rollouts. Gold answers are used only for scoring and for the retrospective analysis in step 6b.
 
 The MathVista normalization in `task3/answers.py` is ported from the official MathVista scorer (lupantech/MathVista `evaluation/calculate_score.py`, commit `9d65741c`).
 

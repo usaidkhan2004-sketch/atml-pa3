@@ -308,7 +308,7 @@ Facts the table shows (the interpretation goes in the report):
 - **Grounding ΔNLL drops at the first Stage 3 evaluation** (2.355 → 1.670 at update 4,000), then reaches 2.032 at 4,500.
 - **The development sets are small** (64 and 48 questions), and these are single-run numbers with no intervals.
 
-**Evaluation script check on the development suites** (Kaggle job `atml-pa3-task2-eval-dev`, `python task2/evaluate.py --split dev`; stage 3 weights; `task2/results/eval_dev_check/metrics.json`; DECISIONS.md T2-12, T2-13, T2-14, T2-30, T2-31). This run checks the final-evaluation code on the 32 VQAv2 and 24 grounding development pairs. It is not the final test. Per-question development predictions are held out of the repo until the grounding labels have been inspected, so the inspection stays independent of model outputs.
+**Evaluation script check on the development suites** (Kaggle job `atml-pa3-task2-eval-dev`, `python task2/evaluate.py --split dev`; stage 3 weights; `task2/results/eval_dev_check/metrics.json`; DECISIONS.md T2-12, T2-13, T2-14, T2-30, T2-31). This run checks the final-evaluation code on the 32 VQAv2 and 24 grounding development pairs. It is not the final test. Per-question development predictions (`predictions.jsonl`) were added to the repo only after the grounding label inspection, which did not use them.
 
 - **Decoding checks:** on the first batch of each suite, with correct and no-image inputs, 8/8 cached greedy outputs equal full recomputation without a cache, and 8/8 batched outputs equal the same example decoded alone.
 - **Agreement with training:** reference NLL under correct, complementary and no-image inputs reproduces the update-4,500 development values (VQAv2 1.262 / 2.095 / 1.996; grounding 0.649 / 2.681 / 1.218).
@@ -331,7 +331,81 @@ Development-suite results (script check, single run, 95% pair-bootstrap interval
 
 No-image inputs are token-identical within a pair, so their identical-answer rate is 1.00 by construction.
 
-**Final test:** not run yet. It waits for the grounding label inspection and the decision on mislabelled pairs.
+**Grounding label inspection** (2026-11-12, before the test run, without model predictions; `task2/results/label_inspection/inspection.csv`; DECISIONS.md T2-32). All 88 pairs (176 images) were compared with the full-resolution images, with COCO's boxes for the asked category drawn in.
+
+| Split | Images | ok | Debatable | Likely wrong |
+|---|---:|---:|---:|---:|
+| dev | 48 | 42 | 5 | 1 |
+| test | 128 | 116 | 8 | 4 |
+
+Likely wrong:
+- `dev_counting_004`: label 3 teddy bears, 4 visible.
+- `test_presence_011`: "car: yes", but the only box is on a small blurred figure.
+- `test_presence_017`: "umbrella: yes", but the box is on a draped cloth.
+- `test_presence_021`: "tie: yes", but the box is on a scarf.
+- `test_counting_030`: label 3 cakes; the image has 2 whole cakes and 2 slices.
+
+The test set is unchanged. Grounding is also scored without the 4 flagged test pairs (`excluding_flagged`).
+
+**Final test** (Kaggle job `atml-pa3-task2-eval-test`, `python task2/evaluate.py --split test`, stage 3 weights, Tesla T4, 2026-11-12; `task2/results/eval_test/{metrics.json, predictions.jsonl, mismatched_mapping.json}`, console log `task2/results/kaggle_stdout_eval_test.log`). 96 VQAv2 pairs (192 questions) and 64 grounding pairs (128 questions) under four image conditions. The mismatched mapping was fixed before generation.
+
+- **Decoding checks:** 8/8 cache vs no-cache and 8/8 batched vs alone, for both suites with correct and no-image inputs.
+- **Generation:** no answer hit the 16-token cap and none was empty. Decoding took 32–34 ms per answer with an image, 21 ms (VQAv2) and 17 ms (grounding) without.
+- **Resources:** peak GPU memory was 4.10 GB allocated, including the cached features. Evaluation took 75 s and the session 120 s.
+
+Test results (95% intervals from 4,000 pair-bootstrap resamples):
+
+| Suite | Condition | Accuracy | Pair accuracy | Identical | Reference NLL |
+|---|---|---|---|---|---|
+| VQAv2 (96 pairs) | correct | 0.548 [0.476, 0.620] | 0.292 [0.208, 0.385] | 0.53 | 1.282 |
+| | complementary | 0.258 [0.201, 0.317] | 0.021 [0.000, 0.052] | 0.53 | 2.261 |
+| | mismatched | 0.346 [0.290, 0.406] | 0.073 [0.021, 0.125] | 0.52 | 2.021 |
+| | no image | 0.330 [0.274, 0.385] | 0.000 | 1.00 | 2.077 |
+| Grounding (64 pairs) | correct | 0.703 [0.625, 0.773] | 0.484 [0.359, 0.609] | 0.39 | 0.650 |
+| | complementary | 0.234 [0.172, 0.305] | 0.031 [0.000, 0.078] | 0.39 | 2.329 |
+| | mismatched | 0.430 [0.367, 0.492] | 0.078 [0.016, 0.141] | 0.75 | 1.508 |
+| | no image | 0.445 [0.398, 0.477] | 0.000 | 1.00 | 1.089 |
+| Grounding without the 4 flagged pairs (60) | correct | 0.708 [0.627, 0.787] | 0.500 [0.375, 0.623] | 0.37 | 0.648 |
+| | complementary | 0.225 [0.158, 0.295] | 0.033 [0.000, 0.085] | 0.37 | 2.382 |
+| | mismatched | 0.433 [0.365, 0.500] | 0.083 [0.017, 0.158] | 0.75 | 1.528 |
+| | no image | 0.442 [0.397, 0.477] | 0.000 | 1.00 | 1.093 |
+
+Accuracy by question type (correct / complementary / mismatched / no image):
+
+| Type | Correct | Complementary | Mismatched | No image |
+|---|---|---|---|---|
+| VQAv2 yes/no | 0.676 | 0.411 | 0.500 | 0.536 |
+| VQAv2 number | 0.527 | 0.192 | 0.277 | 0.254 |
+| VQAv2 other | 0.435 | 0.150 | 0.239 | 0.175 |
+| Grounding presence | 0.859 | 0.141 | 0.516 | 0.500 |
+| Grounding counting | 0.547 | 0.328 | 0.344 | 0.391 |
+
+Correct-image advantage in accuracy (correct − control) and in NLL (control − correct), with 95% intervals:
+
+| Suite | vs complementary | vs mismatched | vs no image |
+|---|---|---|---|
+| VQAv2, accuracy | +0.290 [0.197, 0.386] | +0.202 [0.124, 0.280] | +0.218 [0.144, 0.294] |
+| VQAv2, NLL | +0.979 [0.685, 1.306] | +0.739 [0.506, 1.001] | +0.794 [0.589, 1.020] |
+| Grounding, accuracy | +0.469 [0.328, 0.602] | +0.273 [0.180, 0.375] | +0.258 [0.187, 0.328] |
+| Grounding, NLL | +1.679 [1.304, 2.079] | +0.858 [0.609, 1.129] | +0.439 [0.342, 0.541] |
+| Grounding without flagged, accuracy | +0.483 [0.342, 0.619] | +0.275 [0.178, 0.377] | +0.267 [0.189, 0.342] |
+
+By type, the accuracy advantage over the complementary image is +0.265 (yes/no), +0.335 (number) and +0.285 (other) for VQAv2, and +0.719 (presence) and +0.219 (counting) for grounding. All intervals are in `metrics.json`.
+
+**Complementary swap:** every swapped prediction equals the partner question's correct-image prediction (expected: the question is shared within a pair). VQAv2: 53.1% of swapped answers match the partner's reference answer, 22.4% the question's own, 24.5% neither. Grounding: 70.3% partner, 23.4% own, 6.3% neither.
+
+**Complementary-pair examples** (`python task2/examples.py` → `task2/results/examples/{examples.json, complementary_vqa.png, complementary_grounding.png}`). Rule, stated in the script and saved with the examples: per suite, walk the test pairs in split-file order and take the first pair of each kind, judged on the correct-image predictions with the pair-accuracy criterion. The kinds are both right, same answer for both images, and answer changes but at least one is wrong. Flagged grounding pairs are skipped. Each example shows both images, the shared question, the references, the prediction with each image and the no-image prediction.
+
+| Suite | Kind | Pair | Question | References | Predictions | No image |
+|---|---|---|---|---|---|---|
+| VQAv2 | both right | `213276011_263687004` | Is the man in the office? | no / yes | no / yes | no |
+| VQAv2 | same answer | `129285000_407115005` | Is there anywhere the people could sit in this picture? | yes / no | yes / yes | no |
+| VQAv2 | changes, wrong | `236592001_318722001` | Is the oven light on? | yes / no | no / yes | no |
+| Grounding | both right | `test_presence_000` | Does this image contain a chair? | yes / no | yes / no | no |
+| Grounding | same answer | `test_presence_001` | Does this image contain a dining table? | yes / no | yes / yes | no |
+| Grounding | changes, wrong | `test_counting_002` | How many ties can you see? | 1 / 3 | 1 / 2 | 2 |
+
+The VQAv2 split file starts with yes/no pairs, so all three VQAv2 examples under this rule are yes/no questions.
 
 ## Task 3 — Test-time compute
 

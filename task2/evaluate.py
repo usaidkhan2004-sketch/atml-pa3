@@ -16,6 +16,8 @@ predictions are equal), empty-answer rate (empty outputs stay in the denominator
 reference-answer NLL (termination excluded, as in development), and generation time per answer.
 Correct-image advantages over each control in accuracy and NLL. 95% intervals from 4,000 bootstrap
 resamples of complete pairs, the same resampled pair ids for every condition (T2-14).
+Grounding is also scored without the pairs whose label the inspection found likely wrong
+(task2/results/label_inspection/inspection.csv, group "excluding_flagged"; DECISIONS.md T2-32).
 
 Usage
   python task2/evaluate.py --split dev     # script check on the development suites
@@ -253,7 +255,14 @@ def with_ci(point, boots):
                                             float(np.percentile([b[k] for b in boots], 97.5))]} for k in keys}
 
 
-def suite_metrics(suite, items, results, timing):
+def flagged_pairs(split):
+    """Pair ids whose label the label inspection marked likely wrong (DECISIONS.md T2-32)."""
+    import csv
+    with open(REPO / "task2/results/label_inspection/inspection.csv") as f:
+        return sorted({r["pair_id"] for r in csv.DictReader(f) if r["split"] == split and r["verdict"] == "likely_wrong"})
+
+
+def suite_metrics(suite, items, results, timing, exclude=()):
     """Point estimates and pair-bootstrap intervals, overall and by question type. Every bootstrap
     replicate draws one set of pair indices and applies it to all conditions (T2-14)."""
     tables = {c: pair_table(suite, items, results[c]) for c in CONDITIONS}
@@ -262,11 +271,16 @@ def suite_metrics(suite, items, results, timing):
     draws = rng.integers(0, n_pairs, size=(N_BOOT, n_pairs))
     types = np.array(tables["correct"]["type"])
     out = {"n_pairs": n_pairs, "n_questions": 2 * n_pairs, "conditions": {}, "correct_advantage": {}}
+    keep = ~np.isin(np.array(tables["correct"]["pair_id"]), list(exclude))
+    if len(exclude):
+        out["excluded_pairs"] = sorted(exclude)
 
     def subset(name):
+        if name == "excluding_flagged":
+            return np.flatnonzero(keep)
         return np.arange(n_pairs) if name == "all" else np.flatnonzero(types == name)
 
-    for group in ["all"] + TYPES[suite]:
+    for group in ["all"] + TYPES[suite] + (["excluding_flagged"] if len(exclude) else []):
         sel = subset(group)
         mask = np.isin(np.arange(n_pairs), sel)
         boot_idx = [d[mask[d]] for d in draws]  # the resampled pairs that belong to this group
@@ -371,7 +385,8 @@ def evaluate(args):
                                                             "mismatched": mappings[s][str(it["image_id"])]}[c]),
                                         "canonical": it["canonical"], "reference": it["reference"],
                                         "answers": it["answers"], **r}) + "\n")
-            m, _ = suite_metrics(s, items[s], results, timing)
+            excl = [p for p in flagged_pairs(args.split) if p in {it["pair_id"] for it in items[s]}]
+            m, _ = suite_metrics(s, items[s], results, timing, excl)
             m["complementary_swap"] = swap_diagnostics(items[s], results)
             metrics["suites"][s] = m
 
